@@ -11,8 +11,6 @@ public class MainScene : SceneBase {
 	public override void BeginState()
 	{
 		Application.LoadLevel( "Main" );
-		
-		ItemMgr gi = new ItemMgr();
 	}
 	
 	public override void UpdateState()
