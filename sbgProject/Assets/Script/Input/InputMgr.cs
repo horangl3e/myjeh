@@ -4,6 +4,13 @@ using System.Collections;
 public class InputMgr : MonoBehaviour 
 {
 
+	public enum eINPUT_EVENT
+    {
+        DOWN,
+        MOVE,
+        UP
+    };
+	
 	static InputMgr m_instance;
 	
 	public static InputMgr Instance
@@ -66,18 +73,18 @@ public class InputMgr : MonoBehaviour
 		{
 			Ray inputRay = playCamera.ScreenPointToRay( Input.GetTouch(0).position );
 			
-			/*if(Input.GetTouch(0).phase == TouchPhase.Began)
+			if(Input.GetTouch(0).phase == TouchPhase.Began)
 			{
-				SceneMgr.Instance.InputDown( inputRay );
+				SceneMgr.Instance.InputUpdate( eINPUT_EVENT.DOWN, inputRay );
 			}
 			else if(Input.GetTouch(0).phase == TouchPhase.Stationary || Input.GetTouch(0).phase == TouchPhase.Moved)
 			{
-				SceneMgr.Instance.InputMove( inputRay );
+				SceneMgr.Instance.InputUpdate( eINPUT_EVENT.MOVE, inputRay );
 			}
 			else if(Input.GetTouch(0).phase == TouchPhase.Ended || Input.GetTouch(0).phase == TouchPhase.Canceled)
 			{
-				SceneMgr.Instance.InputUp( inputRay );
-			}*/
+				SceneMgr.Instance.InputUpdate( eINPUT_EVENT.UP, inputRay );
+			}
 		}
 	}
 	
@@ -89,18 +96,18 @@ public class InputMgr : MonoBehaviour
 		
 		Ray inputRay = playCamera.ScreenPointToRay( Input.mousePosition );
 		
-		/*if(Input.GetMouseButtonDown(0) == true)
+		if(Input.GetMouseButtonDown(0) == true)
 		{				
-			SceneMgr.Instance.InputDown( inputRay );
+			SceneMgr.Instance.InputUpdate( eINPUT_EVENT.DOWN, inputRay );
 		}
 		else if(Input.GetMouseButton(0) == true)
 		{
-			SceneMgr.Instance.InputMove( inputRay );
+			SceneMgr.Instance.InputUpdate( eINPUT_EVENT.MOVE, inputRay );
 		}
 		else if(Input.GetMouseButtonUp(0) == true)
 		{			
-			SceneMgr.Instance.InputUp( inputRay );	
-		}*/	
+			SceneMgr.Instance.InputUpdate( eINPUT_EVENT.UP, inputRay );	
+		}	
 	}
 	
 	

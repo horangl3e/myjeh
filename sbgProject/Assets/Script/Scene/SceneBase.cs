@@ -37,4 +37,9 @@ public abstract class SceneBase
 	public virtual void EndState()
 	{
 	}
+	
+	public virtual void InputUpdate( InputMgr.eINPUT_EVENT eInputEvent, Ray ray )
+	{
+		
+	}
 }
