@@ -46,9 +46,8 @@ public class TestXMLReader : IXMLReader
         if (!xmlText) return null;
 
         byte[] encodedString = Encoding.UTF8.GetBytes(xmlText.text);
-        MemoryStream memoryStream = new MemoryStream(encodedString);
-
-        StreamReader streamReader = new StreamReader(memoryStream);
+       
+        StreamReader streamReader = new StreamReader(new MemoryStream(encodedString));
 
         StringReader stringReader = new StringReader(streamReader.ReadToEnd());
         string str = stringReader.ReadToEnd();
