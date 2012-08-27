@@ -1,15 +1,20 @@
 using UnityEngine;
 using System.Collections;
 
-public class Item : MonoBehaviour {
+interface IItem
+{
+    void Start();
+    void Update();
+}
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+public class Item : MonoBehaviour, IItem
+{
+    public void Start() { }
+    public void Update() { }
+}
+
+public class TestItem : IItem
+{
+    public void Start() { }
+    public void Update() { }
 }
