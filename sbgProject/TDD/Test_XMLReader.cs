@@ -1,6 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
+using System.Xml;
+
 namespace TDD
 {
     
@@ -91,6 +93,13 @@ namespace TDD
         {
             TestXMLReader target = new TestXMLReader(); // TODO: Initialize to an appropriate value
             target.Update();
+        }
+
+        [TestMethod()]
+        public void Test_GetXmlRootElement()
+        {
+            //시발 Unity함수라 안됨
+            //XmlElement xmlElement = TestXMLReader.GetXmlRootElement("Root/Table");
         }
     }
 }
