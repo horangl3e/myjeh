@@ -70,6 +70,7 @@ namespace TDD
         public void ItemConstructorTest()
         {
             TestItem target = new TestItem();
+            Assert.IsNotNull(target);
         }
     }
 }
