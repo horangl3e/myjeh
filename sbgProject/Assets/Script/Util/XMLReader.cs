@@ -40,7 +40,7 @@ public class TestXMLReader : IXMLReader
 
     public static XmlElement GetXmlRootElement(string strPath)
     {
-        XmlDocument xmlDoc = new XmlDocument();
+        XmlDocument xmlDoc = CreateXmlDocument();
 
         TextAsset xmlText = Resources.Load(strPath) as TextAsset;
         if (!xmlText) return null;
@@ -56,6 +56,11 @@ public class TestXMLReader : IXMLReader
         xmlDoc.LoadXml(str);
 
         return xmlDoc.DocumentElement;
+    }
+
+    private static XmlDocument CreateXmlDocument()
+    {
+        return new XmlDocument();
     }
     
 }
