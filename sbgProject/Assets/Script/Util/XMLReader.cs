@@ -28,7 +28,29 @@ public class XMLReader : MonoBehaviour, IXMLReader
 
     public static XmlElement GetXmlRootElement(string strPath)
     {
-        return null;
+        XmlDocument xmlDoc = CreateXmlDocument();
+        xmlDoc.LoadXml(StringReaderReadToEnd(strPath));
+        return xmlDoc.DocumentElement;
+    }
+
+    private static MemoryStream CreateMemoryStream(string strPath)
+    {
+        TextAsset xmlText = Resources.Load(strPath) as TextAsset;
+        if (!xmlText) return null;
+        byte[] encodedString = Encoding.UTF8.GetBytes(xmlText.text);
+        return new MemoryStream(encodedString);
+    }
+
+    private static XmlDocument CreateXmlDocument()
+    {
+        return new XmlDocument();
+    }
+
+    private static string StringReaderReadToEnd(string strPath)
+    {
+        StreamReader streamReader = new StreamReader(CreateMemoryStream(strPath));
+        StringReader stringReader = new StringReader(streamReader.ReadToEnd());
+        return stringReader.ReadToEnd();
     }
     
 }
