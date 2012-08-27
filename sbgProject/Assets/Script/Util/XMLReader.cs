@@ -41,12 +41,7 @@ public class TestXMLReader : IXMLReader
     public static XmlElement GetXmlRootElement(string strPath)
     {
         XmlDocument xmlDoc = CreateXmlDocument();
-        StreamReader streamReader = new StreamReader(CreateMemoryStream(strPath));
-        StringReader stringReader = new StringReader(streamReader.ReadToEnd());
-        string str = stringReader.ReadToEnd();
-
-        xmlDoc.LoadXml(str);
-
+        xmlDoc.LoadXml(StringReaderReadToEnd(strPath));
         return xmlDoc.DocumentElement;
     }
 
@@ -61,6 +56,13 @@ public class TestXMLReader : IXMLReader
     private static XmlDocument CreateXmlDocument()
     {
         return new XmlDocument();
+    }
+
+    private static string StringReaderReadToEnd(string strPath)
+    {
+        StreamReader streamReader = new StreamReader(CreateMemoryStream(strPath));
+        StringReader stringReader = new StringReader(streamReader.ReadToEnd());
+        return stringReader.ReadToEnd();
     }
     
 }
