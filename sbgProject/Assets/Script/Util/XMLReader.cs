@@ -41,20 +41,21 @@ public class TestXMLReader : IXMLReader
     public static XmlElement GetXmlRootElement(string strPath)
     {
         XmlDocument xmlDoc = CreateXmlDocument();
-
-        TextAsset xmlText = Resources.Load(strPath) as TextAsset;
-        if (!xmlText) return null;
-
-        byte[] encodedString = Encoding.UTF8.GetBytes(xmlText.text);
-       
-        StreamReader streamReader = new StreamReader(new MemoryStream(encodedString));
-
+        StreamReader streamReader = new StreamReader(CreateMemoryStream(strPath));
         StringReader stringReader = new StringReader(streamReader.ReadToEnd());
         string str = stringReader.ReadToEnd();
 
         xmlDoc.LoadXml(str);
 
         return xmlDoc.DocumentElement;
+    }
+
+    private static MemoryStream CreateMemoryStream(string strPath)
+    {
+        TextAsset xmlText = Resources.Load(strPath) as TextAsset;
+        if (!xmlText) return null;
+        byte[] encodedString = Encoding.UTF8.GetBytes(xmlText.text);
+        return new MemoryStream(encodedString);
     }
 
     private static XmlDocument CreateXmlDocument()
