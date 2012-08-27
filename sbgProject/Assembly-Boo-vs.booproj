@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{6CB775C1-8D6D-93E1-7E73-E95835F8017A}</ProjectGuid>
+	<ProjectGuid>{1995D138-33E0-806A-FCC0-23C4B5D1593D}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-Boo</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,16 +44,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\Input\InputMgr.cs" />
-     <Compile Include="Assets\Script\Item\Item.cs" />
-     <Compile Include="Assets\Script\Item\ItemData.cs" />
-     <Compile Include="Assets\Script\Item\ItemMgr.cs" />
-     <Compile Include="Assets\Script\Scene\IntroScene.cs" />
-     <Compile Include="Assets\Script\Scene\MainScene.cs" />
-     <Compile Include="Assets\Script\Scene\PlayScene.cs" />
-     <Compile Include="Assets\Script\Scene\SceneBase.cs" />
-     <Compile Include="Assets\Script\Scene\SceneMgr.cs" />
-     <Compile Include="Assets\Script\Util\XMLReader.cs" />
+     <Compile Include="Assets\Script\Input\NewBehaviourScript.boo" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
