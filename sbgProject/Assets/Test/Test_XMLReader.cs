@@ -20,6 +20,7 @@ namespace Test
             XmlNodeList nodes = xmlElement.ChildNodes;
             Assert.NotNull(nodes);
 
+            int Value = 0;
             foreach( XmlNode node in nodes)
             {
                 XmlElement ElementNode = node as XmlElement;
@@ -28,7 +29,13 @@ namespace Test
                 ItemTableData itemTableData = new ItemTableData(ElementNode);
                 Assert.NotNull(itemTableData);
                 Assert.NotNull(itemTableData.XMLNode);
+
+                itemTableData.SetValue(ref Value, itemTableData.XMLNode, "Index", 0);
+
+                Debug.Log("test (" + Value  + ") ");
             }
+
+            Debug.Log("Initialize Test");
 
         }
     }
