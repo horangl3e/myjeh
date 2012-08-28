@@ -46,10 +46,10 @@
   <ItemGroup>
      <Compile Include="Assets\Plugins\NUnitLite\NUnitLiteUnityRunner.cs" />
      <Compile Include="Assets\Plugins\TestsInPlugins.cs" />
-     <None Include="Assets\Plugins\NUnitLite\NUnitLite.CHANGES.txt" />
-     <None Include="Assets\Plugins\NUnitLite\NUnitLiteUnityRunner.README.txt" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLite.LICENSE.txt" />
+     <None Include="Assets\Plugins\NUnitLite\NUnitLiteUnityRunner.README.txt" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLite.README.txt" />
+     <None Include="Assets\Plugins\NUnitLite\NUnitLite.CHANGES.txt" />
  <Reference Include="NUnitLite">
  <HintPath>Assets\Plugins\NUnitLite\NUnitLite.dll</HintPath>
  </Reference>
