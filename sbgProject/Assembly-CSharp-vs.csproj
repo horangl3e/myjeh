@@ -55,10 +55,13 @@
      <Compile Include="Assets\Script\Scene\SceneMgr.cs" />
      <Compile Include="Assets\Script\Util\XMLReader.cs" />
      <Compile Include="Assets\Test\CSharpTestDriver.cs" />
+     <Compile Include="Assets\Test\ItemTableData.cs" />
      <Compile Include="Assets\Test\SomeCSharpTests.cs" />
+     <Compile Include="Assets\Test\Test_XMLReader.cs" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLite.LICENSE.txt" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLiteUnityRunner.README.txt" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLite.README.txt" />
+     <None Include="Assets\Resources\Table\ItemTable.xml" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLite.CHANGES.txt" />
  <Reference Include="NUnitLite">
  <HintPath>Assets\Plugins\NUnitLite\NUnitLite.dll</HintPath>
