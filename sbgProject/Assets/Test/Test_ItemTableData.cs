@@ -11,20 +11,20 @@ namespace Test
         [Test]
         public void Initialize()
         {
-            XmlDocument xmlDoc = new XmlDocument();
-            Assert.NotNull(xmlDoc);
+           // XmlDocument xmlDoc = new XmlDocument();
+           //// Assert.NotNull(xmlDoc);
 
-            string xmlFile =
-            (
-                "<Root><name>wrench</name></Root>"
-            );
+           // string xmlFile =
+           // (
+           //     "<Root><name>wrench</name></Root>"
+           // );
 
-            XmlElement newElement = xmlDoc.CreateElement("price");
-            Assert.NotNull(newElement);
-            newElement.InnerText = "10.95";
-            xmlDoc.DocumentElement.AppendChild(newElement);
+           // XmlElement newElement = xmlDoc.CreateElement("price");
+           //// Assert.NotNull(newElement);
+           // newElement.InnerText = "10.95";
+           // xmlDoc.DocumentElement.AppendChild(newElement);
 
-            xmlDoc.LoadXml(xmlFile);
+           // xmlDoc.LoadXml(xmlFile);
 
         }
     }
