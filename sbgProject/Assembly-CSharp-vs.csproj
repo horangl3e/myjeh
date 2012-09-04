@@ -56,6 +56,7 @@
      <Compile Include="Assets\Script\Util\XMLReader.cs" />
      <Compile Include="Assets\Test\CSharpTestDriver.cs" />
      <Compile Include="Assets\Test\ItemTableData.cs" />
+     <Compile Include="Assets\Test\Test_ItemTableData.cs" />
      <Compile Include="Assets\Test\Test_XMLReader.cs" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLite.LICENSE.txt" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLiteUnityRunner.README.txt" />
