@@ -30,15 +30,9 @@ namespace Test
 
             XmlNode root = xmlDoc.FirstChild;
             Assert.NotNull(root);
+            Assert.NotNull(root.InnerText);
 
-             if (root.HasChildNodes)
-             {
-                 //Assert.That(root.ChildNodes[0].InnerText, Is.EqualTo("1000"));
-                // Assert.AreEqual("1111", "1");
-             }
-
-
-
+            Assert.That( "version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"", Is.EqualTo(root.InnerText));
         }
     }
 
