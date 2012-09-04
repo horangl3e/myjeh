@@ -11,7 +11,6 @@
       <File FileName="Assets\Script\Item\Item.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Input\InputMgr.cs" Line="109" Column="63" />
       <File FileName="Assets\Test\CSharpTestDriver.cs" Line="8" Column="30" />
-      <File FileName="Assets\Test\SomeCSharpTests.cs" Line="3" Column="1" />
       <File FileName="Assets\Plugins\TestsInPlugins.cs" Line="13" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
