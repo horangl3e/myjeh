@@ -48,8 +48,8 @@
      <Compile Include="Assets\Plugins\TestsInPlugins.cs" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLite.LICENSE.txt" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLiteUnityRunner.README.txt" />
-     <None Include="Assets\Plugins\NUnitLite\NUnitLite.README.txt" />
      <None Include="Assets\Resources\Table\ItemTable.xml" />
+     <None Include="Assets\Plugins\NUnitLite\NUnitLite.README.txt" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLite.CHANGES.txt" />
  <Reference Include="NUnitLite">
  <HintPath>Assets\Plugins\NUnitLite\NUnitLite.dll</HintPath>
