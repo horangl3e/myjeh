@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 using System.Xml;
 namespace Test
@@ -12,8 +13,16 @@ namespace Test
         [Test]
         public void Initialize()
         {
-           // XmlElement xmlElement = XMLReader.GetXmlRootElement("1");
-           // Assert.NotNull(xmlElement);
+            XmlElement xmlElement = XMLReader.GetXmlRootElement("Table/ItemTable");
+            Assert.NotNull(xmlElement);
+
+            XmlNodeList nodes = xmlElement.ChildNodes;
+            foreach (XmlNode node in nodes)
+            {
+                XmlElement xmlelement = (node as XmlElement);
+                Assert.NotNull(xmlelement);
+            }
+
         }
     }
 
