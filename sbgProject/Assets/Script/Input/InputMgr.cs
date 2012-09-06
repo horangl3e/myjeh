@@ -66,7 +66,21 @@ public class InputMgr : MonoBehaviour
 		
 		Ray uiRay = uiCamera.ScreenPointToRay(Input.GetTouch(0).position);
 		if( true == IsCheckUIRect(uiRay) )
+		{					
+			if(Input.GetTouch(0).phase == TouchPhase.Began)
+			{
+				SceneMgr.Instance.GuiInputUpdata( eINPUT_EVENT.DOWN, uiRay );
+			}
+			else if(Input.GetTouch(0).phase == TouchPhase.Stationary || Input.GetTouch(0).phase == TouchPhase.Moved)
+			{
+				SceneMgr.Instance.GuiInputUpdata( eINPUT_EVENT.MOVE, uiRay );
+			}
+			else if(Input.GetTouch(0).phase == TouchPhase.Ended || Input.GetTouch(0).phase == TouchPhase.Canceled)
+			{
+				SceneMgr.Instance.GuiInputUpdata( eINPUT_EVENT.UP, uiRay );
+			}
 			return;
+		}
 		
 		
 		if(Input.touchCount == 1)
@@ -92,7 +106,21 @@ public class InputMgr : MonoBehaviour
 	{			
 		Ray uiRay = uiCamera.ScreenPointToRay(Input.mousePosition);
 		if( true == IsCheckUIRect(uiRay) )
-			return;	
+		{
+			if(Input.GetMouseButtonDown(0) == true)
+			{				
+				SceneMgr.Instance.GuiInputUpdata( eINPUT_EVENT.DOWN, uiRay );
+			}
+			else if(Input.GetMouseButton(0) == true)
+			{
+				SceneMgr.Instance.GuiInputUpdata( eINPUT_EVENT.MOVE, uiRay );
+			}
+			else if(Input.GetMouseButtonUp(0) == true)
+			{			
+				SceneMgr.Instance.GuiInputUpdata( eINPUT_EVENT.UP, uiRay );	
+			}	
+			return;
+		}
 		
 		Ray inputRay = playCamera.ScreenPointToRay( Input.mousePosition );
 		

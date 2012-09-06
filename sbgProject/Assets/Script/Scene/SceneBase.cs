@@ -42,4 +42,11 @@ public abstract class SceneBase
 	{
 		
 	}
+	
+	public virtual void GuiInputUpdata( InputMgr.eINPUT_EVENT eInputEvent, Ray ray )
+	{
+		
+	}
+	
+	
 }

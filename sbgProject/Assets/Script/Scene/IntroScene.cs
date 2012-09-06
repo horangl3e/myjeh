@@ -13,11 +13,22 @@ public class IntroScene : SceneBase {
 	}
 	public override void UpdateState()
 	{
-		SceneMgr.Instance.SetState( SceneBase.eSCENE_STATE.MAIN );
+		
 	}
 	public override void EndState()
 	{
 	}
 	
+	public override void InputUpdate( InputMgr.eINPUT_EVENT eInputEvent, Ray ray )
+	{		
+	}
+	
+	public override void GuiInputUpdata( InputMgr.eINPUT_EVENT eInputEvent, Ray ray )
+	{
+		if( InputMgr.eINPUT_EVENT.DOWN == eInputEvent )
+		{
+			SceneMgr.Instance.SetState( SceneBase.eSCENE_STATE.MAIN );
+		}
+	}
 	
 }

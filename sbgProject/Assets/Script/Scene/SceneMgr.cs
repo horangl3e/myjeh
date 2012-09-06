@@ -97,6 +97,12 @@ public class SceneMgr : MonoBehaviour
 			m_CurScene.InputUpdate( eInputEvent, ray );
 	}
 	
+	public void GuiInputUpdata( InputMgr.eINPUT_EVENT eInputEvent, Ray ray )
+	{
+		if( null != m_CurScene )
+			m_CurScene.GuiInputUpdata( eInputEvent, ray );
+	}
+	
 	// MonoBehaviour
 	void Awake()
 	{
