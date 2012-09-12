@@ -35,9 +35,16 @@ namespace Test
 
             xmlDoc.LoadXml(xmlFile);
 
-            NodeListLamda lamdaTest = (XmlNode node) =>
+            NodeListLamda FirstItemData = (XmlNode node) =>
             {
-                Debug.Log("XmlNodeList = " + GetXmlIndexValue(node) + "  " + GetXmlNameValue(node) + "  ");
+                Assert.That(1, Is.EqualTo(GetXmlIndexValue(node)) );
+                Assert.That("Test First", Is.EqualTo(GetXmlNameValue(node)));
+            };
+
+            NodeListLamda SecondItemData = (XmlNode node) =>
+            {
+                Assert.That(2, Is.EqualTo(GetXmlIndexValue(node)));
+                Assert.That("Test Second", Is.EqualTo(GetXmlNameValue(node)));
             };
 
             //DocumentElement를 안해 주니까 이상하게 나오네;
@@ -46,9 +53,9 @@ namespace Test
             foreach( XmlNode xmlNode in xmlNodeList )
             {
                 if (count == 0)
-                    lamdaTest(xmlNode);             
+                    FirstItemData(xmlNode);             
                 else if(count == 1)
-                    lamdaTest(xmlNode);
+                    SecondItemData(xmlNode);
                 count++;
             }
 
