@@ -38,13 +38,9 @@ namespace Test
             NodeListLamda lamdaTest = (XmlNode node) =>
             {
                 int index = GetXmlIndexValue(node);
-                string _target = node["Name"].InnerText;
-                char[] separator = new char[1]; separator[0] = '@';
-                string[] splits = _target.Split(separator);
-                if (splits.Length >= 2)
-                    _target = splits[splits.Length - 1];
+                string name = GetXmlNameValue(node);
 
-                Debug.Log("XmlNodeList = " + index + "  " + _target + "  ");
+                Debug.Log("XmlNodeList = " + index + "  " + name + "  ");
             };
 
             //DocumentElement를 안해 주니까 이상하게 나오네;
@@ -63,6 +59,16 @@ namespace Test
 
         }
 
+        private string GetXmlNameValue(XmlNode node)
+        {
+            string _target = node["Name"].InnerText;
+            char[] separator = new char[1]; separator[0] = '@';
+            string[] splits = _target.Split(separator);
+            if (splits.Length >= 2)
+                _target = splits[splits.Length - 1];
+
+            return _target;
+        }
         private int GetXmlIndexValue(XmlNode node)
         {
             return int.Parse(node["Index"].InnerText);
