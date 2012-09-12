@@ -6,6 +6,8 @@ using System.Xml;
 
 namespace Test
 {
+    delegate void NodeListLamda( XmlNode xmlNode );
+
     [TestFixture]
     public class Test_ItemTableData
     {
@@ -21,6 +23,11 @@ namespace Test
                 "<ItemTable xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>" +
                     "<Item>" +
                         "<Index>1</Index>"+
+                        "<Name>Test First</Name>"+
+                    "</Item>" +
+                    "<Item>" +
+                        "<Index>2</Index>" +
+                        "<Name>Test Second</Name>" +
                     "</Item>" +
                  "</ItemTable>"
 
@@ -28,11 +35,33 @@ namespace Test
 
             xmlDoc.LoadXml(xmlFile);
 
+            NodeListLamda lamdaTest = (XmlNode node) =>
+            {
+                int index = int.Parse(node["Index"].InnerText);
+
+                string _target = node["Name"].InnerText;
+                char[] separator = new char[1]; separator[0] = '@';
+                string[] splits = _target.Split(separator);
+                if (splits.Length >= 2)
+                    _target = splits[splits.Length - 1];
+
+                Debug.Log("XmlNodeList = " + index + "  " + _target + "  ");
+            };
+
+            //DocumentElement를 안해 주니까 이상하게 나오네;
+            XmlNodeList xmlNodeList = xmlDoc.DocumentElement.ChildNodes;
+            foreach( XmlNode xmlNode in xmlNodeList )
+            {
+                lamdaTest(xmlNode);
+            }
+
             XmlNode root = xmlDoc.FirstChild;
             Assert.NotNull(root);
             Assert.NotNull(root.InnerText);
 
             Assert.That( "version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"", Is.EqualTo(root.InnerText));
+
+
         }
     }
 

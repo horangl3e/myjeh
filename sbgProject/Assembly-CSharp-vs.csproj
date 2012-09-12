@@ -44,6 +44,22 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\Entity\Component\Animator.cs" />
+     <Compile Include="Assets\Script\Entity\Component\Model.cs" />
+     <Compile Include="Assets\Script\Entity\Component\Mover.cs" />
+     <Compile Include="Assets\Script\Entity\Data\EntityData.cs" />
+     <Compile Include="Assets\Script\Entity\Data\EntityInfo.cs" />
+     <Compile Include="Assets\Script\Entity\Data\MonsterData.cs" />
+     <Compile Include="Assets\Script\Entity\Data\MonsterInfo.cs" />
+     <Compile Include="Assets\Script\Entity\Data\UserData.cs" />
+     <Compile Include="Assets\Script\Entity\Entity.cs" />
+     <Compile Include="Assets\Script\Entity\EntityMgr.cs" />
+     <Compile Include="Assets\Script\Entity\FsmState.cs" />
+     <Compile Include="Assets\Script\Entity\MonsterEntity\MonsterEntity.cs" />
+     <Compile Include="Assets\Script\Entity\Msg\EntityMsg.cs" />
+     <Compile Include="Assets\Script\Entity\UserEntity\UserEntity.cs" />
+     <Compile Include="Assets\Script\Event\EventBase.cs" />
+     <Compile Include="Assets\Script\Event\EventMgr.cs" />
      <Compile Include="Assets\Script\Input\InputMgr.cs" />
      <Compile Include="Assets\Script\Item\Item.cs" />
      <Compile Include="Assets\Script\Item\ItemData.cs" />
@@ -54,6 +70,7 @@
      <Compile Include="Assets\Script\Scene\PlayScene.cs" />
      <Compile Include="Assets\Script\Scene\SceneBase.cs" />
      <Compile Include="Assets\Script\Scene\SceneMgr.cs" />
+     <Compile Include="Assets\Script\Util\FPSCounter.cs" />
      <Compile Include="Assets\Script\Util\XMLReader.cs" />
      <Compile Include="Assets\Test\CSharpTestDriver.cs" />
      <Compile Include="Assets\Test\SomeCSharpTests.cs" />
