@@ -37,10 +37,7 @@ namespace Test
 
             NodeListLamda lamdaTest = (XmlNode node) =>
             {
-                int index = GetXmlIndexValue(node);
-                string name = GetXmlNameValue(node);
-
-                Debug.Log("XmlNodeList = " + index + "  " + name + "  ");
+                Debug.Log("XmlNodeList = " + GetXmlIndexValue(node) + "  " + GetXmlNameValue(node) + "  ");
             };
 
             //DocumentElement를 안해 주니까 이상하게 나오네;
