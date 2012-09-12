@@ -52,8 +52,6 @@ namespace Test
             Assert.NotNull(root.InnerText);
 
             Assert.That( "version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"", Is.EqualTo(root.InnerText));
-
-
         }
 
         private string GetXmlNameValue(XmlNode node)
