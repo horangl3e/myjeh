@@ -37,8 +37,7 @@ namespace Test
 
             NodeListLamda lamdaTest = (XmlNode node) =>
             {
-                int index = int.Parse(node["Index"].InnerText);
-
+                int index = GetXmlIndexValue(node);
                 string _target = node["Name"].InnerText;
                 char[] separator = new char[1]; separator[0] = '@';
                 string[] splits = _target.Split(separator);
@@ -62,6 +61,11 @@ namespace Test
             Assert.That( "version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"", Is.EqualTo(root.InnerText));
 
 
+        }
+
+        private int GetXmlIndexValue(XmlNode node)
+        {
+            return int.Parse(node["Index"].InnerText);
         }
     }
 
