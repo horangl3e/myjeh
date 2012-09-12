@@ -42,9 +42,14 @@ namespace Test
 
             //DocumentElement를 안해 주니까 이상하게 나오네;
             XmlNodeList xmlNodeList = xmlDoc.DocumentElement.ChildNodes;
+            int count = 0;
             foreach( XmlNode xmlNode in xmlNodeList )
             {
-                lamdaTest(xmlNode);
+                if (count == 0)
+                    lamdaTest(xmlNode);             
+                else if(count == 1)
+                    lamdaTest(xmlNode);
+                count++;
             }
 
             XmlNode root = xmlDoc.FirstChild;
