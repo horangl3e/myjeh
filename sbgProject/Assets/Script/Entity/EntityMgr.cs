@@ -39,7 +39,7 @@ public class EntityMgr : MonoBehaviour
 	private Dictionary<int, UserData> m_UserEntityDataList = new Dictionary<int, UserData>();
 	private Dictionary<int, MonsterData> m_MonsterEntityDataList = new Dictionary<int, MonsterData>();		
 	
-	private GameObject m_goEntityParent = null;
+	private GameObject m_entityParent = null;
 	
 	
 	//-------------------------------------------------------------------------------------

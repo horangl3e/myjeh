@@ -24,7 +24,7 @@ public abstract class Entity : MonoBehaviour
 	/* Private Variable */
 	//-------------------------------------------------------------------------------------	
 	private Mover m_Mover; 
-	private Animator m_Animater; 
+	private Animator m_Animator; 
 	private Model m_Model;
     private eENTITY_TYPE m_eEntityType;
 	private EntityData m_EntityData;
@@ -39,7 +39,7 @@ public abstract class Entity : MonoBehaviour
 	{
 		get
 		{
-			return m_Animater;
+			return m_Animator;
 		}
 	}
 	
@@ -101,27 +101,44 @@ public abstract class Entity : MonoBehaviour
 		{
 			m_Mover.SetMsg( _msg );
 		}
-		
-		if( null != m_Animater )
+		 
+		if( null != m_Animator )
 		{
-			m_Animater.SetMsg( _msg );
-		}
-		
-		if( null != m_Model)
-		{
-			m_Model.SetMsg( _msg );
-		}
+			m_Animator.SetMsg( _msg );
+		}	
 	}
 	
 	
 	
 	
-	// Initialize when making
-	public virtual void Init( Vector3 vec3Pos, float fRotY )
+	
+	public virtual bool Create( EntityData data, Vector3 vec3Pos, float fRotY )
+	{		
+		m_Model = gameObject.AddComponent<Model>();
+		if( false == m_Model.Create( data.strModelPath ) )
+			return false;
+		
+		m_Animator = gameObject.AddComponent<Animator3D>();
+		if( null == m_Animator )
+			return false;	
+		
+		m_Mover = gameObject.AddComponent<Mover>();
+		if( null == m_Model)
+			return false;
+		
+		m_EntityData = data;
+		
+		m_Mover.SetPosition( vec3Pos );
+		m_Mover.SetRot( fRotY );
+		
+		return true;
+	}
+	
+	
+	public virtual void Create2D( EntityData data, Vector3 vec3Pos, float fRotY )
 	{		
 		
 	}
-	
 	
 			
 	
