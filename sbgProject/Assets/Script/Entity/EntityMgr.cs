@@ -31,15 +31,13 @@ public class EntityMgr : MonoBehaviour
 	
 	//-------------------------------------------------------------------
     /* Private Variable */
-    //-------------------------------------------------------------------
-	private UserEntity m_PlayerEntity;
+    //-------------------------------------------------------------------	
 	private Dictionary<int, Entity> m_EntityList = new Dictionary<int, Entity>();	
-	
 	private Dictionary<int, EntityData> m_EntityDataList = new Dictionary<int, EntityData>();
 	private Dictionary<int, UserData> m_UserEntityDataList = new Dictionary<int, UserData>();
 	private Dictionary<int, MonsterData> m_MonsterEntityDataList = new Dictionary<int, MonsterData>();		
 	
-	private GameObject m_entityParent = null;
+	private GameObject m_EntityParent = null;
 	
 	
 	//-------------------------------------------------------------------------------------
@@ -123,15 +121,18 @@ public class EntityMgr : MonoBehaviour
 	
 	//-------------------------------------------------------------------------------------
 	/* Public Function */
-	//-------------------------------------------------------------------------------------		
-	public UserEntity playerEntity
+	//-------------------------------------------------------------------------------------
+	public EntityData GetEntityData( int iIndex )
 	{
-		get
+		if( false == m_EntityDataList.ContainsKey( iIndex ) ) 
 		{
-			return m_PlayerEntity;
+			Debug.LogError("EntityMgr::GetEntityData() [ not find ] id : " + iIndex );
+			return null;
 		}
-	}		
 		
+		return m_EntityDataList[iIndex];
+	}
+	
 	public MonsterData GetMonsterData( int iIndex ) 
 	{
 		if( false == m_MonsterEntityDataList.ContainsKey( iIndex ) ) 
@@ -153,21 +154,13 @@ public class EntityMgr : MonoBehaviour
 		
 		return m_UserEntityDataList[iIndex];
 	}
-		
 	
+	
+		
+	//------------
 	// Entity 
 	
-	public void ClearEntities()
-	{
-		m_PlayerEntity = null;			
-				
-		foreach(KeyValuePair<int, Entity> pair in m_EntityList)
-		{
-			if(pair.Value != null)
-				Destroy(pair.Value.gameObject);					
-		}			
-		m_EntityList.Clear();	
-	}
+	// get
 	
 	public Entity GetEntity( int iInstanceID )
 	{
@@ -190,6 +183,30 @@ public class EntityMgr : MonoBehaviour
 		return null;
 	}	
 	
+	public UserEntity GetUserEntity( int iInstanceID )
+	{
+		Entity entity = GetEntity( iInstanceID );
+		if( null == entity )
+			return null;
+		
+		if( eENTITY_TYPE.USER == entity.entityType )
+			return entity as UserEntity; 
+		
+		return null;
+	}
+	
+	
+	// delete 
+	public void Clear()
+	{				
+		foreach(KeyValuePair<int, Entity> pair in m_EntityList)
+		{
+			if(pair.Value != null)
+				Destroy(pair.Value.gameObject);					
+		}			
+		m_EntityList.Clear();	
+	}
+	
 	public void DestoryEntity( int iInstanceID )
 	{
 		if( false == m_EntityList.ContainsKey( iInstanceID ) )
@@ -209,18 +226,19 @@ public class EntityMgr : MonoBehaviour
 			return;
 		}
 		
-		m_EntityList.Remove( entity.gameObject.GetInstanceID() );
-		Destroy(entity.gameObject);					
+		Destroy(entity.gameObject);
+		m_EntityList.Remove( entity.gameObject.GetInstanceID() );							
 	}
 	
-	
-	/*public Entity CreateEntity( EntityInfo entityInfo, Vector3 vec3Pos, float fYRot )
+	// create
+/*	public Entity CreateEntity( EntityInfo entityInfo, Vector3 vec3Pos, float fYRot )
 	{
-		if( null == m_goEntityParent )
+		if( null == m_EntityParent )
 		{
 			Debug.LogError("EntityMgr::CreateEntity() [ m_goEntityParent == null ]");
 			return null;
 		}		
+		
 		
 		string strPath = entityInfo.tableData.strModelPath;
 		GameObject goModel = Resources.Load( strPath ) as GameObject;

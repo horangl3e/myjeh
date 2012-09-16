@@ -5,7 +5,7 @@ using System.Collections;
 public enum eENTITY_TYPE
 {
 	NONE = 0,
-	PLAYER,
+	USER,
 	MONSTER,
 	OBJECT,
 };
@@ -119,15 +119,20 @@ public abstract class Entity : MonoBehaviour
 			return false;
 		
 		m_Animator = gameObject.AddComponent<Animator3D>();
-		if( null == m_Animator )
-			return false;	
+		if( false == m_Animator.Create( this ) )
+		{
+			Debug.LogError("Entity::Create() [ null == m_Animator.Create() ] entity table id : " + data.index );
+			return false;
+		}
 		
 		m_Mover = gameObject.AddComponent<Mover>();
-		if( null == m_Model)
+		if( false == m_Mover.Create() )
+		{
+			Debug.LogError("Entity::Create() [null == m_Mover.Create()] entity table id : " + data.index );
 			return false;
+		}
 		
-		m_EntityData = data;
-		
+		m_EntityData = data;		
 		m_Mover.SetPosition( vec3Pos );
 		m_Mover.SetRot( fRotY );
 		

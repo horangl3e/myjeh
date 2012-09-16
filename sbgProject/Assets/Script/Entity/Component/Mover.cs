@@ -6,20 +6,16 @@ public class Mover : MonoBehaviour
 	private CharacterController m_CharCtrl;
 	
 	
-	// Use this for initialization
-	void Start () 
+	public bool Create()
 	{
 		m_CharCtrl = gameObject.GetComponentInChildren< CharacterController >();
 		if( null == m_CharCtrl )
 		{
-			Debug.LogError("Mover::start()[ null == m_CharCtrl ]");
+			Debug.LogError("Mover::Create()[ null == m_CharCtrl ]");
+			return false;
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-	
+		
+		return true;
 	}
 	
 	public void SetPosition( Vector3 pos )
@@ -32,9 +28,23 @@ public class Mover : MonoBehaviour
 		m_CharCtrl.transform.rotation = Quaternion.AngleAxis( fRot, Vector3.up );
 	}
 	
-	public virtual void SetMsg( EntityMsg _msg )
+	public void SetMsg( EntityMsg _msg )
 	{
 	}
+	
+	// Use this for initialization
+	void Start () 
+	{
+		
+	}
+	
+	// Update is called once per frame
+	void Update () 
+	{
+	
+	}
+	
+	
 	
 	
 }

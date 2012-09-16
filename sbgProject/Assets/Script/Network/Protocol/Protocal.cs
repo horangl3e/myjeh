@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class MonsterInfo : MonoBehaviour {
+public class Protocal : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

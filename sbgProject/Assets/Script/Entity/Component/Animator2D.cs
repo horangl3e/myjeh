@@ -1,8 +1,15 @@
 using UnityEngine;
 using System.Collections;
 
-public class Animator2D : Animator {
-
+public class Animator2D : Animator 
+{
+	
+	public override bool Create( Entity _entity )
+	{
+		return true;
+	}
+	
+	
 	// Use this for initialization
 	void Start () {
 	
