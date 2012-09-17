@@ -1,5 +1,7 @@
+using System;
+using System.Reflection;
 using UnityEngine;
-using System.Collections;
+
 
 public enum PROTOCOL_CS : byte
 {
@@ -7,8 +9,8 @@ public enum PROTOCOL_CS : byte
   	SC_LIVE_ECHO,
 	
 	// npc
-	SC_NPC_APPEAR,
-	SC_NPC_DISAPPEAR,
+	SC_MONSTER_APPEAR,
+	SC_MONSTER_DISAPPEAR,
 	SC_NPC_MOVE,
 	SC_NPC_SKILL,
 	
@@ -28,8 +30,21 @@ public enum PROTOCOL_CS : byte
 
 
 
+public class cSC_MONSTER_APPEAR_DATA : PacketHeader
+{
+	public static int size = 48 + 4;
+
+    public Int32 nIdx;
+    public Int32 nTableIdx;	
+
+    public Vector3 sCurPosition;
+	public float fCurRotate;   
+}
 
 
-
-
+public class cSC_MONSTER_APPEAR : PacketHeader
+{
+	public Int32 nCnt;
+    public cSC_MONSTER_APPEAR_DATA[] datas = null;
+}
 

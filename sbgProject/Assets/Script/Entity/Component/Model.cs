@@ -22,7 +22,7 @@ public class Model : MonoBehaviour
 			return false;
 		}		
 		
-		m_ModelObject.transform.parent = transform.parent;
+		m_ModelObject.transform.parent = transform;
 		m_ModelObject.transform.localPosition = Vector3.zero;
 		m_ModelObject.transform.localScale = Vector3.one;
 		m_ModelObject.transform.localRotation = Quaternion.identity;

@@ -112,29 +112,36 @@ public abstract class Entity : MonoBehaviour
 	
 	
 	
-	public virtual bool Create( EntityData data, Vector3 vec3Pos, float fRotY )
+	public virtual bool Create( cSC_MONSTER_APPEAR_DATA data )
 	{		
+		EntityData _entitydata = EntityMgr.Instance.GetEntityData( data.nTableIdx );
+		if( null == _entitydata )
+		{
+			Debug.LogError("Entity::Create() [ null==_entityData] index: " + data.nTableIdx );
+			return false;			
+		}
+		
 		m_Model = gameObject.AddComponent<Model>();
-		if( false == m_Model.Create( data.strModelPath ) )
+		if( false == m_Model.Create( _entitydata.strModelPath ) )
 			return false;
 		
 		m_Animator = gameObject.AddComponent<Animator3D>();
 		if( false == m_Animator.Create( this ) )
 		{
-			Debug.LogError("Entity::Create() [ null == m_Animator.Create() ] entity table id : " + data.index );
+			Debug.LogError("Entity::Create() [ null == m_Animator.Create() ] entity table id : " + data.nTableIdx );
 			return false;
 		}
 		
 		m_Mover = gameObject.AddComponent<Mover>();
 		if( false == m_Mover.Create() )
 		{
-			Debug.LogError("Entity::Create() [null == m_Mover.Create()] entity table id : " + data.index );
+			Debug.LogError("Entity::Create() [null == m_Mover.Create()] entity table id : " + data.nTableIdx );
 			return false;
 		}
 		
-		m_EntityData = data;		
-		m_Mover.SetPosition( vec3Pos );
-		m_Mover.SetRot( fRotY );
+		m_EntityData = _entitydata;		
+		m_Mover.SetPosition( data.sCurPosition );
+		m_Mover.SetRot( data.fCurRotate );
 		
 		return true;
 	}

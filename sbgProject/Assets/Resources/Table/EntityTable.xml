@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<EntityTable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Entity>
+		<Index>1</Index>
+		<ModelPath>Entity/Monster/Player</ModelPath>			
+	</Entity>		
+</EntityTable>

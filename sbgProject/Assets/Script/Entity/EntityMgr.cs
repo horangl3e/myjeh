@@ -231,67 +231,31 @@ public class EntityMgr : MonoBehaviour
 	}
 	
 	// create
-/*	public Entity CreateEntity( EntityInfo entityInfo, Vector3 vec3Pos, float fYRot )
+	public MonsterEntity CreateMonsterEntity( cSC_MONSTER_APPEAR_DATA data )
 	{
 		if( null == m_EntityParent )
 		{
-			Debug.LogError("EntityMgr::CreateEntity() [ m_goEntityParent == null ]");
+			m_EntityParent = new GameObject();			
+			if( null == m_EntityParent ) 
+			{
+				Debug.LogError("EntityMgr::CreateMonsterEntity() [ m_EntityParent == null ]");
+				return null;
+			}
+			m_EntityParent.name = "entitys";
+		}	
+		
+		GameObject goCreateObject = new GameObject();
+		goCreateObject.name = "Monster_" + data.nIdx;
+		goCreateObject.transform.parent = m_EntityParent.transform;
+		MonsterEntity _mobEntity = goCreateObject.AddComponent<MonsterEntity>();
+		
+		if( false == _mobEntity.Create( data ) )			
 			return null;
-		}		
 		
 		
-		string strPath = entityInfo.tableData.strModelPath;
-		GameObject goModel = Resources.Load( strPath ) as GameObject;
-		if(null == goModel)
-		{
-			Debug.LogError("EntityMgr::CreateEntity() [ null == goModel, path: " + strPath );
-			return null;
-		}		
-			
-		GameObject goRealModel = GameObject.Instantiate( goModel ) as GameObject;
-		goRealModel.transform.parent = m_goEntityParent;		
-		goRealModel.transform.localPosition = Vector3.zero;
-		goRealModel.transform.localRotation = Quaternion.identity;
-		goRealModel.transform.localScale = Vector3.one;		
-		
-		
-		Entity entity = null;		
-		
-		switch( entityInfo.tableData.eEntityType )
-		{
-		case eENTITY_TYPE.PLAYER:
-			m_PlayerEntity = goRealModel.AddComponent<PlayerEntity>();	
-			entity = m_PlayerEntity as Entity;				
-			break;
-			
-		case eENTITY_TYPE.MONSTER:
-			entity = goRealModel.AddComponent<MonsterEntity>() as Entity;				
-			break;
-			
-		case eENTITY_TYPE.OBJECT:
-			entity = goRealModel.AddComponent<ObjectEntity>() as Entity;			
-			break;
-		}
-		
-		if( null == entity )
-		{
-			Debug.LogError("AddComponent error [ null == entity ]");
-			Destroy(goRealModel);
-			return null;
-		}
-		
-		if( null == entityInfo )
-		{
-			Debug.LogError("AddComponent error [ null == entityInfo ]");
-			Destroy(goRealModel);
-			return null;
-		}			
-		
-		entity.Init( entityInfo, vec3Pos, fYRot );		
-		m_EntityList.Add( goRealModel.GetInstanceID(), entity );		
-		return entity;
-	}   */
-	
+		m_EntityList.Add( data.nIdx, _mobEntity );		
+		return _mobEntity;	
+	}
 	
 	
 	void Awake()
@@ -308,7 +272,11 @@ public class EntityMgr : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-	
+		cSC_MONSTER_APPEAR_DATA _data = new cSC_MONSTER_APPEAR_DATA();
+		_data.nIdx = 1;
+		_data.nTableIdx = 1;
+		_data.sCurPosition = new Vector3( 0.0f, 0.0f, 5.0f );
+		CreateMonsterEntity( _data );
 	}
 	
 	// Update is called once per frame
