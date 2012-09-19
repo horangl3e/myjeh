@@ -10,6 +10,7 @@ public abstract class EntityMsg
 		NONE,
 		TARGET_MOVE,
 		MOVE_STOP,
+		MOVE_RESULT_STOP,
 		ANIMATION_PLAY,
 		ANIMATION_STOP,
 		ANIMATION_RESULT_STOP,		
@@ -52,6 +53,14 @@ public class Msg_MoveStop : EntityMsg
 	public Msg_MoveStop()		
 	{		
 		m_eMsg = EntityMsg.eMSG.MOVE_STOP;
+	}
+}
+
+public class Msg_MoveResultStop : EntityMsg 
+{
+	public Msg_MoveResultStop()
+	{
+		m_eMsg = EntityMsg.eMSG.MOVE_RESULT_STOP;
 	}
 }
 

@@ -28,7 +28,7 @@ public abstract class Entity : MonoBehaviour
 	private Model m_Model;
     private eENTITY_TYPE m_eEntityType;
 	private EntityData m_EntityData;
-	
+	private float m_fMoveSpeed;
 	
 	
 	//-------------------------------------------------------------------------------------
@@ -84,6 +84,36 @@ public abstract class Entity : MonoBehaviour
 			return m_EntityData;
 		}
 	}
+	
+	public void SetMoveSpeed( float fMoveSpeed )
+	{
+		m_fMoveSpeed = fMoveSpeed;
+	}
+	
+	public float moveSpeed
+	{
+		get
+		{
+			return m_fMoveSpeed;
+		}
+	}
+	
+	public float getRot
+	{
+		get
+		{
+			return mover.getRot;
+		}
+	}
+	
+	public Vector3 getPosition
+	{
+		get
+		{
+			return mover.getPosition;
+		}
+	}
+
 		
 	
 	
@@ -106,6 +136,8 @@ public abstract class Entity : MonoBehaviour
 		{
 			m_Animator.SetMsg( _msg );
 		}	
+		
+	
 	}
 	
 	
@@ -133,7 +165,7 @@ public abstract class Entity : MonoBehaviour
 		}
 		
 		m_Mover = gameObject.AddComponent<Mover>();
-		if( false == m_Mover.Create() )
+		if( false == m_Mover.Create( this ) )
 		{
 			Debug.LogError("Entity::Create() [null == m_Mover.Create()] entity table id : " + data.nTableIdx );
 			return false;

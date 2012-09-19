@@ -6,13 +6,23 @@ using System.Collections.Generic;
 public class MonsterEntity : Entity
 { 
 	protected FsmState<MonsterEntity> m_CurFsmState; 	
-	protected Dictionary<eFSM_STATE, FsmState<MonsterEntity>> m_FsmState = new Dictionary<eFSM_STATE, FsmState<MonsterEntity>>(); 
+	protected Dictionary<eFSM_STATE, FsmState<MonsterEntity>> m_FsmStateList = new Dictionary<eFSM_STATE, FsmState<MonsterEntity>>();
+	
+	
+	void Awake()
+	{	
+        SetType(eENTITY_TYPE.MONSTER);         
+
+		m_FsmStateList.Add( eFSM_STATE.IDEL, new MonsterFsm_Idle( eFSM_STATE.IDEL, this ) );		
+		m_FsmStateList.Add( eFSM_STATE.WALK, new MonsterFsm_Walk( eFSM_STATE.WALK, this) );	
+		SetState( eFSM_STATE.IDEL );
+	}
 	
 	public override void SetState( eFSM_STATE state )
 	{
-		if( false == m_FsmState.ContainsKey( state ) )
+		if( false == m_FsmStateList.ContainsKey( state ) )
 		{
-			Debug.LogError("MonsterEntity::SetState() [false == m_FsmState.ContainsKey( iState ) state : " + state );
+			Debug.LogError("MonsterEntity::SetState() [false == m_FsmStateList.ContainsKey( iState ) state : " + state );
 			return;			
 		}
 			
@@ -24,7 +34,7 @@ public class MonsterEntity : Entity
 			m_CurFsmState.EndState();
 		}
 		
-		m_CurFsmState = m_FsmState[state];
+		m_CurFsmState = m_FsmStateList[state];
 		m_CurFsmState.BeginState();	
 		
 		viewFsmState = m_CurFsmState.fsmState;
@@ -40,6 +50,15 @@ public class MonsterEntity : Entity
 		}
 		
 		return m_CurFsmState.fsmState;
+	}
+	
+	
+	public override void SetMsg( EntityMsg _msg )
+	{
+		base.SetMsg( _msg );
+		
+		if( null != m_CurFsmState )
+			m_CurFsmState.SetMsg( _msg );
 	}
 	
 }

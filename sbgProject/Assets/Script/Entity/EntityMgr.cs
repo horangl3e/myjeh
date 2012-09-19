@@ -276,6 +276,7 @@ public class EntityMgr : MonoBehaviour
 		_data.nIdx = 1;
 		_data.nTableIdx = 1;
 		_data.sCurPosition = new Vector3( 0.0f, 0.0f, 5.0f );
+		_data.fCurRotate = 180.0f;
 		CreateMonsterEntity( _data );
 	}
 	
