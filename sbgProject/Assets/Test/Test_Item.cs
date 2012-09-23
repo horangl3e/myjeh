@@ -8,38 +8,41 @@ namespace Test
     [TestFixture]
     public class Test_Item
     {
-        [Test]
-        public void Initialize()
+        private XmlNodeList nodes;
+
+        private Item ItemDataCheck(XmlNode node)
+        {
+            ItemData itemData = new ItemData(node as XmlElement);
+            Assert.NotNull(itemData);
+            Item item = new Item(itemData);
+            Assert.NotNull(item);
+            return item;
+        }
+
+        [SetUp]
+        public void SetUp()
         {
             XmlElement xmlElement = XMLReader.GetXmlRootElement("Table/ItemTable");
             Assert.NotNull(xmlElement);
 
-            XmlNodeList nodes = xmlElement.ChildNodes;
+            nodes = xmlElement.ChildNodes;
+        }
 
+        [Test]
+        public void Initialize()
+        {
             foreach ( XmlNode node in nodes )
             {
-                ItemData itemData = new ItemData(node as XmlElement);
-                Assert.NotNull(itemData);
-                Item item = new Item(itemData);
-                Assert.NotNull(item);
+                ItemDataCheck(node);
             }
         }
 
         [Test]
         public void GetData()
         {
-            XmlElement xmlElement = XMLReader.GetXmlRootElement("Table/ItemTable");
-            Assert.NotNull(xmlElement);
-
-            XmlNodeList nodes = xmlElement.ChildNodes;
-
             foreach (XmlNode node in nodes)
             {
-                ItemData itemData = new ItemData(node as XmlElement);
-                Assert.NotNull(itemData);
-                Item item = new Item(itemData);
-                Assert.NotNull(item);
-
+                Item item = ItemDataCheck(node);
                 Assert.NotNull(item.Data);
             }
         }
