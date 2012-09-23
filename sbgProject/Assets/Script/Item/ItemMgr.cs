@@ -1,16 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
-public class ItemMgr : MonoBehaviour 
+public class ItemMgr 
 {
-   // private Item item = new Item();
-	// Use this for initialization
-    void Start()
+    public ItemMgr()
     {
 
     }
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

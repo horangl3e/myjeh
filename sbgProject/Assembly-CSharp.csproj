@@ -82,6 +82,7 @@
      <Compile Include="Assets\Test\SomeCSharpTests.cs" />
      <Compile Include="Assets\Test\Test_Item.cs" />
      <Compile Include="Assets\Test\Test_ItemData.cs" />
+     <Compile Include="Assets\Test\Test_ItemMgr.cs" />
      <Compile Include="Assets\Test\Test_ItemTableData.cs" />
      <Compile Include="Assets\Test\Test_XMLReader.cs" />
      <None Include="Assets\Resources\Table\MonsterEntityTable.xml" />

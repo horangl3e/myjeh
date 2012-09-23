@@ -1,109 +1,105 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.20506</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6CB775C1-8D6D-93E1-7E73-E95835F8017A}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>
-    </RootNamespace>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{6CB775C1-8D6D-93E1-7E73-E95835F8017A}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_3_5_1;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_WIN;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_WEBCAM;ENABLE_MICROPHONE;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW;ENABLE_SUBSTANCE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <NoWarn>0169</NoWarn>
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_5_1;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_WIN;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_WEBCAM;ENABLE_MICROPHONE;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW;ENABLE_SUBSTANCE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>Temp\bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <NoWarn>0169</NoWarn>
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+	<Reference Include="System" />
     <Reference Include="System.XML" />
-    <Reference Include="System.Core" />
-    <Reference Include="UnityEngine">
-      <HintPath>G:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>G:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
-    </Reference>
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>G:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>G:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\Entity\Component\Animator.cs" />
-    <Compile Include="Assets\Script\Entity\Component\Animator2D.cs" />
-    <Compile Include="Assets\Script\Entity\Component\Animator3D.cs" />
-    <Compile Include="Assets\Script\Entity\Component\Model.cs" />
-    <Compile Include="Assets\Script\Entity\Component\Move\Move.cs" />
-    <Compile Include="Assets\Script\Entity\Component\Move\TargetMove.cs" />
-    <Compile Include="Assets\Script\Entity\Component\Mover.cs" />
-    <Compile Include="Assets\Script\Entity\Data\EntityData.cs" />
-    <Compile Include="Assets\Script\Entity\Data\MonsterData.cs" />
-    <Compile Include="Assets\Script\Entity\Data\UserData.cs" />
-    <Compile Include="Assets\Script\Entity\Entity.cs" />
-    <Compile Include="Assets\Script\Entity\EntityMgr.cs" />
-    <Compile Include="Assets\Script\Entity\FsmState.cs" />
-    <Compile Include="Assets\Script\Entity\MonsterEntity\MonsterEntity.cs" />
-    <Compile Include="Assets\Script\Entity\MonsterEntity\MonsterFsm_Idle.cs" />
-    <Compile Include="Assets\Script\Entity\MonsterEntity\MonsterFsm_Walk.cs" />
-    <Compile Include="Assets\Script\Entity\Msg\EntityMsg.cs" />
-    <Compile Include="Assets\Script\Entity\UserEntity\UserEntity.cs" />
-    <Compile Include="Assets\Script\Event\EventBase.cs" />
-    <Compile Include="Assets\Script\Event\EventMgr.cs" />
-    <Compile Include="Assets\Script\Input\InputMgr.cs" />
-    <Compile Include="Assets\Script\Item\Item.cs" />
-    <Compile Include="Assets\Script\Item\ItemData.cs" />
-    <Compile Include="Assets\Script\Item\ItemMgr.cs" />
-    <Compile Include="Assets\Script\Network\Protocol\NetworkPacketHeader.cs" />
-    <Compile Include="Assets\Script\Network\Protocol\Protocal.cs" />
-    <Compile Include="Assets\Script\Network\Protocol\Protocal_Common.cs" />
-    <Compile Include="Assets\Script\Scene\IntroScene.cs" />
-    <Compile Include="Assets\Script\Scene\MainScene.cs" />
-    <Compile Include="Assets\Script\Scene\PlayScene.cs" />
-    <Compile Include="Assets\Script\Scene\SceneBase.cs" />
-    <Compile Include="Assets\Script\Scene\SceneMgr.cs" />
-    <Compile Include="Assets\Script\Util\FPSCounter.cs" />
-    <Compile Include="Assets\Script\Util\XMLReader.cs" />
-    <Compile Include="Assets\Test\CSharpTestDriver.cs" />
-    <Compile Include="Assets\Test\SomeCSharpTests.cs" />
-    <Compile Include="Assets\Test\Test_Item.cs" />
-    <Compile Include="Assets\Test\Test_ItemData.cs" />
-    <Compile Include="Assets\Test\Test_ItemTableData.cs" />
-    <Compile Include="Assets\Test\Test_XMLReader.cs" />
-    <None Include="Assets\Resources\Table\MonsterEntityTable.xml" />
-    <None Include="Assets\Plugins\NUnitLite\NUnitLite.LICENSE.txt" />
-    <None Include="Assets\Plugins\NUnitLite\NUnitLiteUnityRunner.README.txt" />
-    <None Include="Assets\Resources\Table\UserEntityTable.xml">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Assets\Plugins\NUnitLite\NUnitLite.README.txt" />
-    <None Include="Assets\Resources\Table\EntityTable.xml" />
-    <None Include="Assets\Plugins\NUnitLite\NUnitLite.CHANGES.txt" />
-    <None Include="Assets\Resources\Table\ItemTable.xml" />
-    <Reference Include="NUnitLite">
-      <HintPath>Assets\Plugins\NUnitLite\NUnitLite.dll</HintPath>
-    </Reference>
+     <Compile Include="Assets\Script\Entity\Component\Animator.cs" />
+     <Compile Include="Assets\Script\Entity\Component\Animator2D.cs" />
+     <Compile Include="Assets\Script\Entity\Component\Animator3D.cs" />
+     <Compile Include="Assets\Script\Entity\Component\Model.cs" />
+     <Compile Include="Assets\Script\Entity\Component\Move\Move.cs" />
+     <Compile Include="Assets\Script\Entity\Component\Move\TargetMove.cs" />
+     <Compile Include="Assets\Script\Entity\Component\Mover.cs" />
+     <Compile Include="Assets\Script\Entity\Data\EntityData.cs" />
+     <Compile Include="Assets\Script\Entity\Data\MonsterData.cs" />
+     <Compile Include="Assets\Script\Entity\Data\UserData.cs" />
+     <Compile Include="Assets\Script\Entity\Entity.cs" />
+     <Compile Include="Assets\Script\Entity\EntityMgr.cs" />
+     <Compile Include="Assets\Script\Entity\FsmState.cs" />
+     <Compile Include="Assets\Script\Entity\MonsterEntity\MonsterEntity.cs" />
+     <Compile Include="Assets\Script\Entity\MonsterEntity\MonsterFsm_Idle.cs" />
+     <Compile Include="Assets\Script\Entity\MonsterEntity\MonsterFsm_Walk.cs" />
+     <Compile Include="Assets\Script\Entity\Msg\EntityMsg.cs" />
+     <Compile Include="Assets\Script\Entity\UserEntity\UserEntity.cs" />
+     <Compile Include="Assets\Script\Event\EventBase.cs" />
+     <Compile Include="Assets\Script\Event\EventMgr.cs" />
+     <Compile Include="Assets\Script\Input\InputMgr.cs" />
+     <Compile Include="Assets\Script\Item\Item.cs" />
+     <Compile Include="Assets\Script\Item\ItemData.cs" />
+     <Compile Include="Assets\Script\Item\ItemMgr.cs" />
+     <Compile Include="Assets\Script\Network\Protocol\NetworkPacketHeader.cs" />
+     <Compile Include="Assets\Script\Network\Protocol\Protocal.cs" />
+     <Compile Include="Assets\Script\Network\Protocol\Protocal_Common.cs" />
+     <Compile Include="Assets\Script\Scene\IntroScene.cs" />
+     <Compile Include="Assets\Script\Scene\MainScene.cs" />
+     <Compile Include="Assets\Script\Scene\PlayScene.cs" />
+     <Compile Include="Assets\Script\Scene\SceneBase.cs" />
+     <Compile Include="Assets\Script\Scene\SceneMgr.cs" />
+     <Compile Include="Assets\Script\Util\FPSCounter.cs" />
+     <Compile Include="Assets\Script\Util\XMLReader.cs" />
+     <Compile Include="Assets\Test\CSharpTestDriver.cs" />
+     <Compile Include="Assets\Test\SomeCSharpTests.cs" />
+     <Compile Include="Assets\Test\Test_Item.cs" />
+     <Compile Include="Assets\Test\Test_ItemData.cs" />
+     <Compile Include="Assets\Test\Test_ItemMgr.cs" />
+     <Compile Include="Assets\Test\Test_ItemTableData.cs" />
+     <Compile Include="Assets\Test\Test_XMLReader.cs" />
+     <None Include="Assets\Resources\Table\MonsterEntityTable.xml" />
+     <None Include="Assets\Plugins\NUnitLite\NUnitLite.LICENSE.txt" />
+     <None Include="Assets\Plugins\NUnitLite\NUnitLiteUnityRunner.README.txt" />
+     <None Include="Assets\Resources\Table\UserEntityTable.xml" />
+     <None Include="Assets\Plugins\NUnitLite\NUnitLite.README.txt" />
+     <None Include="Assets\Resources\Table\EntityTable.xml" />
+     <None Include="Assets\Plugins\NUnitLite\NUnitLite.CHANGES.txt" />
+     <None Include="Assets\Resources\Table\ItemTable.xml" />
+ <Reference Include="NUnitLite">
+ <HintPath>Assets\Plugins\NUnitLite\NUnitLite.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{0F4EF605-098C-C867-3506-D24161AB9BEC}</Project>
-      <Name>Assembly-CSharp-firstpass-vs</Name>
-    </ProjectReference>
+      <Project>{0F4EF605-098C-C867-3506-D24161AB9BEC}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -113,4 +109,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  
 </Project>
