@@ -37,10 +37,10 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>G:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>G:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +48,8 @@
      <Compile Include="Assets\Script\Entity\Component\Animator2D.cs" />
      <Compile Include="Assets\Script\Entity\Component\Animator3D.cs" />
      <Compile Include="Assets\Script\Entity\Component\Model.cs" />
+     <Compile Include="Assets\Script\Entity\Component\Move\Move.cs" />
+     <Compile Include="Assets\Script\Entity\Component\Move\TargetMove.cs" />
      <Compile Include="Assets\Script\Entity\Component\Mover.cs" />
      <Compile Include="Assets\Script\Entity\Data\EntityData.cs" />
      <Compile Include="Assets\Script\Entity\Data\MonsterData.cs" />
@@ -56,6 +58,8 @@
      <Compile Include="Assets\Script\Entity\EntityMgr.cs" />
      <Compile Include="Assets\Script\Entity\FsmState.cs" />
      <Compile Include="Assets\Script\Entity\MonsterEntity\MonsterEntity.cs" />
+     <Compile Include="Assets\Script\Entity\MonsterEntity\MonsterFsm_Idle.cs" />
+     <Compile Include="Assets\Script\Entity\MonsterEntity\MonsterFsm_Walk.cs" />
      <Compile Include="Assets\Script\Entity\Msg\EntityMsg.cs" />
      <Compile Include="Assets\Script\Entity\UserEntity\UserEntity.cs" />
      <Compile Include="Assets\Script\Event\EventBase.cs" />
