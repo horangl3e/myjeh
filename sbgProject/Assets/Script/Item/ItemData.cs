@@ -8,6 +8,7 @@ public class ItemData : XMLReader {
     private string ItemName ="";
     private string ItemType = "";
     private int ItemValue = 0;
+    private int ItemTime = 0;
 
     public int index
     {
@@ -41,6 +42,14 @@ public class ItemData : XMLReader {
         }
     }
 
+    public int Time
+    {
+        get
+        {
+            return ItemTime;
+        }
+    }
+
     public ItemData( XmlElement _element )
     {
         XmlNode node = _element;
@@ -48,6 +57,7 @@ public class ItemData : XMLReader {
         SetValue(ref ItemName, node, "Name");
         SetValue(ref ItemType, node, "Type");
         SetValue(ref ItemValue, node, "Value");
+        SetValue(ref ItemTime, node, "Time");
     }
  
 }
