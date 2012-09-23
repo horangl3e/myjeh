@@ -11,10 +11,12 @@ namespace Test
     [TestFixture]
     public class Test_ItemData
     {
+        private string TableDataPath = "Table/ItemTable";
+
         [Test]
         public void Initialize()
         {
-            XmlElement xmlElement = XMLReader.GetXmlRootElement("Table/ItemTable");
+            XmlElement xmlElement = XMLReader.GetXmlRootElement(TableDataPath);
             Assert.NotNull(xmlElement);
 
             XmlNodeList nodes = xmlElement.ChildNodes;
