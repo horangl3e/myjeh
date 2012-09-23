@@ -7,6 +7,7 @@ public class ItemData : XMLReader {
     private int ItemIndex = 0;
     private string ItemName ="";
     private string ItemType = "";
+    private int ItemValue = 0;
 
     public int index
     {
@@ -32,12 +33,21 @@ public class ItemData : XMLReader {
         }
     }
 
+    public int Value
+    {
+        get
+        {
+            return ItemValue;
+        }
+    }
+
     public ItemData( XmlElement _element )
     {
         XmlNode node = _element;
         SetValue(ref ItemIndex, node, "Index");
         SetValue(ref ItemName, node, "Name");
         SetValue(ref ItemType, node, "Type");
+        SetValue(ref ItemValue, node, "Value");
     }
  
 }

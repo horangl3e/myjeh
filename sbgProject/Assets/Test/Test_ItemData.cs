@@ -24,6 +24,7 @@ namespace Test
                 Assert.That(itemData.index, Is.EqualTo(1));
                 Assert.That(itemData.Name, Is.EqualTo("MpUp"));
                 Assert.That(itemData.Type, Is.EqualTo("HP_AMOUNT"));
+                Assert.That(itemData.Value, Is.EqualTo(50));
             };
 
             ItemDataLamda SecondItemData = (ItemData itemData) =>
@@ -31,6 +32,7 @@ namespace Test
                 Assert.That(itemData.index, Is.EqualTo(2));
                 Assert.That(itemData.Name, Is.EqualTo("Mpdown"));
                 Assert.That(itemData.Type, Is.EqualTo("HP_AMOUNT"));
+                Assert.That(itemData.Value, Is.EqualTo(-70));
             };
 
 
