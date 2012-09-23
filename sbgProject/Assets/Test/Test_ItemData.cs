@@ -6,6 +6,8 @@ using System.Collections.Generic;
 
 namespace Test
 {
+    delegate void ItemDataLamda(ItemData itemData);
+
     [TestFixture]
     public class Test_ItemData
     {
@@ -17,22 +19,29 @@ namespace Test
 
             XmlNodeList nodes = xmlElement.ChildNodes;
 
+            ItemDataLamda FirstItemData = (ItemData itemData) =>
+            {
+                Assert.That(itemData.index, Is.EqualTo(1));
+                Assert.That(itemData.Name, Is.EqualTo("MpUp"));
+                Assert.That(itemData.Type, Is.EqualTo("HP_AMOUNT"));
+            };
+
+            ItemDataLamda SecondItemData = (ItemData itemData) =>
+            {
+                Assert.That(itemData.index, Is.EqualTo(2));
+                Assert.That(itemData.Name, Is.EqualTo("Mpdown"));
+                Assert.That(itemData.Type, Is.EqualTo("HP_AMOUNT"));
+            };
+
+
             int count = 0;
             foreach( XmlNode node in nodes )
             {
                 ItemData itemData = new ItemData( node as XmlElement);
                 if (count == 0)
-                {
-                    Assert.That( itemData.index, Is.EqualTo(1) );
-                    Assert.That( itemData.Name, Is.EqualTo("MpUp") );
-                    Assert.That( itemData.Type, Is.EqualTo("HP_AMOUNT"));
-                }
+                    FirstItemData(itemData);
                 else if (count == 1)
-                {
-                    Assert.That( itemData.index, Is.EqualTo(2) );
-                    Assert.That( itemData.Name, Is.EqualTo("Mpdown") );
-                    Assert.That(itemData.Type, Is.EqualTo("HP_AMOUNT"));
-                }
+                    SecondItemData(itemData);
                 count++;
             }
         }
