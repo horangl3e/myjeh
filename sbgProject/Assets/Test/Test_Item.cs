@@ -9,6 +9,7 @@ namespace Test
     public class Test_Item
     {
         private XmlNodeList nodes;
+        private string TableDataPath = "Table/ItemTable";
 
         private Item ItemDataCheck(XmlNode node)
         {
@@ -22,7 +23,7 @@ namespace Test
         [SetUp]
         public void SetUp()
         {
-            XmlElement xmlElement = XMLReader.GetXmlRootElement("Table/ItemTable");
+            XmlElement xmlElement = XMLReader.GetXmlRootElement(TableDataPath);
             Assert.NotNull(xmlElement);
 
             nodes = xmlElement.ChildNodes;
