@@ -68,7 +68,6 @@
      <Compile Include="Assets\Script\Item\Item.cs" />
      <Compile Include="Assets\Script\Item\ItemData.cs" />
      <Compile Include="Assets\Script\Item\ItemMgr.cs" />
-     <Compile Include="Assets\Script\Item\ItemTableData.cs" />
      <Compile Include="Assets\Script\Network\Protocol\NetworkPacketHeader.cs" />
      <Compile Include="Assets\Script\Network\Protocol\Protocal.cs" />
      <Compile Include="Assets\Script\Network\Protocol\Protocal_Common.cs" />
