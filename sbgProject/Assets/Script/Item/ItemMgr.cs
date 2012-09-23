@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ItemMgr : MonoBehaviour 
 {
-    private Item item = new Item();
+   // private Item item = new Item();
 	// Use this for initialization
     void Start()
     {
