@@ -23,7 +23,25 @@ namespace Test
                 Item item = new Item(itemData);
                 Assert.NotNull(item);
             }
-           
+        }
+
+        [Test]
+        public void GetData()
+        {
+            XmlElement xmlElement = XMLReader.GetXmlRootElement("Table/ItemTable");
+            Assert.NotNull(xmlElement);
+
+            XmlNodeList nodes = xmlElement.ChildNodes;
+
+            foreach (XmlNode node in nodes)
+            {
+                ItemData itemData = new ItemData(node as XmlElement);
+                Assert.NotNull(itemData);
+                Item item = new Item(itemData);
+                Assert.NotNull(item);
+
+                Assert.NotNull(item.Data);
+            }
         }
     }
 }
