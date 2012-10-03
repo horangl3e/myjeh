@@ -6,17 +6,13 @@ using System.Xml;
 namespace Test
 {
     [TestFixture]
-    public class Test_Inventory
+    public class Test_Inventory : Inventory
     {
         private XmlNodeList xmlNodelist;
-        private Inventory inventory;
 
         [SetUp]
         public void SetUp()
         {
-            inventory = new Inventory();
-            Assert.NotNull(inventory);
-
             XmlElement xmlElement = XMLReader.GetXmlRootElement("Table/ItemTable");
             Assert.NotNull(xmlElement);
 
@@ -33,8 +29,8 @@ namespace Test
             Item item = new Item(itemData);
             Assert.NotNull(item);
 
-            inventory.AddItem(item);
-            Assert.That(inventory.itemList.Count,Is.EqualTo(1));
+            AddItem(item);
+            Assert.That(ItemList.Count, Is.EqualTo(1));
         }
 
         [Test]
@@ -46,12 +42,12 @@ namespace Test
             Item item = new Item(itemData);
             Assert.NotNull(item);
 
-            inventory.AddItem(item);
-            if (inventory.ItemSize() > 1)
+            AddItem(item);
+            if (ItemSize() > 1)
             {
-                Debug.Log("Itemsize = " + inventory.ItemSize());
-                inventory.RemoveItem(0);
-                Assert.That(inventory.itemList.Count, Is.EqualTo(0));
+                Debug.Log("Itemsize = " + ItemSize());
+                RemoveItem(0);
+                Assert.That(ItemList.Count, Is.EqualTo(0));
             }
         }
 
