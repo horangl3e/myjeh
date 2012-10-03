@@ -44,7 +44,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Plugins\2DFrameWork\KSprite.cs" />
+     <Compile Include="Assets\Plugins\2DFrameWork\Editor\EditUtil.cs" />
+     <Compile Include="Assets\Plugins\2DFrameWork\Editor\K2DSpriteEdit.cs" />
+     <Compile Include="Assets\Plugins\2DFrameWork\Editor\K2DSpriteUVMoveEdit.cs" />
+     <Compile Include="Assets\Plugins\2DFrameWork\Script\K2DSprite.cs" />
+     <Compile Include="Assets\Plugins\2DFrameWork\Script\K2DSpriteAnimation.cs" />
+     <Compile Include="Assets\Plugins\2DFrameWork\Script\K2DSpriteUVMove.cs" />
+     <Compile Include="Assets\Plugins\2DFrameWork\Script\K2DView.cs" />
+     <Compile Include="Assets\Plugins\2DFrameWork\Script\KSprite.cs" />
      <Compile Include="Assets\Plugins\NUnitLite\NUnitLiteUnityRunner.cs" />
      <Compile Include="Assets\Plugins\TestsInPlugins.cs" />
      <None Include="Assets\Resources\Table\MonsterEntityTable.xml" />
