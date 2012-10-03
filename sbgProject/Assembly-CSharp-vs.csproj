@@ -65,6 +65,7 @@
      <Compile Include="Assets\Script\Event\EventBase.cs" />
      <Compile Include="Assets\Script\Event\EventMgr.cs" />
      <Compile Include="Assets\Script\Input\InputMgr.cs" />
+     <Compile Include="Assets\Script\Item\Inventory.cs" />
      <Compile Include="Assets\Script\Item\Item.cs" />
      <Compile Include="Assets\Script\Item\ItemData.cs" />
      <Compile Include="Assets\Script\Item\ItemMgr.cs" />
@@ -80,6 +81,7 @@
      <Compile Include="Assets\Script\Util\XMLReader.cs" />
      <Compile Include="Assets\Test\CSharpTestDriver.cs" />
      <Compile Include="Assets\Test\SomeCSharpTests.cs" />
+     <Compile Include="Assets\Test\Test_Inventory.cs" />
      <Compile Include="Assets\Test\Test_Item.cs" />
      <Compile Include="Assets\Test\Test_ItemData.cs" />
      <Compile Include="Assets\Test\Test_ItemMgr.cs" />
