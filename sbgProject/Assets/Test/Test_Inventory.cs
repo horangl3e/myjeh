@@ -34,6 +34,7 @@ namespace Test
             Assert.NotNull(item);
 
             inventory.AddItem(item);
+            Assert.That(inventory.itemList.Count,Is.EqualTo(1));
         }
 
     }
