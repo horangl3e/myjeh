@@ -15,4 +15,15 @@ public class Inventory {
     {
         ItemList.Add(item);
     }
+
+    public void RemoveItem(int index)
+    {
+        ItemList.RemoveAt(index);
+    }
+
+    public int ItemSize()
+    {
+        return ItemList.Count;
+    }
+
 }

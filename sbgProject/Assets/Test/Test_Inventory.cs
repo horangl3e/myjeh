@@ -37,6 +37,24 @@ namespace Test
             Assert.That(inventory.itemList.Count,Is.EqualTo(1));
         }
 
+        [Test]
+        public void Test_RemoveItem()
+        {
+            ItemData itemData = new ItemData(xmlNodelist[0] as XmlElement);
+            Assert.NotNull(itemData);
+
+            Item item = new Item(itemData);
+            Assert.NotNull(item);
+
+            inventory.AddItem(item);
+            if (inventory.ItemSize() > 1)
+            {
+                Debug.Log("Itemsize = " + inventory.ItemSize());
+                inventory.RemoveItem(0);
+                Assert.That(inventory.itemList.Count, Is.EqualTo(0));
+            }
+        }
+
     }
 }
 
