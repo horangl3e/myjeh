@@ -31,20 +31,20 @@ public class K2DSprite : MonoBehaviour
 	protected Mesh m_mesh;
 	protected MeshRenderer m_renderer;
 	protected MeshFilter m_meshFilter;
-	private float m_defCameraPixels = 640f;
+	//private float m_defCameraPixels = 640f;
 	
 	
 	//---------------------------------------------------------------------
 	/* get function */
 	//---------------------------------------------------------------------
 		
-	public float getDefCameraPixels
+	/*public float getDefCameraPixels
 	{
 		get
 		{
 			return m_defCameraPixels;
 		}
-	}
+	}*/
 	
 	//---------------------------------------------------------------------
 	/* set function */
@@ -105,16 +105,16 @@ public class K2DSprite : MonoBehaviour
 		ResetMeshData();
 	}
 	
-	public void SetDefCameraPixels( float fDefCameraPixels )
+	/*public void SetDefCameraPixels( float fDefCameraPixels )
 	{
-		if( getDefCameraPixels == fDefCameraPixels )
+		if( K2DView.defCameraPixels == fDefCameraPixels )
 			return;
 		
 		m_defCameraPixels = fDefCameraPixels;
 		
 		ResetMeshVertices();
 		ResetMeshData();
-	}
+	}*/
 	
 	//---------------------------------------------------------------------
 	/* function */
@@ -152,7 +152,7 @@ public class K2DSprite : MonoBehaviour
 	
 	private void ResetMeshVertices()
 	{
-		float pixelPerWorldUnit = Camera.mainCamera.orthographicSize * 2f / getDefCameraPixels;
+		float pixelPerWorldUnit = Camera.mainCamera.orthographicSize * 2f / K2DView.defCameraPixels;
 		
 		if( SpriteOrientation.MiddleCenter == spriteOrientation )	
 		{

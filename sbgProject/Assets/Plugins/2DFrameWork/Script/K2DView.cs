@@ -8,27 +8,39 @@ public class K2DView : MonoBehaviour
 	//-------------------------------------------------------------------
     /* static */
     //-------------------------------------------------------------------
-	private static K2DView ms_Instance = null;
+	/*private static K2DView ms_Instance = null;
 	public static K2DView Instance
 	{
 		get
 		{
 			return ms_Instance;
 		}
-	}
+	}*/
+	
+	public static float defCameraPixels = 640f;
 	
 	//-------------------------------------------------------------------
     /* variable */
     //-------------------------------------------------------------------	
-	public float defCameraPixels = 640;
+	public bool alwaysPixelPerfect = false;
 	
 	//-------------------------------------------------------------------
     /* function */
     //-------------------------------------------------------------------
+	
+	public void ResetCamera()
+	{
+		if( true == alwaysPixelPerfect )
+			Camera.main.orthographicSize = (float)Screen.height / 2f;
+		else
+			Camera.main.orthographicSize = (float)Screen.height / 2f * (defCameraPixels / (float)Screen.height);
+	}
+	
 	void Awake()
 	{
-		ms_Instance = this;
-		DontDestroyOnLoad(gameObject);	
+		/*ms_Instance = this;
+		DontDestroyOnLoad(gameObject);*/
+		ResetCamera();
 	}
 		
 		
