@@ -21,4 +21,6 @@ public class EditUtil
 		vec2Value.y = EditorGUILayout.FloatField("Y", vec2Value.y, opt);		
 		return vec2Value;
 	}
+	
+	
 }

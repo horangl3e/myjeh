@@ -93,7 +93,7 @@ public class K2DSprite : MonoBehaviour
 		ResetMeshData();		
 	}
 	
-	public void SetSpriteMaterial( Material _material )
+	public virtual void SetSpriteMaterial( Material _material )
 	{
 		if( spriteMaterial == _material )
 			return;
@@ -182,7 +182,7 @@ public class K2DSprite : MonoBehaviour
 	{
 		if( null == m_renderer.sharedMaterial || null == m_renderer.sharedMaterial.mainTexture )
 		{
-			Debug.LogError("ResetMeshTexture() [ null == m_renderer.sharedMaterial || null == m_renderer.sharedMaterial.mainTexture ]");
+			//Debug.LogError("ResetMeshTexture() [ null == m_renderer.sharedMaterial || null == m_renderer.sharedMaterial.mainTexture ]");
 			return;
 		}		
 		
@@ -223,7 +223,7 @@ public class K2DSprite : MonoBehaviour
 	{
 		if( null == spriteMaterial )
 		{
-			Debug.LogError("KSimpleSprite::ResetMaterial() [ null == spriteMaterial ]");
+			//Debug.LogError("KSimpleSprite::ResetMaterial() [ null == spriteMaterial ]");
 			return;
 		}		
 		

@@ -27,28 +27,30 @@ public class K2DFrame
 		}
 	}
 	
-	public void Create(K2DFrameImg _img)
-	{
-		if( null == _img )
-			return;
-		
+	public void Create( Vector2 imgXY )
+	{		
 		m_uvs = new Rect[ endFrame - startFrame ];
 		
 		int iIndex = 0;
 		for( int i=startFrame; i<endFrame; ++i )
 		{
-			float scx = 1f / _img.framesXY.x;
-        	float scy = 1f / _img.framesXY.y;
+			float scx = 1f / imgXY.x;
+        	float scy = 1f / imgXY.y;
 			
 			float f = (float)i;
-			float tY = Mathf.Floor(f / _img.framesXY.x);
-            float tX = f - (int)(tY * _img.framesXY.y);
+			float tY = Mathf.Floor(f / imgXY.x);
+            float tX = f - (int)(tY * imgXY.y);
 			
 			float sx = tX * scx;
-            float sy = (_img.framesXY.y - 1 - tY) * scy;
+            float sy = (imgXY.y - 1 - tY) * scy;
 			
 			m_uvs[iIndex++] = new Rect( sx, sy, scx, scy );			
 		}
+	}
+	
+	public void Remove()	
+	{
+		m_uvs = null;
 	}
 	
 	public void Update( Material _mat, float _fSpeed )
@@ -91,16 +93,11 @@ public class K2DFrame
 	}
 }
 
-[System.Serializable]
-public class K2DFrameImg
-{
-	public Vector2 framesXY = Vector2.zero;	
-}
 
 public class K2DSpriteAnimation : K2DSprite
 {
 	public float speed;
-	public K2DFrameImg frameImg;
+	public Vector2 imgXY = Vector2.zero;
 	public K2DFrame[] frameList;
 	
 	private K2DFrame m_CurFrame;
@@ -128,18 +125,63 @@ public class K2DSpriteAnimation : K2DSprite
 		}		
 	}
 	
+	public void SetImgXY( Vector2 _imgxy )
+	{
+		if( _imgxy == imgXY )
+			return;
+		imgXY = _imgxy;
+		
+		foreach( K2DFrame _frame in frameList )
+		{
+			_frame.Remove();
+		}	
+		
+		InitStart();
+	}
+	
+	public void SetFrameListCount( int iCount )
+	{
+		if( null == frameList )
+		{
+			if( 0 < iCount )
+				frameList = new K2DFrame[iCount];
+			return;
+		}
+		
+		if( frameList.Length == iCount )
+			return;
+		
+		K2DFrame[] frameListTemp = new K2DFrame[iCount];
+		for( int i=0; i<frameList.Length; ++i )
+		{			
+			if( frameListTemp.Length <= i )
+				break;
+			
+			frameListTemp[i] = new K2DFrame();
+			frameListTemp[i] = frameList[i];
+		}
+		
+		frameList = frameListTemp;
+	}
+	
+	public override void SetSpriteMaterial( Material _material )
+	{
+		base.SetSpriteMaterial(_material);
+		
+	}
+	
 	
 	public override void InitStart()
 	{
-		if( frameImg.framesXY == Vector2.zero )
+		if( imgXY == Vector2.zero )
 		{
-			Debug.LogError("[ frameImg.framesXY == Vector2.zero ] value : " + frameImg.framesXY );
+			Debug.LogError("[ imgXY == Vector2.zero ] value : " + imgXY );
 			return;
 		}
 		
 		foreach( K2DFrame _frame in frameList )
 		{
-			_frame.Create( frameImg );
+			_frame.Create( imgXY );
 		}		
 	}
 	
