@@ -2,8 +2,8 @@ using UnityEngine;
 using System.Collections;
 
 public class Mover : MonoBehaviour
-{
-	private CharacterController m_CharCtrl;
+{	
+	private CharacterController m_CharCtrl;	
 	private Move m_CurMove;	
 	private Entity m_entity = null;
 	private float m_fRot = 0.0f;
@@ -28,30 +28,45 @@ public class Mover : MonoBehaviour
 		
 		
 		m_CharCtrl = gameObject.GetComponentInChildren< CharacterController >();
-		if( null == m_CharCtrl )
+		/*if( null == m_CharCtrl )
 		{
 			Debug.LogError("Mover::Create()[ null == m_CharCtrl ]");
 			return false;
-		}
+		}*/
 		
 		return true;
 	}
 	
 	public void SetPosition( Vector3 pos )
 	{
-		m_CharCtrl.transform.position = pos;
+		if( null != m_CharCtrl )
+			m_CharCtrl.transform.position = pos;
+		else
+			transform.position = pos;
+	}
+	
+	public void MovePosition( Vector3 pos )
+	{
+		if( null != m_CharCtrl )
+			m_CharCtrl.SimpleMove( pos );
 	}
 	
 	public void SetRot( float fRot )
 	{
 		m_fRot = fRot;
-		m_CharCtrl.transform.rotation = Quaternion.AngleAxis( fRot, Vector3.up );
+		if( null != m_CharCtrl )
+			m_CharCtrl.transform.rotation = Quaternion.AngleAxis( fRot, Vector3.up );
+		else
+			transform.rotation = Quaternion.AngleAxis( fRot, Vector3.up );
 	}
 	
 	public Vector3 getPosition
 	{
 		get
 		{
+			if( null == m_CharCtrl )
+				return transform.position;
+			
 			return m_CharCtrl.transform.position;
 		}
 	}
@@ -92,7 +107,10 @@ public class Mover : MonoBehaviour
 				return;
 			}
 			
-			SetPosition( getPosition +  m_CurMove.GetPos( getPosition, curEntity.moveSpeed ) );
+			if( null != m_CharCtrl )
+				MovePosition( m_CurMove.GetPos( getPosition, curEntity.moveSpeed ) );
+			else
+				SetPosition( getPosition +  m_CurMove.GetPos( getPosition, curEntity.moveSpeed ) );
 		}
 	}
 	
