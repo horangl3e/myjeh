@@ -140,7 +140,7 @@ public class K2DSpriteAnimation : K2DSprite
 		foreach( K2DFrame _frame in frameList )
 		{
 			_frame.Create( frameImg );
-		}
+		}		
 	}
 	
 	// Update is called once per frame

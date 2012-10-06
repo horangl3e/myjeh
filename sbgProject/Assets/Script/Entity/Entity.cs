@@ -157,12 +157,20 @@ public abstract class Entity : MonoBehaviour
 		if( false == m_Model.Create( _entitydata.strModelPath ) )
 			return false;
 		
-		m_Animator = gameObject.AddComponent<Animator3D>();
-		if( false == m_Animator.Create( this ) )
+		
+		m_Animator = gameObject.GetComponentInChildren<Animator3D>();
+		if( null == m_Animator )
+		{
+			m_Animator = gameObject.GetComponentInChildren<Animator2D>();			
+		}		
+		
+		if( null == m_Animator ||  false == m_Animator.Create( this ) )
 		{
 			Debug.LogError("Entity::Create() [ null == m_Animator.Create() ] entity table id : " + data.nTableIdx );
 			return false;
 		}
+				
+		
 		
 		m_Mover = gameObject.AddComponent<Mover>();
 		if( false == m_Mover.Create( this ) )
