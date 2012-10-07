@@ -3,5 +3,10 @@
 	<Entity>
 		<Index>1</Index>
 		<ModelPath>Entity/Monster/Player</ModelPath>			
-	</Entity>		
+	</Entity>
+	<Entity>
+		<Index>2</Index>
+		<ModelPath>Entity/Monster/Mob1</ModelPath>			
+	</Entity>
+	
 </EntityTable>

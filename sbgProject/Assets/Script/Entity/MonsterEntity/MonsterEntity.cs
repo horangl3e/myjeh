@@ -9,7 +9,7 @@ public class MonsterEntity : Entity
 	protected Dictionary<eFSM_STATE, FsmState<MonsterEntity>> m_FsmStateList = new Dictionary<eFSM_STATE, FsmState<MonsterEntity>>();
 	
 	
-	void Awake()
+	void Start()
 	{	
         SetType(eENTITY_TYPE.MONSTER);         
 

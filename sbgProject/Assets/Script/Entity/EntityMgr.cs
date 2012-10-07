@@ -278,6 +278,12 @@ public class EntityMgr : MonoBehaviour
 		_data.sCurPosition = new Vector3( 0.0f, 0.0f, 5.0f );
 		_data.fCurRotate = 180.0f;
 		CreateMonsterEntity( _data );
+		
+		_data.nIdx = 2;
+		_data.nTableIdx = 2;
+		_data.sCurPosition = new Vector3( 10.0f, 0.0f, 5.0f );
+		_data.fCurRotate = 0.0f;
+		CreateMonsterEntity( _data );
 	}
 	
 	// Update is called once per frame
