@@ -77,6 +77,8 @@
      <Compile Include="Assets\Script\Scene\PlayScene.cs" />
      <Compile Include="Assets\Script\Scene\SceneBase.cs" />
      <Compile Include="Assets\Script\Scene\SceneMgr.cs" />
+     <Compile Include="Assets\Script\Sound\AsSoundObject.cs" />
+     <Compile Include="Assets\Script\Sound\SoundMgr.cs" />
      <Compile Include="Assets\Script\Util\FPSCounter.cs" />
      <Compile Include="Assets\Script\Util\XMLReader.cs" />
      <Compile Include="Assets\Test\CSharpTestDriver.cs" />
@@ -87,6 +89,7 @@
      <Compile Include="Assets\Test\Test_ItemMgr.cs" />
      <Compile Include="Assets\Test\Test_ItemTableData.cs" />
      <Compile Include="Assets\Test\Test_XMLReader.cs" />
+     <Compile Include="Assets\Test\test.cs" />
      <None Include="Assets\Resources\Table\MonsterEntityTable.xml" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLite.LICENSE.txt" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLiteUnityRunner.README.txt" />
