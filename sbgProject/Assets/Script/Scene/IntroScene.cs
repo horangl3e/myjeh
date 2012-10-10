@@ -1,7 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-public class IntroScene : SceneBase {
+public class IntroScene : SceneBase 
+{
+	
+	private float m_fTime = 0.0f;
+	private float m_fMaxTime = 2.0f;
 	
 	public IntroScene()
 		:base(SceneBase.eSCENE_STATE.INTRO)
@@ -13,7 +17,11 @@ public class IntroScene : SceneBase {
 	}
 	public override void UpdateState()
 	{
-		
+		m_fTime += Time.deltaTime;
+		if( m_fMaxTime <= m_fTime )
+		{
+			SceneMgr.Instance.SetState( SceneBase.eSCENE_STATE.MAIN );
+		}
 	}
 	public override void EndState()
 	{
@@ -21,7 +29,7 @@ public class IntroScene : SceneBase {
 	
 	public override void InputUpdate( InputMgr.eINPUT_EVENT eInputEvent, Ray ray )
 	{	
-		if( InputMgr.eINPUT_EVENT.DOWN == eInputEvent )
+		/*if( InputMgr.eINPUT_EVENT.DOWN == eInputEvent )
 		{
 			MonsterEntity mob = EntityMgr.Instance.GetMonsterEntity( 1 );
 			if( null != mob )
@@ -36,15 +44,15 @@ public class IntroScene : SceneBase {
 								
 				}				
 			}
-		}
+		}*/
 	}
 	
 	public override void GuiInputUpdata( InputMgr.eINPUT_EVENT eInputEvent, Ray ray )
 	{
-		if( InputMgr.eINPUT_EVENT.DOWN == eInputEvent )
+		/*if( InputMgr.eINPUT_EVENT.DOWN == eInputEvent )
 		{
 			SceneMgr.Instance.SetState( SceneBase.eSCENE_STATE.MAIN );		
-		}
+		}*/
 	}
 	
 }

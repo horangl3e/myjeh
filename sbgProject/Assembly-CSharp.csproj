@@ -76,6 +76,7 @@
      <Compile Include="Assets\Script\Network\Protocol\NetworkPacketHeader.cs" />
      <Compile Include="Assets\Script\Network\Protocol\Protocal.cs" />
      <Compile Include="Assets\Script\Network\Protocol\Protocal_Common.cs" />
+     <Compile Include="Assets\Script\Network\Protocol\Protocal_Game.cs" />
      <Compile Include="Assets\Script\Scene\IntroScene.cs" />
      <Compile Include="Assets\Script\Scene\MainScene.cs" />
      <Compile Include="Assets\Script\Scene\PlayScene.cs" />
@@ -83,6 +84,7 @@
      <Compile Include="Assets\Script\Scene\SceneMgr.cs" />
      <Compile Include="Assets\Script\Sound\AsSoundObject.cs" />
      <Compile Include="Assets\Script\Sound\SoundMgr.cs" />
+     <Compile Include="Assets\Script\Terrain\WidthScrollCamera.cs" />
      <Compile Include="Assets\Script\Util\FPSCounter.cs" />
      <Compile Include="Assets\Script\Util\XMLReader.cs" />
      <Compile Include="Assets\Test\CSharpTestDriver.cs" />
