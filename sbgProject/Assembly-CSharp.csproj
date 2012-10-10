@@ -44,6 +44,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Lib\K2DFrameWork\Script\K2DSprite.cs" />
+     <Compile Include="Assets\Lib\K2DFrameWork\Script\K2DSpriteAnimation.cs" />
+     <Compile Include="Assets\Lib\K2DFrameWork\Script\K2DSpriteUVMove.cs" />
+     <Compile Include="Assets\Lib\K2DFrameWork\Script\K2DView.cs" />
      <Compile Include="Assets\Script\Entity\Component\Animator.cs" />
      <Compile Include="Assets\Script\Entity\Component\Animator2D.cs" />
      <Compile Include="Assets\Script\Entity\Component\Animator3D.cs" />
