@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-
+[AddComponentMenu( "2D/K2DSpriteUVMove" )]
 public class K2DSpriteUVMove : K2DSprite
 {	
 	public Vector2 moveSpeed = Vector2.zero;

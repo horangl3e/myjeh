@@ -9,6 +9,8 @@ public abstract class SceneBase
 		INTRO,
 		MAIN,	
 		PLAY,
+		ACTION,
+		BOOK
 	}
 	
 	private eSCENE_STATE m_eSceneState = eSCENE_STATE.NONE;

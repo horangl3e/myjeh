@@ -14,7 +14,7 @@ public enum SpriteUV
 }
 
 
-
+[AddComponentMenu( "2D/K2DSprite" )]
 public class K2DSprite : MonoBehaviour 
 {
 	//---------------------------------------------------------------------
@@ -151,7 +151,7 @@ public class K2DSprite : MonoBehaviour
 	
 	
 	private void ResetMeshVertices()
-	{
+	{				
 		float pixelPerWorldUnit = Camera.mainCamera.orthographicSize * 2f / K2DView.defCameraPixels;
 		
 		if( SpriteOrientation.MiddleCenter == spriteOrientation )	

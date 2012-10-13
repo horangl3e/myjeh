@@ -2,7 +2,7 @@
 <EntityTable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Entity>
 		<Index>1</Index>
-		<ModelPath>Entity/Monster/Player</ModelPath>			
+		<ModelPath>Entity/Player/testUser/Player</ModelPath>			
 	</Entity>
 	<Entity>
 		<Index>2</Index>

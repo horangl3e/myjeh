@@ -111,7 +111,9 @@ public class SceneMgr : MonoBehaviour
 		
 		m_SceneList.Add( SceneBase.eSCENE_STATE.INTRO, new IntroScene() );
 		m_SceneList.Add( SceneBase.eSCENE_STATE.MAIN, new MainScene() );				
-		m_SceneList.Add( SceneBase.eSCENE_STATE.PLAY, new PlayScene() );				
+		m_SceneList.Add( SceneBase.eSCENE_STATE.PLAY, new PlayScene() );	
+		m_SceneList.Add( SceneBase.eSCENE_STATE.ACTION, new ActionScene() );		
+		m_SceneList.Add( SceneBase.eSCENE_STATE.BOOK, new BookScene() );		
 	}	
 		
 	void Start () 

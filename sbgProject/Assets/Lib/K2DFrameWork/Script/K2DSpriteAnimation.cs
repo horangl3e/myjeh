@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+
 [System.Serializable]
 public class K2DFrame
 {
@@ -97,7 +98,7 @@ public class K2DFrame
 	}
 }
 
-
+[AddComponentMenu( "2D/K2DSpriteAnimation" )]
 public class K2DSpriteAnimation : K2DSprite
 {
 	public float speed;

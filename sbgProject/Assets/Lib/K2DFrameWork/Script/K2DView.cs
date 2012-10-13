@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 
+[AddComponentMenu( "2D/K2DView" )]
 [ExecuteInEditMode]
 public class K2DView : MonoBehaviour 
 {
