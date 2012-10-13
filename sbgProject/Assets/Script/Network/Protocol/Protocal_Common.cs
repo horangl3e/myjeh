@@ -48,3 +48,22 @@ public class cSC_MONSTER_APPEAR : PacketHeader
     public cSC_MONSTER_APPEAR_DATA[] datas = null;
 }
 
+
+public class cSC_USER_APPEAR_DATA : PacketHeader
+{
+	public static int size = 48 + 4;
+
+    public Int32 nIdx;
+    public Int32 nTableIdx;	
+
+    public Vector3 sCurPosition;
+	public float fCurRotate;   
+}
+
+
+public class cSC_USER_APPEAR : PacketHeader
+{
+	public Int32 nCnt;
+    public cSC_USER_APPEAR_DATA[] datas = null;
+}
+

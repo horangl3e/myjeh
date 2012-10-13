@@ -29,6 +29,7 @@ public abstract class Entity : MonoBehaviour
     private eENTITY_TYPE m_eEntityType;
 	private EntityData m_EntityData;
 	private float m_fMoveSpeed;
+	private int m_iIndex = 0;
 	
 	
 	//-------------------------------------------------------------------------------------
@@ -115,6 +116,13 @@ public abstract class Entity : MonoBehaviour
 	}
 
 		
+	public int getIndex
+	{
+		get
+		{
+			return m_iIndex;
+		}
+	}
 	
 	
 	
@@ -140,23 +148,15 @@ public abstract class Entity : MonoBehaviour
 	
 	}
 	
-	
-	
-	
-	
-	public virtual bool Create( cSC_MONSTER_APPEAR_DATA data )
-	{		
-		EntityData _entitydata = EntityMgr.Instance.GetEntityData( data.nTableIdx );
+	public virtual bool Create( int iIndex, EntityData _entitydata, Vector3 sCurPosition, float fCurRotate )
+	{				
 		if( null == _entitydata )
 		{
-			Debug.LogError("Entity::Create() [ null==_entityData] index: " + data.nTableIdx );
+			Debug.LogError("Entity::Create() [ null==_entityData] index: " + iIndex );
 			return false;			
 		}
 		
-		m_Model = gameObject.AddComponent<Model>();
-		if( false == m_Model.Create( _entitydata.strModelPath ) )
-			return false;
-		
+		m_Model = gameObject.AddComponent<Model>();		
 		
 		m_Animator = gameObject.GetComponentInChildren<Animator3D>();
 		if( null == m_Animator )
@@ -166,7 +166,7 @@ public abstract class Entity : MonoBehaviour
 		
 		if( null == m_Animator ||  false == m_Animator.Create( this ) )
 		{
-			Debug.LogError("Entity::Create() [ null == m_Animator.Create() ] entity table id : " + data.nTableIdx );
+			Debug.LogError("Entity::Create() [ null == m_Animator.Create() ] index : " + iIndex );
 			return false;
 		}
 				
@@ -175,16 +175,18 @@ public abstract class Entity : MonoBehaviour
 		m_Mover = gameObject.AddComponent<Mover>();
 		if( false == m_Mover.Create( this ) )
 		{
-			Debug.LogError("Entity::Create() [null == m_Mover.Create()] entity table id : " + data.nTableIdx );
+			Debug.LogError("Entity::Create() [null == m_Mover.Create()] index: " + iIndex );
 			return false;
 		}
 		
+		m_iIndex = iIndex;
 		m_EntityData = _entitydata;		
-		m_Mover.SetPosition( data.sCurPosition );
-		m_Mover.SetRot( data.fCurRotate );
+		m_Mover.SetPosition( sCurPosition );
+		m_Mover.SetRot( fCurRotate );
 		
 		return true;
-	}
+	} 
+		
 	
 	
 	public virtual void Create2D( EntityData data, Vector3 vec3Pos, float fRotY )

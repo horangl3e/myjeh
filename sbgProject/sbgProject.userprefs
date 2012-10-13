@@ -1,18 +1,25 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Network\Protocol\Protocal_Game.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Util\ResourceComm.cs">
     <Files>
       <File FileName="Assets\Resources\Table\EntityTable.xml" Line="9" Column="23" />
       <File FileName="Assets\Script\Entity\Component\Animator2D.cs" Line="7" Column="3" />
-      <File FileName="Assets\Script\Entity\Entity.cs" Line="169" Column="1" />
-      <File FileName="Assets\Script\Entity\EntityMgr.cs" Line="234" Column="44" />
-      <File FileName="Assets\Script\Terrain\WidthScrollCamera.cs" Line="7" Column="33" />
+      <File FileName="Assets\Script\Entity\Entity.cs" Line="150" Column="2" />
+      <File FileName="Assets\Script\Entity\EntityMgr.cs" Line="270" Column="15" />
+      <File FileName="Assets\Script\Terrain\WidthScrollCamera.cs" Line="4" Column="31" />
       <File FileName="Assets\Lib\K2DFrameWork\Script\K2DView.cs" Line="41" Column="24" />
-      <File FileName="Assets\Script\Event\EventMgr.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Scene\IntroScene.cs" Line="20" Column="10" />
-      <File FileName="Assets\Script\Scene\MainScene.cs" Line="15" Column="28" />
-      <File FileName="Assets\Script\Network\Protocol\Protocal_Common.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Network\Protocol\Protocal_Game.cs" Line="5" Column="26" />
+      <File FileName="Assets\Script\Scene\IntroScene.cs" Line="28" Column="3" />
+      <File FileName="Assets\Script\Scene\MainScene.cs" Line="13" Column="28" />
+      <File FileName="Assets\Script\Network\Protocol\Protocal_Common.cs" Line="54" Column="24" />
+      <File FileName="Assets\Script\Network\Protocol\Protocal_Game.cs" Line="14" Column="47" />
+      <File FileName="Assets\Script\Entity\UserEntity\UserEntity.cs" Line="37" Column="4" />
+      <File FileName="Assets\Script\Entity\MonsterEntity\MonsterEntity.cs" Line="32" Column="26" />
+      <File FileName="Assets\Script\Entity\Component\Model.cs" Line="8" Column="1" />
+      <File FileName="Assets\Script\Util\ResourceComm.cs" Line="35" Column="15" />
+      <File FileName="Assets\Script\Entity\Data\EntityData.cs" Line="12" Column="23" />
+      <File FileName="Assets\Script\Entity\Component\Animator.cs" Line="17" Column="22" />
+      <File FileName="Assets\Script\Entity\Component\Animator3D.cs" Line="20" Column="17" />
+      <File FileName="Assets\Script\Network\Protocol\NetworkPacketHeader.cs" Line="454" Column="16" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,18 +31,20 @@
                   <Node name="Script" expanded="True" />
                 </Node>
               </Node>
-              <Node name="Resources" expanded="True">
-                <Node name="Table" expanded="True" />
-              </Node>
               <Node name="Script" expanded="True">
-                <Node name="Entity" expanded="True" />
+                <Node name="Entity" expanded="True">
+                  <Node name="Component" expanded="True" />
+                  <Node name="Data" expanded="True" />
+                  <Node name="MonsterEntity" expanded="True" />
+                  <Node name="UserEntity" expanded="True" />
+                </Node>
                 <Node name="Network" expanded="True">
-                  <Node name="Protocol" expanded="True">
-                    <Node name="Protocal_Game.cs" selected="True" />
-                  </Node>
+                  <Node name="Protocol" expanded="True" />
                 </Node>
                 <Node name="Scene" expanded="True" />
-                <Node name="Terrain" expanded="True" />
+                <Node name="Util" expanded="True">
+                  <Node name="ResourceComm.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>

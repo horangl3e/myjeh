@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_3_5_1;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_WIN;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_WEBCAM;ENABLE_MICROPHONE;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW;ENABLE_SUBSTANCE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_5_3;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_WIN;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_WEBCAM;ENABLE_MICROPHONE;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW;ENABLE_SUBSTANCE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -73,10 +73,12 @@
      <Compile Include="Assets\Script\Item\Item.cs" />
      <Compile Include="Assets\Script\Item\ItemData.cs" />
      <Compile Include="Assets\Script\Item\ItemMgr.cs" />
+     <Compile Include="Assets\Script\Network\Process\GameProcess.cs" />
      <Compile Include="Assets\Script\Network\Protocol\NetworkPacketHeader.cs" />
      <Compile Include="Assets\Script\Network\Protocol\Protocal.cs" />
      <Compile Include="Assets\Script\Network\Protocol\Protocal_Common.cs" />
      <Compile Include="Assets\Script\Network\Protocol\Protocal_Game.cs" />
+     <Compile Include="Assets\Script\Network\Sender\GameSender.cs" />
      <Compile Include="Assets\Script\Scene\IntroScene.cs" />
      <Compile Include="Assets\Script\Scene\MainScene.cs" />
      <Compile Include="Assets\Script\Scene\PlayScene.cs" />
@@ -86,6 +88,7 @@
      <Compile Include="Assets\Script\Sound\SoundMgr.cs" />
      <Compile Include="Assets\Script\Terrain\WidthScrollCamera.cs" />
      <Compile Include="Assets\Script\Util\FPSCounter.cs" />
+     <Compile Include="Assets\Script\Util\ResourceComm.cs" />
      <Compile Include="Assets\Script\Util\XMLReader.cs" />
      <Compile Include="Assets\Test\CSharpTestDriver.cs" />
      <Compile Include="Assets\Test\SomeCSharpTests.cs" />

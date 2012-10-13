@@ -233,28 +233,44 @@ public class EntityMgr : MonoBehaviour
 	// create
 	public MonsterEntity CreateMonsterEntity( cSC_MONSTER_APPEAR_DATA data )
 	{
-		if( null == m_EntityParent )
-		{
-			m_EntityParent = new GameObject();			
-			if( null == m_EntityParent ) 
-			{
-				Debug.LogError("EntityMgr::CreateMonsterEntity() [ m_EntityParent == null ]");
-				return null;
-			}
-			m_EntityParent.name = "entitys";
-		}	
-		
-		GameObject goCreateObject = new GameObject();
-		goCreateObject.name = "Monster_" + data.nIdx;
-		goCreateObject.transform.parent = m_EntityParent.transform;
-		MonsterEntity _mobEntity = goCreateObject.AddComponent<MonsterEntity>();
-		
-		if( false == _mobEntity.Create( data ) )			
-			return null;
-		
+		if( false == CheckEntityParent() )
+			return null;	
+	
+		MonsterEntity _mobEntity = MonsterEntity.CreateMonsterEntity( data, m_EntityParent.transform );
+		if( null == _mobEntity)
+			return null;	
 		
 		m_EntityList.Add( data.nIdx, _mobEntity );		
 		return _mobEntity;	
+	}
+	
+	private bool CheckEntityParent()
+	{
+		if( null != m_EntityParent )
+			return true;
+		
+		m_EntityParent = new GameObject();			
+		if( null == m_EntityParent ) 
+		{
+			Debug.LogError("EntityMgr::CreateMonsterEntity() [ m_EntityParent == null ]");
+			return false;
+		}
+		m_EntityParent.name = "entitys";
+		
+		return true;
+	}
+	
+	public UserEntity CreatePlayerEntity( cSC_USER_APPEAR_DATA data )
+	{
+		if( false == CheckEntityParent() )
+			return null;
+		
+		UserEntity _playerEntity = UserEntity.CreatePlayerEntity( data, m_EntityParent.transform );
+		if( null == _playerEntity)
+			return null;	
+		
+		m_EntityList.Add( data.nIdx, _playerEntity );		
+		return _playerEntity;		
 	}
 	
 	

@@ -9,6 +9,35 @@ public class MonsterEntity : Entity
 	protected Dictionary<eFSM_STATE, FsmState<MonsterEntity>> m_FsmStateList = new Dictionary<eFSM_STATE, FsmState<MonsterEntity>>();
 	
 	
+	static public MonsterEntity CreateMonsterEntity( cSC_MONSTER_APPEAR_DATA _data, Transform trsParent )
+	{		
+		EntityData _entitydata = EntityMgr.Instance.GetEntityData( _data.nTableIdx );
+		if( null == _entitydata )
+		{
+			Debug.LogError("MonsterEntity::Create() [ null==_entityData] index: " + _data.nTableIdx );
+			return null;			
+		}		  
+		 
+				
+		GameObject goCreateObject = ResourceComm.CreateGameObject( _entitydata.strModelPath, trsParent );
+		if( null == goCreateObject )
+		{
+			Debug.LogError("MonsterEntity::Create() [ null == goCreateObject ] index: " + _data.nTableIdx );
+			return null;
+		}
+		
+					
+		goCreateObject.name = "Monster_" + _data.nIdx;		
+		MonsterEntity _mobEntity = goCreateObject.AddComponent<MonsterEntity>();		
+		if( false == _mobEntity.Create( _data.nIdx, _entitydata, _data.sCurPosition, _data.fCurRotate ) )			
+		{
+			Debug.LogError("UserEntity::Create() [ false == _userEntity.Create() ] table index: " + _data.nTableIdx);
+			return null;
+		}
+		
+		return _mobEntity;
+	}
+	
 	void Start()
 	{	
         SetType(eENTITY_TYPE.MONSTER);         
