@@ -233,9 +233,6 @@ public class EntityMgr : MonoBehaviour
 	// create
 	public MonsterEntity CreateMonsterEntity( cSC_MONSTER_APPEAR_DATA data )
 	{
-		if( false == CheckEntityParent() )
-			return null;	
-	
 		MonsterEntity _mobEntity = MonsterEntity.CreateMonsterEntity( data, m_EntityParent.transform );
 		if( null == _mobEntity)
 			return null;	
@@ -244,26 +241,9 @@ public class EntityMgr : MonoBehaviour
 		return _mobEntity;	
 	}
 	
-	private bool CheckEntityParent()
-	{
-		if( null != m_EntityParent )
-			return true;
-		
-		m_EntityParent = new GameObject();			
-		if( null == m_EntityParent ) 
-		{
-			Debug.LogError("EntityMgr::CreateMonsterEntity() [ m_EntityParent == null ]");
-			return false;
-		}
-		m_EntityParent.name = "entitys";
-		
-		return true;
-	}
 	
 	public UserEntity CreatePlayerEntity( cSC_USER_APPEAR_DATA data )
 	{
-		if( false == CheckEntityParent() )
-			return null;
 		
 		UserEntity _playerEntity = UserEntity.CreatePlayerEntity( data, m_EntityParent.transform );
 		if( null == _playerEntity)
@@ -279,6 +259,10 @@ public class EntityMgr : MonoBehaviour
 		ms_Instance = this;
 		DontDestroyOnLoad(gameObject);	
 	
+		m_EntityParent = new GameObject();		
+		m_EntityParent.name = "entitys";
+		DontDestroyOnLoad(m_EntityParent);
+		
 	
 		ReadEntityData(entityTable);
 		ReadUserEntityData(userEntityTable);
