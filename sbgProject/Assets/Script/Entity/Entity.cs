@@ -148,7 +148,7 @@ public abstract class Entity : MonoBehaviour
 	
 	}
 	
-	public virtual bool Create( int iIndex, EntityData _entitydata, Vector3 sCurPosition, float fCurRotate )
+	public virtual bool Create( int iIndex, EntityData _entitydata, Vector3 sCurPosition, Vector2 sCurSize, float fCurRotate )
 	{				
 		if( null == _entitydata )
 		{
@@ -180,7 +180,8 @@ public abstract class Entity : MonoBehaviour
 		}
 		
 		m_iIndex = iIndex;
-		m_EntityData = _entitydata;		
+		m_EntityData = _entitydata;	
+		transform.localScale = sCurSize;
 		m_Mover.SetPosition( sCurPosition );
 		m_Mover.SetRot( fCurRotate );
 		

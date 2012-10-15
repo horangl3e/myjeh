@@ -30,7 +30,7 @@ public class UserEntity : Entity
 					
 		goCreateObject.name = "User_" + _data.nIdx;		
 		UserEntity _userEntity = goCreateObject.AddComponent<UserEntity>();		
-		if( false == _userEntity.Create( _data.nIdx, _entitydata, _data.sCurPosition, _data.fCurRotate ) )			
+		if( false == _userEntity.Create( _data.nIdx, _entitydata, _data.sCurPosition, _data.sCurSize, _data.fCurRotate ) )			
 		{
 			Debug.LogError("UserEntity::Create() [ false == _userEntity.Create() ] table index: " + _data.nTableIdx);
 			return null;

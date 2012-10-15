@@ -11,6 +11,25 @@ public class ActionScene : SceneBase {
 	public override void BeginState()
 	{		
 		Application.LoadLevel( "Action" );
+		
+		cSC_USER_APPEAR_DATA _data = new cSC_USER_APPEAR_DATA();
+		_data.nIdx = 1;
+		_data.nTableIdx = 3;
+		_data.sCurPosition = new Vector3( 0.0f, 0.0f, 50.0f );
+		_data.fCurRotate = 180.0f;	
+		_data.sCurSize = Vector3.one;
+		
+		UserEntity player = EntityMgr.Instance.CreatePlayerEntity( _data );
+		
+		cSC_MONSTER_APPEAR_DATA _mobData = new cSC_MONSTER_APPEAR_DATA();
+		_mobData.nIdx = 2;
+		_mobData.nTableIdx = 2;
+		_mobData.sCurPosition = new Vector3( 50.0f, 0.0f, 50.0f );
+		_mobData.fCurRotate = 180.0f;	
+		_mobData.sCurSize = Vector3.one;
+		
+		MonsterEntity Mob = EntityMgr.Instance.CreateMonsterEntity( _mobData );
+		
 	}
 	public override void UpdateState()
 	{		

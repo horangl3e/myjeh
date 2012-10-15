@@ -15,8 +15,9 @@ public class BookScene : SceneBase {
 		cSC_USER_APPEAR_DATA _data = new cSC_USER_APPEAR_DATA();
 		_data.nIdx = 1;
 		_data.nTableIdx = 1;
-		_data.sCurPosition = new Vector3( 0.0f, 0.0f, 5.0f );
-		_data.fCurRotate = 180.0f;			
+		_data.sCurPosition = new Vector3( 0.0f, 0.0f, 50.0f );
+		_data.fCurRotate = 180.0f;	
+		_data.sCurSize = new Vector3( 100f, 100f, 100f );
 		
 		UserEntity player = EntityMgr.Instance.CreatePlayerEntity( _data );
 		WidthScrollCamera.Instance.target = player.gameObject;

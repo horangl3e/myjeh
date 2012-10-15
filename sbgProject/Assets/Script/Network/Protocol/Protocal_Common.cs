@@ -38,6 +38,7 @@ public class cSC_MONSTER_APPEAR_DATA : PacketHeader
     public Int32 nTableIdx;	
 
     public Vector3 sCurPosition;
+	public Vector3 sCurSize;
 	public float fCurRotate;   
 }
 
@@ -57,6 +58,7 @@ public class cSC_USER_APPEAR_DATA : PacketHeader
     public Int32 nTableIdx;	
 
     public Vector3 sCurPosition;
+	public Vector3 sCurSize;
 	public float fCurRotate;   
 }
 

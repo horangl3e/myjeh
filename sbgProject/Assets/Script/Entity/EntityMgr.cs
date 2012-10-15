@@ -232,7 +232,8 @@ public class EntityMgr : MonoBehaviour
 	
 	// create
 	public MonsterEntity CreateMonsterEntity( cSC_MONSTER_APPEAR_DATA data )
-	{
+	{	
+
 		MonsterEntity _mobEntity = MonsterEntity.CreateMonsterEntity( data, m_EntityParent.transform );
 		if( null == _mobEntity)
 			return null;	
@@ -240,11 +241,10 @@ public class EntityMgr : MonoBehaviour
 		m_EntityList.Add( data.nIdx, _mobEntity );		
 		return _mobEntity;	
 	}
-	
+
 	
 	public UserEntity CreatePlayerEntity( cSC_USER_APPEAR_DATA data )
-	{
-		
+    {
 		UserEntity _playerEntity = UserEntity.CreatePlayerEntity( data, m_EntityParent.transform );
 		if( null == _playerEntity)
 			return null;	
@@ -257,12 +257,11 @@ public class EntityMgr : MonoBehaviour
 	void Awake()
 	{
 		ms_Instance = this;
-		DontDestroyOnLoad(gameObject);	
+		DontDestroyOnLoad(gameObject);		
 	
 		m_EntityParent = new GameObject();		
 		m_EntityParent.name = "entitys";
-		DontDestroyOnLoad(m_EntityParent);
-		
+		DontDestroyOnLoad(m_EntityParent);		
 	
 		ReadEntityData(entityTable);
 		ReadUserEntityData(userEntityTable);

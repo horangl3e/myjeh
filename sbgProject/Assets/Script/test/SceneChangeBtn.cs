@@ -32,7 +32,7 @@ public class SceneChangeBtn : MonoBehaviour
 					SceneMgr.Instance.SetState( SceneBase.eSCENE_STATE.BOOK );
 					break;
 					
-				case 2:
+				case 1:
 					SceneMgr.Instance.SetState( SceneBase.eSCENE_STATE.ACTION );
 					break;
 				}			
