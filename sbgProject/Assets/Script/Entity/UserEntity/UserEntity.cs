@@ -6,7 +6,7 @@ public class UserEntity : Entity
 {
 	
 	protected FsmState<UserEntity> m_CurFsmState; 	
-	protected Dictionary<eFSM_STATE, FsmState<UserEntity>> m_FsmState = new Dictionary<eFSM_STATE, FsmState<UserEntity>>(); 
+	protected Dictionary<eFSM_STATE, FsmState<UserEntity>> m_FsmStateList = new Dictionary<eFSM_STATE, FsmState<UserEntity>>(); 
 	
 	
 	
@@ -30,7 +30,7 @@ public class UserEntity : Entity
 					
 		goCreateObject.name = "User_" + _data.nIdx;		
 		UserEntity _userEntity = goCreateObject.AddComponent<UserEntity>();		
-		if( false == _userEntity.Create( _data.nIdx, _entitydata, _data.sCurPosition, _data.sCurSize, _data.fCurRotate ) )			
+		if( false == _userEntity.Create( _data.nIdx, _entitydata, _data.sCurPosition, _data.sCurSize, _data.fCurRotate, _data.fMoveSpeed ) )			
 		{
 			Debug.LogError("UserEntity::Create() [ false == _userEntity.Create() ] table index: " + _data.nTableIdx);
 			return null;
@@ -51,11 +51,20 @@ public class UserEntity : Entity
 	}
 	
 	
+	void Start()
+	{	
+        SetType(eENTITY_TYPE.USER);         
+
+		m_FsmStateList.Add( eFSM_STATE.IDEL, new UserEntityFsm_Idle( eFSM_STATE.IDEL, this ) );		
+		m_FsmStateList.Add( eFSM_STATE.WALK, new UserEntityFsm_Walk( eFSM_STATE.WALK, this) );	
+		SetState( eFSM_STATE.IDEL );
+	}
+	
 	
 	// Set State
 	public override void SetState( eFSM_STATE state )
 	{
-		if( false == m_FsmState.ContainsKey( state ) )
+		if( false == m_FsmStateList.ContainsKey( state ) )
 		{
 			Debug.LogError("UserEntity::SetState() [false == m_FsmState.ContainsKey( iState ) state : " + state );
 			return;			
@@ -69,10 +78,18 @@ public class UserEntity : Entity
 			m_CurFsmState.EndState();
 		}
 		
-		m_CurFsmState = m_FsmState[state];
+		m_CurFsmState = m_FsmStateList[state];
 		m_CurFsmState.BeginState();	
 		
 		viewFsmState = m_CurFsmState.fsmState;
+	}
+	
+	public override void SetMsg( EntityMsg _msg )
+	{
+		base.SetMsg( _msg );
+		
+		if( null != m_CurFsmState )
+			m_CurFsmState.SetMsg( _msg );
 	}
 	
 	// get fsm state

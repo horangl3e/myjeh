@@ -44,7 +44,7 @@ public abstract class Entity : MonoBehaviour
 		}
 	}
 	
-	protected Mover mover
+	public Mover mover
 	{
 		get
 		{
@@ -148,7 +148,7 @@ public abstract class Entity : MonoBehaviour
 	
 	}
 	
-	public virtual bool Create( int iIndex, EntityData _entitydata, Vector3 sCurPosition, Vector2 sCurSize, float fCurRotate )
+	public virtual bool Create( int iIndex, EntityData _entitydata, Vector3 sCurPosition, Vector3 sCurSize, float fCurRotate, float fMoveSpeed )
 	{				
 		if( null == _entitydata )
 		{
@@ -184,7 +184,7 @@ public abstract class Entity : MonoBehaviour
 		transform.localScale = sCurSize;
 		m_Mover.SetPosition( sCurPosition );
 		m_Mover.SetRot( fCurRotate );
-		
+		m_fMoveSpeed = fMoveSpeed;		
 		return true;
 	} 
 		

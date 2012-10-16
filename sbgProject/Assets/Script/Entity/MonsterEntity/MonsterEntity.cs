@@ -29,7 +29,7 @@ public class MonsterEntity : Entity
 					
 		goCreateObject.name = "Monster_" + _data.nIdx;		
 		MonsterEntity _mobEntity = goCreateObject.AddComponent<MonsterEntity>();		
-		if( false == _mobEntity.Create( _data.nIdx, _entitydata, _data.sCurPosition, _data.sCurSize, _data.fCurRotate ) )			
+		if( false == _mobEntity.Create( _data.nIdx, _entitydata, _data.sCurPosition, _data.sCurSize, _data.fCurRotate, _data.fMoveSpeed ) )			
 		{
 			Debug.LogError("UserEntity::Create() [ false == _userEntity.Create() ] table index: " + _data.nTableIdx);
 			return null;

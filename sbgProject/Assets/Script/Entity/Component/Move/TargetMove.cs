@@ -23,7 +23,7 @@ public class TargetMove : Move
 			return false;
 		} 
 
-        m_vec3TargetPos = targetMove.targetPos;
+        m_vec3TargetPos = targetMove.targetPos;		
 		return true;
 	}
 	

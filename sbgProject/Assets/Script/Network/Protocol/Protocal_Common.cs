@@ -40,6 +40,7 @@ public class cSC_MONSTER_APPEAR_DATA : PacketHeader
     public Vector3 sCurPosition;
 	public Vector3 sCurSize;
 	public float fCurRotate;   
+	public float fMoveSpeed;
 }
 
 
@@ -60,6 +61,7 @@ public class cSC_USER_APPEAR_DATA : PacketHeader
     public Vector3 sCurPosition;
 	public Vector3 sCurSize;
 	public float fCurRotate;   
+	public float fMoveSpeed;
 }
 
 

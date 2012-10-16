@@ -66,6 +66,8 @@
      <Compile Include="Assets\Script\Entity\MonsterEntity\MonsterFsm_Walk.cs" />
      <Compile Include="Assets\Script\Entity\Msg\EntityMsg.cs" />
      <Compile Include="Assets\Script\Entity\UserEntity\UserEntity.cs" />
+     <Compile Include="Assets\Script\Entity\UserEntity\UserEntityFsm_Idle.cs" />
+     <Compile Include="Assets\Script\Entity\UserEntity\UserEntityFsm_Walk.cs" />
      <Compile Include="Assets\Script\Event\EventBase.cs" />
      <Compile Include="Assets\Script\Event\EventMgr.cs" />
      <Compile Include="Assets\Script\Input\InputMgr.cs" />

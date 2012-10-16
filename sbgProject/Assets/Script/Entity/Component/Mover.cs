@@ -48,7 +48,13 @@ public class Mover : MonoBehaviour
 	public void MovePosition( Vector3 pos )
 	{
 		if( null != m_CharCtrl )
+		{
 			m_CharCtrl.SimpleMove( pos );
+		}
+		else
+		{
+			transform.position += pos;
+		}
 	}
 	
 	public void SetRot( float fRot )

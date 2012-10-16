@@ -19,7 +19,7 @@ public class ActionScene : SceneBase {
 		_data.fCurRotate = 180.0f;	
 		_data.sCurSize = Vector3.one;
 		
-		UserEntity player = EntityMgr.Instance.CreatePlayerEntity( _data );
+		/*UserEntity player = */EntityMgr.Instance.CreatePlayerEntity( _data );
 		
 		cSC_MONSTER_APPEAR_DATA _mobData = new cSC_MONSTER_APPEAR_DATA();
 		_mobData.nIdx = 2;
@@ -28,7 +28,7 @@ public class ActionScene : SceneBase {
 		_mobData.fCurRotate = 180.0f;	
 		_mobData.sCurSize = Vector3.one;
 		
-		MonsterEntity Mob = EntityMgr.Instance.CreateMonsterEntity( _mobData );
+		/*MonsterEntity Mob = */EntityMgr.Instance.CreateMonsterEntity( _mobData );
 		
 	}
 	public override void UpdateState()
