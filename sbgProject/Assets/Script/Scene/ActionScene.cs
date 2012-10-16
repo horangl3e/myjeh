@@ -30,6 +30,12 @@ public class ActionScene : SceneBase {
 		
 		/*MonsterEntity Mob = */EntityMgr.Instance.CreateMonsterEntity( _mobData );
 		
+		K2DView view = InputMgr.Instance.playCamera.gameObject.GetComponent<K2DView>();
+		if( null != view )
+		{
+			view.enabled = false;
+		}
+		InputMgr.Instance.playCamera.orthographic = false;
 	}
 	public override void UpdateState()
 	{		

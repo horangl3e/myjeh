@@ -11,7 +11,7 @@ public class UserEntityFsm_Walk : FsmState<UserEntity>
 	
 	public override void BeginState()
 	{
-		ownerEntity.SetMsg( new Msg_AnimationPlay("run_backward") );
+		ownerEntity.SetMsg( new Msg_AnimationPlay("walk") );
 	}
 	public override void UpdateState()
 	{

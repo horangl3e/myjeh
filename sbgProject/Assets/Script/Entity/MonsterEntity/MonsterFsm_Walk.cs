@@ -11,7 +11,7 @@ public class MonsterFsm_Walk : FsmState<MonsterEntity>
 	
 	public override void BeginState()
 	{
-		ownerEntity.SetMsg( new Msg_AnimationPlay("run_forward") );
+		ownerEntity.SetMsg( new Msg_AnimationPlay("walk") );
 	}
 	public override void UpdateState()
 	{
