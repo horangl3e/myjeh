@@ -1,21 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Entity\UserEntity\UserEntity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Terrain\WidthScrollCamera.cs">
     <Files>
       <File FileName="Assets\Resources\Table\EntityTable.xml" Line="13" Column="45" />
       <File FileName="Assets\Script\Entity\Component\Animator2D.cs" Line="7" Column="3" />
-      <File FileName="Assets\Script\Entity\Entity.cs" Line="203" Column="23" />
-      <File FileName="Assets\Script\Entity\EntityMgr.cs" Line="234" Column="23" />
-      <File FileName="Assets\Script\Terrain\WidthScrollCamera.cs" Line="28" Column="3" />
+      <File FileName="Assets\Script\Entity\Entity.cs" Line="156" Column="18" />
+      <File FileName="Assets\Script\Entity\EntityMgr.cs" Line="248" Column="51" />
+      <File FileName="Assets\Script\Terrain\WidthScrollCamera.cs" Line="39" Column="1" />
       <File FileName="Assets\Lib\K2DFrameWork\Script\K2DView.cs" Line="5" Column="31" />
       <File FileName="Assets\Script\Scene\IntroScene.cs" Line="31" Column="3" />
       <File FileName="Assets\Script\Scene\MainScene.cs" Line="37" Column="15" />
-      <File FileName="Assets\Script\Network\Protocol\Protocal_Common.cs" Line="33" Column="37" />
+      <File FileName="Assets\Script\Network\Protocol\Protocal_Common.cs" Line="43" Column="26" />
       <File FileName="Assets\Script\Network\Protocol\Protocal_Game.cs" Line="14" Column="47" />
-      <File FileName="Assets\Script\Entity\UserEntity\UserEntity.cs" Line="14" Column="5" />
-      <File FileName="Assets\Script\Entity\MonsterEntity\MonsterEntity.cs" Line="32" Column="96" />
+      <File FileName="Assets\Script\Entity\UserEntity\UserEntity.cs" Line="93" Column="3" />
+      <File FileName="Assets\Script\Entity\MonsterEntity\MonsterEntity.cs" Line="91" Column="3" />
       <File FileName="Assets\Script\Entity\Component\Model.cs" Line="8" Column="1" />
-      <File FileName="Assets\Script\Util\ResourceComm.cs" Line="35" Column="15" />
+      <File FileName="Assets\Script\Util\ResourceComm.cs" Line="7" Column="27" />
       <File FileName="Assets\Script\Entity\Data\EntityData.cs" Line="12" Column="23" />
       <File FileName="Assets\Script\Entity\Component\Animator.cs" Line="17" Column="22" />
       <File FileName="Assets\Script\Entity\Component\Animator3D.cs" Line="20" Column="17" />
@@ -27,29 +27,22 @@
       <File FileName="Assets\Script\Scene\SceneBase.cs" Line="13" Column="7" />
       <File FileName="Assets\Script\Scene\PlayScene.cs" Line="10" Column="2" />
       <File FileName="Assets\Script\Scene\ActionScene.cs" Line="3" Column="1" />
-      <File FileName="Assets\Script\Scene\BookScene.cs" Line="47" Column="18" />
+      <File FileName="Assets\Script\Scene\BookScene.cs" Line="38" Column="3" />
       <File FileName="Assets\Script\Scene\SceneMgr.cs" Line="64" Column="1" />
       <File FileName="Assets\Script\Input\InputMgr.cs" Line="112" Column="23" />
       <File FileName="Assets\Resources\Table\MonsterEntityTable.xml" Line="9" Column="9" />
+      <File FileName="Assets\Script\Entity\UserEntity\UserEntityFsm_Idle.cs" Line="22" Column="2" />
+      <File FileName="Assets\Script\Entity\MonsterEntity\MonsterFsm_Idle.cs" Line="22" Column="2" />
+      <File FileName="Assets\Script\Entity\UserEntity\UserEntityFsm_Walk.cs" Line="3" Column="1" />
+      <File FileName="Assets\Script\Entity\Component\Mover.cs" Line="107" Column="26" />
+      <File FileName="Assets\Script\Entity\Component\Move\TargetMove.cs" Line="4" Column="32" />
+      <File FileName="Assets\Script\Entity\Component\Move\Move.cs" Line="24" Column="26" />
+      <File FileName="Assets\Script\Entity\MonsterEntity\MonsterFsm_Walk.cs" Line="34" Column="4" />
+      <File FileName="Assets\Script\Entity\Msg\EntityMsg.cs" Line="59" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Script" expanded="True">
-                <Node name="Entity" expanded="True">
-                  <Node name="MonsterEntity" expanded="True" />
-                  <Node name="UserEntity" expanded="True">
-                    <Node name="UserEntity.cs" selected="True" />
-                  </Node>
-                </Node>
-                <Node name="Scene" expanded="True" />
-                <Node name="Terrain" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />
@@ -57,7 +50,9 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="D:\sbg\sbgProject\Assets\Script\Terrain\WidthScrollCamera.cs" line="42" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
