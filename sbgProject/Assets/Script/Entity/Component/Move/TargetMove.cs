@@ -29,22 +29,32 @@ public class TargetMove : Move
 	
 	
 	
-	public override Vector3 GetPos( Vector3 vec3CurPos,  float fMoveSpeed )
+	public override Vector3 GetPos( Vector3 vec3CurPos,  float fMoveSpeed, bool bIgnoreY = false )
 	{				
-        Vector3 vec3TargetPos = m_vec3TargetPos;       
-        Vector3 vec3Direction = (vec3TargetPos - vec3CurPos);
+        Vector3 vec3TargetPos = m_vec3TargetPos;              
+		
+		if( true == bIgnoreY )			
+		{
+			vec3TargetPos.y = 0.0f;	
+			vec3CurPos.y = 0.0f;
+		}
+		
+		Vector3 vec3Direction = (vec3TargetPos - vec3CurPos);
 
 		if( Vector3.zero == vec3Direction )			
 		{
 			m_bMoving = false;
 			return Vector3.zero;
 		}
-
+		
+		if( 0.0f > fMoveSpeed )
+			Debug.LogError("0.0f > fMoveSpeed");
+		
         float fMaxDistance = fMoveSpeed * Time.deltaTime;
         if (fMaxDistance < vec3Direction.magnitude)
         {
 			return vec3Direction.normalized * fMaxDistance;           
-        }
+        }		
        
 		m_bMoving = false;
 		return vec3Direction;         		
@@ -52,6 +62,7 @@ public class TargetMove : Move
 	
 	public override Quaternion GetRot( Quaternion curRot, float fRotSpeed )
 	{
+		
 		return Quaternion.identity;
 	}
 }

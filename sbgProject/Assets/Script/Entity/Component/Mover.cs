@@ -34,6 +34,7 @@ public class Mover : MonoBehaviour
 			return false;
 		}*/
 		
+		
 		return true;
 	}
 	
@@ -114,9 +115,20 @@ public class Mover : MonoBehaviour
 			}
 			
 			if( null != m_CharCtrl )
-				MovePosition( m_CurMove.GetPos( getPosition, curEntity.moveSpeed ) );
+			{
+				Vector3 temp = m_CurMove.GetPos( getPosition, curEntity.moveSpeed, true );
+				temp.y = -1;
+				MovePosition( temp );
+				
+				transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(temp), 20.0f * Time.deltaTime);
+				Vector3 rot = transform.rotation.eulerAngles;
+				rot.x = 0;rot.z = 0;
+				transform.rotation = Quaternion.Euler(rot);
+			}
 			else
+			{
 				SetPosition( getPosition +  m_CurMove.GetPos( getPosition, curEntity.moveSpeed ) );
+			}
 		}
 	}
 	

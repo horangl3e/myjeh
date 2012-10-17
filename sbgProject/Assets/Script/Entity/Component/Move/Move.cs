@@ -21,6 +21,6 @@ public abstract class Move
 		return true;
 	}
    
-	public abstract Vector3 GetPos( Vector3 vec3CurPos,  float fMoveSpeed );
+	public abstract Vector3 GetPos( Vector3 vec3CurPos,  float fMoveSpeed, bool bIgnoreY = false );
 	public abstract Quaternion GetRot( Quaternion curRot, float fRotSpeed ); 
 } 

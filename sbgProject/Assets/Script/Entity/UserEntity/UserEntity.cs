@@ -57,6 +57,7 @@ public class UserEntity : Entity
 
 		m_FsmStateList.Add( eFSM_STATE.IDEL, new UserEntityFsm_Idle( eFSM_STATE.IDEL, this ) );		
 		m_FsmStateList.Add( eFSM_STATE.WALK, new UserEntityFsm_Walk( eFSM_STATE.WALK, this) );	
+		m_FsmStateList.Add( eFSM_STATE.ATTACK, new UserEntityFsm_Attack( eFSM_STATE.ATTACK, this) );
 		SetState( eFSM_STATE.IDEL );
 	}
 	

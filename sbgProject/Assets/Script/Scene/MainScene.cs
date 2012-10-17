@@ -19,12 +19,13 @@ public class MainScene : SceneBase {
 	
 	public override void UpdateState()
 	{
-		if(null == m_btn )
+		/*if(null == m_btn )
 		{
 			GameObject gameTest = GameObject.Find( "background" );
 			if( null != gameTest )
 				m_btn = gameTest.GetComponentInChildren<SceneChangeBtn>();
-		}
+		}*/
+		SceneMgr.Instance.SetState( SceneBase.eSCENE_STATE.ACTION );
 	}
 	
 	public override void EndState()

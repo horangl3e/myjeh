@@ -5,7 +5,7 @@ public class IntroScene : SceneBase
 {
 	
 	private float m_fTime = 0.0f;
-	private float m_fMaxTime = 2.0f;
+	private float m_fMaxTime = 1.0f;
 	
 	public IntroScene()
 		:base(SceneBase.eSCENE_STATE.INTRO)
@@ -52,7 +52,7 @@ public class IntroScene : SceneBase
 		/*if( InputMgr.eINPUT_EVENT.DOWN == eInputEvent )
 		{
 			SceneMgr.Instance.SetState( SceneBase.eSCENE_STATE.MAIN );		
-		}*/
+		}*/		
 	}
 	
 }

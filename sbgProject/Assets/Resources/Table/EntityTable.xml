@@ -2,7 +2,7 @@
 <EntityTable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Entity>
 		<Index>1</Index>
-		<ModelPath>Entity/Player/Char_1</ModelPath>			
+		<ModelPath>Entity/Monster/mob</ModelPath>			
 	</Entity>
 	<Entity>
 		<Index>2</Index>
@@ -10,7 +10,7 @@
 	</Entity>
 	<Entity>
 		<Index>3</Index>
-		<ModelPath>Entity/Player/Char</ModelPath>			
+		<ModelPath>Entity/Monster/mob</ModelPath>			
 	</Entity>
 	
 </EntityTable>
