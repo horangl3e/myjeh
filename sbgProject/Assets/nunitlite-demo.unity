@@ -83,7 +83,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 12}
   - 114: {fileID: 20}
-  - 114: {fileID: 19}
   m_Layer: 0
   m_Name: TestRunner
   m_TagString: Untagged
@@ -119,7 +118,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!4 &13
@@ -131,7 +129,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!20 &14
@@ -183,17 +180,6 @@ Behaviour:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 11}
   m_Enabled: 1
---- !u!114 &19
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 10}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c9c898eec3aea9489deb30faabd92c2, type: 1}
-  m_Name: 
-  runTests: 1
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +188,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 10}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e614246a7fe51441a48de83ce2a10e7, type: 1}
+  m_Script: {fileID: 11500000, guid: d66c77855dde3b3459559150deec5975, type: 1}
   m_Name: 
   runTests: 1

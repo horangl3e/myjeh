@@ -37,10 +37,10 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +48,7 @@
      <Compile Include="Assets\Lib\K2DFrameWork\Script\K2DSpriteAnimation.cs" />
      <Compile Include="Assets\Lib\K2DFrameWork\Script\K2DSpriteUVMove.cs" />
      <Compile Include="Assets\Lib\K2DFrameWork\Script\K2DView.cs" />
+     <Compile Include="Assets\Script\Camera\CameraMgr.cs" />
      <Compile Include="Assets\Script\Entity\Component\Animator.cs" />
      <Compile Include="Assets\Script\Entity\Component\Animator2D.cs" />
      <Compile Include="Assets\Script\Entity\Component\Animator3D.cs" />
@@ -66,11 +67,13 @@
      <Compile Include="Assets\Script\Entity\MonsterEntity\MonsterFsm_Walk.cs" />
      <Compile Include="Assets\Script\Entity\Msg\EntityMsg.cs" />
      <Compile Include="Assets\Script\Entity\UserEntity\UserEntity.cs" />
+     <Compile Include="Assets\Script\Entity\UserEntity\UserEntityFsm_Attack.cs" />
      <Compile Include="Assets\Script\Entity\UserEntity\UserEntityFsm_Idle.cs" />
      <Compile Include="Assets\Script\Entity\UserEntity\UserEntityFsm_Walk.cs" />
      <Compile Include="Assets\Script\Event\EventBase.cs" />
      <Compile Include="Assets\Script\Event\EventMgr.cs" />
      <Compile Include="Assets\Script\Input\InputMgr.cs" />
+     <Compile Include="Assets\Script\Input\Joystick_1.cs" />
      <Compile Include="Assets\Script\Item\Inventory.cs" />
      <Compile Include="Assets\Script\Item\Item.cs" />
      <Compile Include="Assets\Script\Item\ItemData.cs" />
@@ -91,9 +94,12 @@
      <Compile Include="Assets\Script\Sound\AsSoundObject.cs" />
      <Compile Include="Assets\Script\Sound\SoundMgr.cs" />
      <Compile Include="Assets\Script\Terrain\WidthScrollCamera.cs" />
+     <Compile Include="Assets\Script\TestJEH\SpotLightOnOff.cs" />
+     <Compile Include="Assets\Script\Timer\Timer.cs" />
      <Compile Include="Assets\Script\Util\FPSCounter.cs" />
      <Compile Include="Assets\Script\Util\ResourceComm.cs" />
      <Compile Include="Assets\Script\Util\XMLReader.cs" />
+     <Compile Include="Assets\Script\test\BtnSkill.cs" />
      <Compile Include="Assets\Script\test\SceneChangeBtn.cs" />
      <Compile Include="Assets\Test\CSharpTestDriver.cs" />
      <Compile Include="Assets\Test\SomeCSharpTests.cs" />
@@ -102,9 +108,12 @@
      <Compile Include="Assets\Test\Test_ItemData.cs" />
      <Compile Include="Assets\Test\Test_ItemMgr.cs" />
      <Compile Include="Assets\Test\Test_ItemTableData.cs" />
+     <Compile Include="Assets\Test\Test_Timer.cs" />
      <Compile Include="Assets\Test\Test_XMLReader.cs" />
      <Compile Include="Assets\Test\test.cs" />
+     <None Include="Assets\Resources\Entity\Player\SpartanKing\animations.txt" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLite.CHANGES.txt" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLiteUnityRunner.README.txt" />
      <None Include="Assets\Resources\Table\MonsterEntityTable.xml" />
      <None Include="Assets\Resources\Table\EntityTable.xml" />
