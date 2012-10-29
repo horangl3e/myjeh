@@ -10,17 +10,16 @@ namespace Test
         [Test]
         public void Initialize()
         {
-            Timer timer = new Timer();
-           // SpotLightOnOff test = new SpotLightOnOff();
+            var result = false;
+            Timer timer = new Timer(() => { result = true; });
+            Assert.NotNull(timer);
 
-            SpotLightOnOff.CreateSpotLightOnOff();
+            while (!timer.IsTimerOut())
+            {
+                timer.Update();
+            }
 
-//             Assert.NotNull(timer);
-// 
-//             while (!timer.IsTimerOut())
-//             {
-//                 timer.Update();
-//             }
+            Assert.That(result, Is.EqualTo(true));
         }
     }
 }

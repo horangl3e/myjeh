@@ -1,12 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Timer\Timer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\TestJEH\SpotLightOnOff.cs">
     <Files>
+      <File FileName="Assets\Script\Timer\Timer.cs" Line="18" Column="1" />
+      <File FileName="Assets\Script\TestJEH\SpotLightOnOffImp.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\TestJEH\SpotLightOnOff.cs" Line="16" Column="1" />
+      <File FileName="Assets\Plugins\TestsInPlugins.cs" Line="1" Column="1" />
       <File FileName="Assets\Test\Test_Timer.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Network\Protocol\Protocal_Common.cs" Line="43" Column="26" />
       <File FileName="Assets\Script\Network\Process\GameProcess.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Timer\Timer.cs" Line="21" Column="30" />
-      <File FileName="Assets\Script\TestJEH\SpotLightOnOff.cs" Line="23" Column="1" />
       <File FileName="Assets\Resources\Table\EntityTable.xml" Line="13" Column="45" />
       <File FileName="Assets\Script\Entity\Component\Animator2D.cs" Line="7" Column="3" />
       <File FileName="Assets\Script\Entity\Entity.cs" Line="156" Column="18" />
@@ -46,7 +48,20 @@
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True" />
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Script" expanded="True">
+                <Node name="Network" expanded="True">
+                  <Node name="Process" expanded="True" />
+                </Node>
+                <Node name="TestJEH" expanded="True">
+                  <Node name="SpotLightOnOff.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />

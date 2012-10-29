@@ -113,7 +113,6 @@
      <Compile Include="Assets\Test\test.cs" />
      <None Include="Assets\Resources\Entity\Player\SpartanKing\animations.txt" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLite.CHANGES.txt" />
-     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Plugins\NUnitLite\NUnitLiteUnityRunner.README.txt" />
      <None Include="Assets\Resources\Table\MonsterEntityTable.xml" />
      <None Include="Assets\Resources\Table\EntityTable.xml" />

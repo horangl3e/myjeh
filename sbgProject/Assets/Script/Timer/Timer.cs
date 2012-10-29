@@ -4,17 +4,14 @@ using System.Collections;
 public class Timer {
 
     private float destroyTime = 3.0f;
-    private SpotLightOnOff SpotLightObject;
     private bool TimeOutCheck = false;
 
-    public Timer()
-    {
+    public delegate void TimeOutFunc();
+    private TimeOutFunc TimeOutfunc;
 
-    }
-    public Timer( SpotLightOnOff spotLightObject)
+    public Timer(TimeOutFunc timeOutfunc)
     {
-        Debug.Log(" Timer Start() ");
-        SpotLightObject = spotLightObject;
+        TimeOutfunc = timeOutfunc;
     }
 
 	// Update is called once per frame
@@ -26,7 +23,7 @@ public class Timer {
         {
             Debug.Log("Time End");
             TimeOutCheck = true;
-           // SpotLightObject.SetSpotLightOnOff(true);  
+            TimeOutfunc();
         }
 	}
 
