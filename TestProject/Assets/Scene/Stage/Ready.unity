@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d33c6354b54fb847b16b36e1391868d, type: 1}
   m_Name: 
   mMat: {fileID: 2100000, guid: d650d98b3c4028a4a8b7225c1a6482f8, type: 2}
-  mTex: {fileID: 2800000, guid: d4b622e2ae4b7aa4abf761706845a53f, type: 1}
+  mTex: {fileID: 2800000, guid: 4d965c40d166ca54ca91ceb228a5f445, type: 1}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 4
@@ -178,6 +178,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 566190464}
   - 114: {fileID: 566190465}
+  - 114: {fileID: 566190466}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -207,13 +208,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d33c6354b54fb847b16b36e1391868d, type: 1}
   m_Name: 
   mMat: {fileID: 2100000, guid: d650d98b3c4028a4a8b7225c1a6482f8, type: 2}
-  mTex: {fileID: 2800000, guid: d4b622e2ae4b7aa4abf761706845a53f, type: 1}
+  mTex: {fileID: 2800000, guid: 4d965c40d166ca54ca91ceb228a5f445, type: 1}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 4
   mAtlas: {fileID: 11400000, guid: 2f2473f73b9ca724f9080d6d76009ea2, type: 2}
   mSpriteName: Dark
   mFillCenter: 1
+--- !u!114 &566190466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 566190463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9bfb5c080dac24cbbc6c9f595ed413, type: 1}
+  m_Name: 
+  mFPS: 5
+  mPrefix: Fire
+  mLoop: 1
 --- !u!1 &1250509875
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +253,7 @@ Transform:
   m_GameObject: {fileID: 1250509875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .00512820529, y: .00512820529, z: .00512820529}
+  m_LocalScale: {x: .00480769249, y: .00480769249, z: .00480769249}
   m_Children:
   - {fileID: 1490556025}
   m_Father: {fileID: 0}
@@ -738,7 +752,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1802895752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.998081207, y: 1.90734863e-06, z: 0}
+  m_LocalPosition: {x: 0, y: .499996185, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1601532026}
