@@ -236,7 +236,6 @@ MonoBehaviour:
   m_Name: 
   useMouse: 1
   useTouch: 1
-  allowMultiTouch: 1
   useKeyboard: 1
   useController: 1
   eventReceiverMask:
@@ -244,9 +243,7 @@ MonoBehaviour:
     m_Bits: 1
   tooltipDelay: 1
   stickyTooltip: 1
-  mouseDragThreshold: 4
   mouseClickThreshold: 10
-  touchDragThreshold: 40
   touchClickThreshold: 40
   rangeDistance: -1
   scrollAxisName: Mouse ScrollWheel
@@ -326,7 +323,7 @@ Transform:
   m_GameObject: {fileID: 966013289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: .140405655}
-  m_LocalScale: {x: .0047169812, y: .0047169812, z: .0047169812}
+  m_LocalScale: {x: .00514138816, y: .00514138816, z: .00514138816}
   m_Children:
   - {fileID: 177380486}
   m_Father: {fileID: 0}
@@ -356,9 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5ecb5660b11414fb042fb826e03b73, type: 1}
   m_Name: 
   automatic: 1
-  manualHeight: 800
-  minimumHeight: 320
-  maximumHeight: 1080
+  manualHeight: 389
 --- !u!1 &1290237263
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +533,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1636161435}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.49999997, y: .5, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 937971154}
@@ -554,9 +549,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8077b76001d36d489868d20d28bddb9, type: 1}
   m_Name: 
   uiCamera: {fileID: 177380487}
-  widgetContainer: {fileID: 0}
-  panelContainer: {fileID: 0}
   side: 8
   halfPixelOffset: 1
   depthOffset: 0
   relativeOffset: {x: 0, y: 0}
+  stretchToFill: 0
