@@ -9,7 +9,8 @@ public class TestLabel : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	protected void Update () {
+    protected void Update()
+    {
 		float fValue = Input.GetAxis("Horizontal");
 		uiLabel.text = fValue.ToString();	
 	}
