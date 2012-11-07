@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 
 public class EntityManager : MonoBehaviour {
     private static EntityManager ms_Instance = null;
@@ -16,6 +17,18 @@ public class EntityManager : MonoBehaviour {
 
     public string monsterEntityTable = "Table/MonsterEntityTable";
     private Dictionary<int, Entity> m_EntityList = new Dictionary<int, Entity>();
+    private Dictionary<int, EntityData> m_EntityDataList = new Dictionary<int, EntityData>();
+
+    public EntityData GetEntityData(int iIndex)
+    {
+        if (false == m_EntityDataList.ContainsKey(iIndex))
+        {
+            Debug.LogError("EntityMgr::GetEntityData() [ not find ] id : " + iIndex);
+            return null;
+        }
+
+        return m_EntityDataList[iIndex];
+    }
 
     public Entity GetEntity(int iInstanceID)
     {
@@ -57,6 +70,30 @@ public class EntityManager : MonoBehaviour {
 
         Destroy(entity.gameObject);
         m_EntityList.Remove(entity.gameObject.GetInstanceID());
+    }
+
+    protected void ReadEntityData( string strPath )
+    {
+        try
+        {
+            XmlElement root = XMLReader.GetXmlRootElement(strPath);
+            XmlNodeList nodes = root.ChildNodes;
+
+            foreach (XmlNode node in nodes)
+            {
+                EntityData data = new EntityData(node as XmlElement);
+                if (true == m_EntityDataList.ContainsKey(data.index))
+                {
+                    Debug.LogError("EntityMgr::ReadEntityData() [ same index : " + data.index);
+                    continue;
+                }
+                m_EntityDataList.Add(data.index, data);
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError(e.ToString());
+        }	
     }
 
     void Awake()
