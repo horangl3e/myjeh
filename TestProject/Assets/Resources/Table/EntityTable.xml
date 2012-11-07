@@ -2,15 +2,11 @@
 <EntityTable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Entity>
 		<Index>1</Index>
-		<ModelPath>Entity/Monster/mob</ModelPath>			
+		<ModelPath>Entity/User/Player</ModelPath>			
 	</Entity>
 	<Entity>
 		<Index>2</Index>
-		<ModelPath>Entity/Monster/mob</ModelPath>			
-	</Entity>
-	<Entity>
-		<Index>3</Index>
-		<ModelPath>Entity/Monster/mob</ModelPath>			
+		<ModelPath>Entity/Monster/Mob1</ModelPath>			
 	</Entity>
 	
 </EntityTable>

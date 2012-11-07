@@ -112,7 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d33c6354b54fb847b16b36e1391868d, type: 1}
   m_Name: 
   mMat: {fileID: 2100000, guid: d650d98b3c4028a4a8b7225c1a6482f8, type: 2}
-  mTex: {fileID: 2800000, guid: 4d965c40d166ca54ca91ceb228a5f445, type: 1}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 4
@@ -157,18 +156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c5ca47aa5c01740810b7c66662099f, type: 1}
   m_Name: 
   mMat: {fileID: 0}
-  mTex: {fileID: 0}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 6
-  mRect:
-    serializedVersion: 2
-    x: 100
-    y: 100
-    width: 100
-    height: 0
-  mShader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  mTexture: {fileID: 2800000, guid: 7280812eccadc1e47b7402e6d9679e5c, type: 1}
 --- !u!1 &566190463
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d33c6354b54fb847b16b36e1391868d, type: 1}
   m_Name: 
   mMat: {fileID: 2100000, guid: d650d98b3c4028a4a8b7225c1a6482f8, type: 2}
-  mTex: {fileID: 2800000, guid: 4d965c40d166ca54ca91ceb228a5f445, type: 1}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 4
@@ -227,7 +216,6 @@ MonoBehaviour:
   m_Name: 
   mFPS: 5
   mPrefix: Fire
-  mLoop: 1
 --- !u!1 &1250509875
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +241,7 @@ Transform:
   m_GameObject: {fileID: 1250509875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .0047169812, y: .0047169812, z: .0047169812}
+  m_LocalScale: {x: .00473933667, y: .00473933667, z: .00473933667}
   m_Children:
   - {fileID: 1490556025}
   m_Father: {fileID: 0}
@@ -283,9 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5ecb5660b11414fb042fb826e03b73, type: 1}
   m_Name: 
   automatic: 1
-  manualHeight: 800
-  minimumHeight: 320
-  maximumHeight: 1080
+  manualHeight: 422
 --- !u!1 &1255739108
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +310,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 1}
   m_Name: 
   mMat: {fileID: 2100000, guid: d650d98b3c4028a4a8b7225c1a6482f8, type: 2}
-  mTex: {fileID: 0}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 5
@@ -336,15 +321,13 @@ MonoBehaviour:
 '
   mMaxLineWidth: 0
   mEncoding: 1
-  mMaxLineCount: 0
+  mMultiline: 1
   mPassword: 0
   mShowLastChar: 0
   mEffectStyle: 0
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
   mLineWidth: 0
-  mMultiline: 1
 --- !u!1 &1471183567
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,7 +430,6 @@ MonoBehaviour:
   hover: {r: .600000024, g: 1, b: .200000003, a: 1}
   pressed: {r: .5, g: .5, b: .5, a: 1}
   duration: .200000003
-  disabledColor: {r: .5, g: .5, b: .5, a: 1}
 --- !u!114 &1471183574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,7 +509,6 @@ MonoBehaviour:
   m_Name: 
   useMouse: 1
   useTouch: 1
-  allowMultiTouch: 1
   useKeyboard: 1
   useController: 1
   eventReceiverMask:
@@ -535,9 +516,7 @@ MonoBehaviour:
     m_Bits: 1
   tooltipDelay: 1
   stickyTooltip: 1
-  mouseDragThreshold: 4
   mouseClickThreshold: 10
-  touchDragThreshold: 40
   touchClickThreshold: 40
   rangeDistance: -1
   scrollAxisName: Mouse ScrollWheel
@@ -664,7 +643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 1}
   m_Name: 
   mMat: {fileID: 2100000, guid: d650d98b3c4028a4a8b7225c1a6482f8, type: 2}
-  mTex: {fileID: 0}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 5
@@ -672,15 +650,13 @@ MonoBehaviour:
   mText: 'Start '
   mMaxLineWidth: 0
   mEncoding: 1
-  mMaxLineCount: 0
+  mMultiline: 1
   mPassword: 0
   mShowLastChar: 0
   mEffectStyle: 0
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
   mLineWidth: 0
-  mMultiline: 1
 --- !u!1 &1601532025
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,12 +744,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8077b76001d36d489868d20d28bddb9, type: 1}
   m_Name: 
   uiCamera: {fileID: 1490556026}
-  widgetContainer: {fileID: 0}
-  panelContainer: {fileID: 0}
   side: 8
   halfPixelOffset: 1
   depthOffset: 0
   relativeOffset: {x: 0, y: 0}
+  stretchToFill: 0
 --- !u!1 &1838870073
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +809,6 @@ MonoBehaviour:
   hover: {r: .600000024, g: 1, b: .200000003, a: 1}
   pressed: {r: .5, g: .5, b: .5, a: 1}
   duration: .200000003
-  disabledColor: {r: .5, g: .5, b: .5, a: 1}
 --- !u!114 &1838870077
 MonoBehaviour:
   m_ObjectHideFlags: 0

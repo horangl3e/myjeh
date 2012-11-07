@@ -78,10 +78,28 @@ public class FSMState : MonoBehaviour {
 
     public void DeleteTransition(int iOutputID)
     {
-        for (int i = 0; i < m_usNumberOfTransistions; ++i )
+        int i = 0;
+        for (; i < m_usNumberOfTransistions; ++i )
         {
-           // if( m_OutPutState[i] == iOutputID )
+            if ((int)m_OutPutState[i] == iOutputID)
+                break;
+        }
 
+        //지울 트랜지션의 ID가 없으면 삭제 로직을 돌지 않음
+        if (i >= m_usNumberOfTransistions)
+            return;
+
+        m_InputList[i] = 0;
+        m_OutPutState[i] = 0;
+
+        for (; i < (m_usNumberOfTransistions - 1); ++i )
+        {
+            if ((int)m_OutPutState[i] == 0)
+                break;
+
+            m_InputList[i] = m_InputList[i + 1];
+            m_InputList[i] = m_OutPutState[i + 1];
+                
         }
     }
 }
