@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 83359948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 150, y: 40, z: 1}
   m_Children: []
   m_Father: {fileID: 496290427}
@@ -244,7 +244,7 @@ Transform:
   m_GameObject: {fileID: 1250509875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .00514138816, y: .00514138816, z: .00514138816}
+  m_LocalScale: {x: .0047169812, y: .0047169812, z: .0047169812}
   m_Children:
   - {fileID: 1490556025}
   m_Father: {fileID: 0}
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5ecb5660b11414fb042fb826e03b73, type: 1}
   m_Name: 
   automatic: 1
-  manualHeight: 389
+  manualHeight: 424
 --- !u!1 &1273816143
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +302,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1273816143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.70768166, y: -50.6610718, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2008926433}
@@ -319,7 +319,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 150, y: 40, z: 0}
-  m_Center: {x: 0, y: 0, z: -.5}
+  m_Center: {x: 0, y: -25, z: -.5}
 --- !u!114 &1273816146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,8 +399,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1278886917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -9.25288391, z: 10}
-  m_LocalScale: {x: 20, y: 20, z: 1}
+  m_LocalPosition: {x: 0, y: -9, z: -1}
+  m_LocalScale: {x: 25, y: 25, z: 1}
   m_Children: []
   m_Father: {fileID: 496290427}
 --- !u!114 &1278886919
@@ -413,12 +413,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 1}
   m_Name: 
-  mMat: {fileID: 2100000, guid: d650d98b3c4028a4a8b7225c1a6482f8, type: 2}
+  mMat: {fileID: 2100000, guid: 021396f09bd62c0469fb9262d942d596, type: 2}
   mColor: {r: .985074639, g: .0294051878, b: .0294051878, a: 1}
   mPivot: 4
-  mDepth: 5
+  mDepth: 3
   mFont: {fileID: 11400000, guid: 7b2de707e40e9ce4382fdc5e8124035e, type: 2}
-  mText: "\uBB50\uC57C \uC774\uAC70 \n"
+  mText: "\uC2DC\uC791\n"
   mMaxLineWidth: 0
   mEncoding: 1
   mMultiline: 1
@@ -663,7 +663,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1802895752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .583282471, z: 0}
+  m_LocalPosition: {x: -.291643143, y: .29164505, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1601532026}
@@ -707,7 +707,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2008926432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -25.0715237, z: 0}
+  m_LocalPosition: {x: 0, y: -13, z: 0}
   m_LocalScale: {x: 150, y: 40, z: 1}
   m_Children: []
   m_Father: {fileID: 1273816144}
@@ -751,8 +751,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2122760318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: -24, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 1}
+  m_LocalPosition: {x: -1, y: -12.5, z: -1}
+  m_LocalScale: {x: 25, y: 25, z: 1}
   m_Children: []
   m_Father: {fileID: 1273816144}
 --- !u!114 &2122760320
@@ -765,12 +765,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 1}
   m_Name: 
-  mMat: {fileID: 2100000, guid: d650d98b3c4028a4a8b7225c1a6482f8, type: 2}
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mMat: {fileID: 2100000, guid: 021396f09bd62c0469fb9262d942d596, type: 2}
+  mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11400000, guid: 7b2de707e40e9ce4382fdc5e8124035e, type: 2}
-  mText: "\uD788\uBC1C \uC9C4\uC9DC "
+  mText: "\uC635\uC158"
   mMaxLineWidth: 0
   mEncoding: 1
   mMultiline: 1
