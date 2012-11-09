@@ -63,9 +63,22 @@ namespace Test
             UIAtlas uiAtlas = uiLabelgameObject.AddComponent<UIAtlas>();
             Assert.NotNull(uiAtlas);
 
-            Object textureFile = Resources.Load("/Texture/Effect/Fire_00000", typeof(Texture));
-            Assert.NotNull(textureFile);
+            string strPath = "Texture/Effect/Fire_00000";
+            Texture TempTexture = Resources.Load(strPath) as Texture;
+            Assert.NotNull(TempTexture);
+            Shader shader = Shader.Find("UnlitSprite");
+            Assert.NotNull(shader);
 
+            Material material = new Material(shader);
+            Assert.NotNull(material);
+
+
+            //Material material = new Material();
+
+            //uiAtlas.spriteMaterial
+            //uiAtlas.spriteMaterial.mainTexture = TempTexture;
+
+           
            // uiAtlas.spriteMaterial;
            // uiAtlas.
 
