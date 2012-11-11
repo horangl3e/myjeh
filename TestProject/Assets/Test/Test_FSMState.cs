@@ -13,6 +13,7 @@ namespace Test
         public void SetUp()
         {
             gameObject = new GameObject();
+            gameObject.name = "Test_FSMState";
             Assert.NotNull(gameObject);
         }
         

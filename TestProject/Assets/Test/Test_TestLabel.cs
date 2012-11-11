@@ -25,6 +25,7 @@ namespace Test
         public void Test_Initialize()
         {
             GameObject gameobject = new GameObject();
+            gameobject.name = "Test_Label";
 
             if (gameobject != null)
                 gameobject.AddComponent<Test_TestLabelSubClass>();

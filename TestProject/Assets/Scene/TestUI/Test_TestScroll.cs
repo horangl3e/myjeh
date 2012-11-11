@@ -52,62 +52,47 @@ namespace Test
             UIPanel uiPanel = uiPanelGameObject.AddComponent<UIPanel>();
             Assert.NotNull(uiPanel);
 
+            GameObject UIAtlasData = (GameObject)Resources.Load("Atllases/ScFi/SciFi Atlas");
+            Assert.NotNull(UIAtlasData);
+
+            int depth = NGUITools.CalculateNextDepth(uiPanelGameObject);
 
             GameObject uiLabelgameObject = new GameObject();
-            uiLabelgameObject.name = "uiLabelGameObject";
-
-            int depth = NGUITools.CalculateNextDepth(uiLabelgameObject);
-            uiLabelgameObject = NGUITools.AddChild(uiLabelgameObject);
+            uiLabelgameObject = NGUITools.AddChild(uiPanelGameObject);
             uiLabelgameObject.name = "Button";
 
-            UIAtlas uiAtlas = uiLabelgameObject.AddComponent<UIAtlas>();
+            UIAtlas uiAtlas = UIAtlasData.GetComponent<UIAtlas>();
             Assert.NotNull(uiAtlas);
 
-            string strPath = "Texture/Effect/Fire_00000";
-            Texture TempTexture = Resources.Load(strPath) as Texture;
-            Assert.NotNull(TempTexture);
-            Shader shader = Shader.Find("UnlitSprite");
-            Assert.NotNull(shader);
+            UISlicedSprite bg = NGUITools.AddWidget<UISlicedSprite>(uiLabelgameObject);
+            bg.name = "Background";
+            bg.depth = depth;
+            bg.atlas = uiAtlas;
+            bg.spriteName = "NGUI BUTTON";
+            bg.transform.localScale = new Vector3(150.0f, 40.0f, 1f);
+            bg.MakePixelPerfect();
 
-            Material material = new Material(shader);
-            Assert.NotNull(material);
+            GameObject uiFontObject = (GameObject)Resources.Load("Font/GodicBold25");
+            //Assert.NotNull(uiFontObject);
 
 
-            //Material material = new Material();
+            UIFont uiFont = UIAtlasData.GetComponent<UIFont>();
+            //Assert.NotNull(uiFont);
 
-            //uiAtlas.spriteMaterial
-            //uiAtlas.spriteMaterial.mainTexture = TempTexture;
+            UILabel lbl = NGUITools.AddWidget<UILabel>(uiLabelgameObject);
+            lbl.font = uiFont;
+            lbl.text = uiLabelgameObject.name;
+            lbl.MakePixelPerfect();
 
-           
-           // uiAtlas.spriteMaterial;
-           // uiAtlas.
+            NGUITools.AddWidgetCollider(uiLabelgameObject);
 
-            //UISlicedSprite bg = NGUITools.AddWidget<UISlicedSprite>(uiLabelgameObject);
-            //bg.name = "Background";
-            //bg.depth = depth;
-           // bg.atlas = UISettings.atlas;
-//             bg.spriteName = "NGUI BUTTON";
-//             bg.transform.localScale = new Vector3(150f, 40f, 1f);
-//             bg.MakePixelPerfect();
-// 
-//             if (UISettings.font != null)
-//             {
-//                 UILabel lbl = NGUITools.AddWidget<UILabel>(uiLabelgameObject);
-//                 lbl.font = UISettings.font;
-//                 lbl.text = uiLabelgameObject.name;
-//                 lbl.MakePixelPerfect();
-//             }
-// 
-//             // Add a collider
-//             NGUITools.AddWidgetCollider(uiLabelgameObject);
-// 
-//             // Add the scripts
-//             uiLabelgameObject.AddComponent<UIButton>().tweenTarget = bg.gameObject;
-//             uiLabelgameObject.AddComponent<UIButtonScale>();
-//             uiLabelgameObject.AddComponent<UIButtonOffset>();
-//             uiLabelgameObject.AddComponent<UIButtonSound>();
-// 
-//             Selection.activeGameObject = uiLabelgameObject;
+            // Add the scripts
+            uiLabelgameObject.AddComponent<UIButton>().tweenTarget = bg.gameObject;
+            uiLabelgameObject.AddComponent<UIButtonScale>();
+            uiLabelgameObject.AddComponent<UIButtonOffset>();
+            uiLabelgameObject.AddComponent<UIButtonSound>();
+
+            Selection.activeGameObject = uiLabelgameObject;
         }
     }
 }

@@ -25,6 +25,7 @@ namespace Test
        public void Initialize()
         {
             GameObject gameObject = new GameObject();
+            gameObject.name = "Test_Entity";
             EntitySubClass entity = gameObject.AddComponent<EntitySubClass>();
             Assert.NotNull(entity);
         }

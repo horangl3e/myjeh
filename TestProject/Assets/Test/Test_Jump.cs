@@ -27,6 +27,7 @@ namespace Test
         public void Test_Initialize()
         {
 		   GameObject gameObject = new GameObject();
+           gameObject.name = "Test_Jump";
            gameObject.AddComponent<Test_JumpSubClass>();
            Test_JumpSubClass testJump = gameObject.GetComponent<Test_JumpSubClass>();
            Assert.NotNull(testJump);

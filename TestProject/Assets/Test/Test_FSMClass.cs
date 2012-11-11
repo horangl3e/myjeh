@@ -15,6 +15,7 @@ namespace Test
         {
             gameObject = new GameObject();
             fsmClass = gameObject.AddComponent<FSMClass>();
+            fsmClass.name = "FSM_Class";
             Assert.NotNull(fsmClass);
         }
 

@@ -42,6 +42,7 @@ namespace Test
         public void SetUp()
         {
             gameObject = new GameObject();
+            gameObject.name = "Test_Sprite";
             Assert.NotNull(gameObject);
         }
 
