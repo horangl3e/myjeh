@@ -12,4 +12,11 @@ public class UpMoveSpere : MonoBehaviour {
     {
         Debug.Log("Up Move Spere OnTriggerEnter");
     }
+	
+    //충돌 진입
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Up Colision Start");
+    }
+	
 }
