@@ -12,6 +12,12 @@ public class UIListViewControl : MonoBehaviour {
             CreateItem(i);
     }
 
+    public void CreateItemforEdit()
+    {
+        Debug.Log("ssssssssssssssssssssssssssssssssssssssssssssssssssssssssss");
+        CreateItem(0);
+    }
+
     public void CreateItem( int i)
     {
         GameObject ItemData = null;
