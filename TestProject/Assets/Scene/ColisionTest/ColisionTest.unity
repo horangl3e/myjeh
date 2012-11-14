@@ -323,7 +323,7 @@ Transform:
   m_GameObject: {fileID: 966013289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: .140405655}
-  m_LocalScale: {x: .00714285718, y: .00714285718, z: .00714285718}
+  m_LocalScale: {x: .00451467279, y: .00451467279, z: .00451467279}
   m_Children:
   - {fileID: 177380486}
   m_Father: {fileID: 0}
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5ecb5660b11414fb042fb826e03b73, type: 1}
   m_Name: 
   automatic: 1
-  manualHeight: 280
+  manualHeight: 443
 --- !u!1 &1290237263
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +366,7 @@ GameObject:
   - 135: {fileID: 1290237267}
   - 23: {fileID: 1290237265}
   - 114: {fileID: 1290237269}
+  - 114: {fileID: 1290237268}
   m_Layer: 0
   m_Name: UpSphere
   m_TagString: Untagged
@@ -421,6 +422,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .500000119
   m_Center: {x: 5.96046448e-08, y: 0, z: -8.94069672e-08}
+--- !u!114 &1290237268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1290237263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bfbf38045287d44a60b8ccec53d9e4, type: 1}
+  m_Name: 
+  ParticlePrefab: {fileID: 100000, guid: e6ab56e4714ff4154ac034cf28db78b2, type: 2}
 --- !u!114 &1290237269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,7 +545,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1636161435}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.997772872, y: 0, z: 3.05175781e-05}
+  m_LocalPosition: {x: 0, y: .999969482, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 937971154}
