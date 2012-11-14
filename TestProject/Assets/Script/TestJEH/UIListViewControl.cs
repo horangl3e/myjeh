@@ -30,10 +30,6 @@ public class UIListViewControl : MonoBehaviour {
             ItemData.name = "Item";
             UIGrid uiGrid = GetComponent<UIGrid>();
 
-
-            UILabel uiLabel = ItemData.GetComponent<UILabel>();
-            uiLabel.text = "11111111111111111111";
-
             if (!uiGrid)
                 Debug.LogError("Error CreateItem UIGrid Null");
         }

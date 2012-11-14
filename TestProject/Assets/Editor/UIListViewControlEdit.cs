@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections;
 
-[CustomEditor(typeof(UIListViewControl))]
+//[CustomEditor(typeof(UIListViewControl))]
 public class UIListViewControlEdit : Editor
 {
     private UIListViewControl m_target = null;
@@ -17,7 +17,6 @@ public class UIListViewControlEdit : Editor
     {
         m_target = target as UIListViewControl;
         m_target.CreateItemforEdit();
-        Debug.Log("InitEnable1111111111111111111111");
     }
 
     public override void OnInspectorGUI()
