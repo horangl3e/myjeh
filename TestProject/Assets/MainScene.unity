@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 35993989}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -548.606567, z: 0}
+  m_LocalPosition: {x: 0, y: -548.606567, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 777131642}
@@ -181,7 +181,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 320219321}
   - 114: {fileID: 320219322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CharacterExpInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,8 +304,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 428886367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8082b79c3c970148b744fa02659a0db, type: 1}
+  m_Script: {fileID: 11500000, guid: 493bd005af597e7498d1261a47fbad23, type: 1}
   m_Name: 
+  SugarLoafImageList:
+  - {fileID: 2036288069}
+  - {fileID: 729124518}
+  - {fileID: 1536839597}
+  - {fileID: 817164326}
+  - {fileID: 970598074}
+  - {fileID: 978603686}
+  SugarLoafImageVisiblecount: 2
 --- !u!1 &512820990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1103,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 777131641}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -74.6152649, y: 223.020905, z: 0}
+  m_LocalPosition: {x: -74.6152649, y: 223.020905, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1686897830}
