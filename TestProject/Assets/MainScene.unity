@@ -2677,8 +2677,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1585192266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 410df3003a89c9d4da555ecf3fc2baa4, type: 1}
+  m_Script: {fileID: 11500000, guid: c2c2d667696414c4db45a66d1d09e34b, type: 1}
   m_Name: 
+  ItemPrefab: {fileID: 100010, guid: a88f370acb8544041bf3d1739cf94be8, type: 2}
+  ItemSize: 10
 --- !u!1 &1636753839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2702,7 +2704,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1636753839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.703296781, y: .703296721, z: 0}
+  m_LocalPosition: {x: -1.50943398, y: 1.50943398, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1997463091}
@@ -3104,7 +3106,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1796109400}
   - 114: {fileID: 1796109401}
-  - 114: {fileID: 1796109402}
+  - 114: {fileID: 1796109403}
   m_Layer: 8
   m_Name: ExpString
   m_TagString: Untagged
@@ -3148,7 +3150,7 @@ MonoBehaviour:
   mEffectColor: {r: .022388041, g: 0, b: .940298498, a: 1}
   mSymbols: 2
   mLineWidth: 0
---- !u!114 &1796109402
+--- !u!114 &1796109403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -3156,8 +3158,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1796109399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e43b8cb27b6f66d488b9f78c59dab646, type: 1}
+  m_Script: {fileID: 11500000, guid: 9041c79d947df6547bd0fb2703f21274, type: 1}
   m_Name: 
+  ExpSlider: {fileID: 1962530992}
 --- !u!1 &1823015416
 GameObject:
   m_ObjectHideFlags: 0
