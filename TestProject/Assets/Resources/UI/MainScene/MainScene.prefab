@@ -1,0 +1,413 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 3
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: MainScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 1}
+  m_Name: 
+  material: {fileID: 2100000, guid: f7e3df572f18e804eae9eca4db629442, type: 2}
+  sprites:
+  - name: XP_BG_00
+    outer:
+      serializedVersion: 2
+      x: 1404
+      y: 1654
+      width: 316
+      height: 113
+    inner:
+      serializedVersion: 2
+      x: 1404
+      y: 1654
+      width: 316
+      height: 113
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: List_Bar_1st_00
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 36
+      width: 682
+      height: 110
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 36
+      width: 682
+      height: 110
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Start_00
+    outer:
+      serializedVersion: 2
+      x: 1404
+      y: 1887
+      width: 439
+      height: 161
+    inner:
+      serializedVersion: 2
+      x: 1404
+      y: 1887
+      width: 439
+      height: 161
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ShopIcon_00
+    outer:
+      serializedVersion: 2
+      x: 1844
+      y: 1924
+      width: 120
+      height: 124
+    inner:
+      serializedVersion: 2
+      x: 1844
+      y: 1924
+      width: 120
+      height: 124
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: MessegeIcon_alert_00
+    outer:
+      serializedVersion: 2
+      x: 1646
+      y: 1518
+      width: 59
+      height: 59
+    inner:
+      serializedVersion: 2
+      x: 1646
+      y: 1518
+      width: 59
+      height: 59
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Frame_BG_00
+    outer:
+      serializedVersion: 2
+      x: 721
+      y: 1494
+      width: 682
+      height: 554
+    inner:
+      serializedVersion: 2
+      x: 721
+      y: 1494
+      width: 682
+      height: 554
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Frame_00
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 147
+      width: 698
+      height: 620
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 147
+      width: 698
+      height: 620
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: PalIcon_00
+    outer:
+      serializedVersion: 2
+      x: 1404
+      y: 1529
+      width: 120
+      height: 124
+    inner:
+      serializedVersion: 2
+      x: 1404
+      y: 1529
+      width: 120
+      height: 124
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: +BTN_00
+    outer:
+      serializedVersion: 2
+      x: 1965
+      y: 1895
+      width: 70
+      height: 76
+    inner:
+      serializedVersion: 2
+      x: 1965
+      y: 1895
+      width: 70
+      height: 76
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: InfoIcon_00
+    outer:
+      serializedVersion: 2
+      x: 1525
+      y: 1529
+      width: 120
+      height: 124
+    inner:
+      serializedVersion: 2
+      x: 1525
+      y: 1529
+      width: 120
+      height: 124
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: List_Bar_2nd_00
+    outer:
+      serializedVersion: 2
+      x: 721
+      y: 1383
+      width: 682
+      height: 110
+    inner:
+      serializedVersion: 2
+      x: 721
+      y: 1383
+      width: 682
+      height: 110
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Gift_Icon_00
+    outer:
+      serializedVersion: 2
+      x: 1965
+      y: 1972
+      width: 76
+      height: 76
+    inner:
+      serializedVersion: 2
+      x: 1965
+      y: 1972
+      width: 76
+      height: 76
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: MessegeIcon_00
+    outer:
+      serializedVersion: 2
+      x: 1721
+      y: 1762
+      width: 120
+      height: 124
+    inner:
+      serializedVersion: 2
+      x: 1721
+      y: 1762
+      width: 120
+      height: 124
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Candy_00
+    outer:
+      serializedVersion: 2
+      x: 683
+      y: 110
+      width: 36
+      height: 36
+    inner:
+      serializedVersion: 2
+      x: 683
+      y: 110
+      width: 36
+      height: 36
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: CandyBar_00
+    outer:
+      serializedVersion: 2
+      x: 721
+      y: 1322
+      width: 698
+      height: 60
+    inner:
+      serializedVersion: 2
+      x: 721
+      y: 1322
+      width: 698
+      height: 60
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Level_Ball_00
+    outer:
+      serializedVersion: 2
+      x: 1721
+      y: 1598
+      width: 110
+      height: 110
+    inner:
+      serializedVersion: 2
+      x: 1721
+      y: 1598
+      width: 110
+      height: 110
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: NumPlate_00
+    outer:
+      serializedVersion: 2
+      x: 1646
+      y: 1578
+      width: 69
+      height: 75
+    inner:
+      serializedVersion: 2
+      x: 1646
+      y: 1578
+      width: 69
+      height: 75
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Option_00
+    outer:
+      serializedVersion: 2
+      x: 1842
+      y: 1762
+      width: 120
+      height: 124
+    inner:
+      serializedVersion: 2
+      x: 1842
+      y: 1762
+      width: 120
+      height: 124
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: SelectedCha_00
+    outer:
+      serializedVersion: 2
+      x: 1404
+      y: 1768
+      width: 316
+      height: 118
+    inner:
+      serializedVersion: 2
+      x: 1404
+      y: 1768
+      width: 316
+      height: 118
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Level_Gauge_00
+    outer:
+      serializedVersion: 2
+      x: 1721
+      y: 1709
+      width: 241
+      height: 52
+    inner:
+      serializedVersion: 2
+      x: 1721
+      y: 1709
+      width: 241
+      height: 52
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: MAIN_BG
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 768
+      width: 720
+      height: 1280
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 768
+      width: 720
+      height: 1280
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  mCoordinates: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
