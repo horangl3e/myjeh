@@ -396,6 +396,40 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: Scroll_Bar_00
+    outer:
+      serializedVersion: 2
+      x: 709
+      y: 733
+      width: 7
+      height: 34
+    inner:
+      serializedVersion: 2
+      x: 709
+      y: 733
+      width: 7
+      height: 34
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Scroll_BG_00
+    outer:
+      serializedVersion: 2
+      x: 699
+      y: 213
+      width: 9
+      height: 554
+    inner:
+      serializedVersion: 2
+      x: 699
+      y: 213
+      width: 9
+      height: 554
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   mCoordinates: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}
