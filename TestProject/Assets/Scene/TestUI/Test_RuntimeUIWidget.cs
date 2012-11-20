@@ -48,8 +48,8 @@ namespace Test
             UIPanel uiPanel = PanelGameObject.AddComponent<UIPanel>();
             Assert.NotNull(uiPanel);
 
-            GameObject UIAtlasData = (GameObject)Resources.Load("Atllases/ScFi/ScFiAtlasPrefab/SciFi Atlas");
-            Assert.NotNull(UIAtlasData);
+             GameObject UIAtlasData = (GameObject)Resources.Load("Atlases/ScFi/ScFiAtlasPrefab/SciFi Atlas");
+             Assert.NotNull(UIAtlasData);
 
             int depth = NGUITools.CalculateNextDepth(PanelGameObject);
 

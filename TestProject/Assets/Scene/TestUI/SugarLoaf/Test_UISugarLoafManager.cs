@@ -42,22 +42,12 @@ namespace Test
             //NGUITools.AddChild(gameObject, SugarLoafImageObject);
 
             //Script Component
-            UISugarLoafManagerSubClass uiSugarLoafManager = gameObject.GetComponent<UISugarLoafManagerSubClass>();
-            Assert.NotNull(uiSugarLoafManager);
+//             UISugarLoafManagerSubClass uiSugarLoafManager = gameObject.GetComponent<UISugarLoafManagerSubClass>();
+//             Assert.NotNull(uiSugarLoafManager);
 
 
-            uiSugarLoafManager.SugarLoafData = SugarLoafImageObject;
-            uiSugarLoafManager.Start();
-
-
-             
-
-
-
-
-
-
-
+//             uiSugarLoafManager.SugarLoafData = SugarLoafImageObject;
+//             uiSugarLoafManager.Start();
 
 
 //             UITexture uiTexture = gameObject.GetComponent<UITexture>();
