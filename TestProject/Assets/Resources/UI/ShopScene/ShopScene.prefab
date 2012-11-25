@@ -1,0 +1,447 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 3
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: ShopScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 1}
+  m_Name: 
+  material: {fileID: 2100000, guid: 57b6c7ae27364bc498cd3ddc97d93065, type: 2}
+  sprites:
+  - name: Buy
+    outer:
+      serializedVersion: 2
+      x: 699
+      y: 1882
+      width: 160
+      height: 166
+    inner:
+      serializedVersion: 2
+      x: 699
+      y: 1882
+      width: 160
+      height: 166
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Gold_Bar_00
+    outer:
+      serializedVersion: 2
+      x: 494
+      y: 1024
+      width: 494
+      height: 60
+    inner:
+      serializedVersion: 2
+      x: 494
+      y: 1024
+      width: 494
+      height: 60
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Dia_Shop_00
+    outer:
+      serializedVersion: 2
+      x: 860
+      y: 1882
+      width: 160
+      height: 166
+    inner:
+      serializedVersion: 2
+      x: 860
+      y: 1882
+      width: 160
+      height: 166
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Back_00
+    outer:
+      serializedVersion: 2
+      x: 860
+      y: 1435
+      width: 107
+      height: 112
+    inner:
+      serializedVersion: 2
+      x: 860
+      y: 1435
+      width: 107
+      height: 112
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Main
+    outer:
+      serializedVersion: 2
+      x: 699
+      y: 1715
+      width: 160
+      height: 166
+    inner:
+      serializedVersion: 2
+      x: 699
+      y: 1715
+      width: 160
+      height: 166
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Character_Shop_00
+    outer:
+      serializedVersion: 2
+      x: 860
+      y: 1715
+      width: 160
+      height: 166
+    inner:
+      serializedVersion: 2
+      x: 860
+      y: 1715
+      width: 160
+      height: 166
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Start_Store_00
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 923
+      width: 493
+      height: 161
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 923
+      width: 493
+      height: 161
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Rollipop_Shop_00
+    outer:
+      serializedVersion: 2
+      x: 699
+      y: 1548
+      width: 160
+      height: 166
+    inner:
+      serializedVersion: 2
+      x: 699
+      y: 1548
+      width: 160
+      height: 166
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Store_frame_00
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 1085
+      width: 698
+      height: 963
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 1085
+      width: 698
+      height: 963
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Gold_Shop_00
+    outer:
+      serializedVersion: 2
+      x: 860
+      y: 1548
+      width: 160
+      height: 166
+    inner:
+      serializedVersion: 2
+      x: 860
+      y: 1548
+      width: 160
+      height: 166
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Fake_Icon_00
+    outer:
+      serializedVersion: 2
+      x: 699
+      y: 1381
+      width: 160
+      height: 166
+    inner:
+      serializedVersion: 2
+      x: 699
+      y: 1381
+      width: 160
+      height: 166
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Score_Alpha
+    outer:
+      serializedVersion: 2
+      x: 860
+      y: 1396
+      width: 28
+      height: 38
+    inner:
+      serializedVersion: 2
+      x: 860
+      y: 1396
+      width: 28
+      height: 38
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ','
+    outer:
+      serializedVersion: 2
+      x: 699
+      y: 1345
+      width: 13
+      height: 35
+    inner:
+      serializedVersion: 2
+      x: 699
+      y: 1345
+      width: 13
+      height: 35
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 2
+    outer:
+      serializedVersion: 2
+      x: 968
+      y: 1477
+      width: 25
+      height: 34
+    inner:
+      serializedVersion: 2
+      x: 968
+      y: 1477
+      width: 25
+      height: 34
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1
+    outer:
+      serializedVersion: 2
+      x: 889
+      y: 1400
+      width: 26
+      height: 34
+    inner:
+      serializedVersion: 2
+      x: 889
+      y: 1400
+      width: 26
+      height: 34
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 4
+    outer:
+      serializedVersion: 2
+      x: 968
+      y: 1512
+      width: 25
+      height: 35
+    inner:
+      serializedVersion: 2
+      x: 968
+      y: 1512
+      width: 25
+      height: 35
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 5
+    outer:
+      serializedVersion: 2
+      x: 916
+      y: 1400
+      width: 26
+      height: 34
+    inner:
+      serializedVersion: 2
+      x: 916
+      y: 1400
+      width: 26
+      height: 34
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 6
+    outer:
+      serializedVersion: 2
+      x: 994
+      y: 1477
+      width: 25
+      height: 34
+    inner:
+      serializedVersion: 2
+      x: 994
+      y: 1477
+      width: 25
+      height: 34
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 7
+    outer:
+      serializedVersion: 2
+      x: 968
+      y: 1442
+      width: 25
+      height: 34
+    inner:
+      serializedVersion: 2
+      x: 968
+      y: 1442
+      width: 25
+      height: 34
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 0
+    outer:
+      serializedVersion: 2
+      x: 994
+      y: 1442
+      width: 25
+      height: 34
+    inner:
+      serializedVersion: 2
+      x: 994
+      y: 1442
+      width: 25
+      height: 34
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 3
+    outer:
+      serializedVersion: 2
+      x: 968
+      y: 1407
+      width: 25
+      height: 34
+    inner:
+      serializedVersion: 2
+      x: 968
+      y: 1407
+      width: 25
+      height: 34
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 8
+    outer:
+      serializedVersion: 2
+      x: 994
+      y: 1512
+      width: 25
+      height: 35
+    inner:
+      serializedVersion: 2
+      x: 994
+      y: 1512
+      width: 25
+      height: 35
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 9
+    outer:
+      serializedVersion: 2
+      x: 994
+      y: 1407
+      width: 25
+      height: 34
+    inner:
+      serializedVersion: 2
+      x: 994
+      y: 1407
+      width: 25
+      height: 34
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  mCoordinates: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

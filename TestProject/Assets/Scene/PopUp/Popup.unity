@@ -271,11 +271,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d33c6354b54fb847b16b36e1391868d, type: 1}
   m_Name: 
-  mMat: {fileID: 2100000, guid: be9cdb0e4a69ca342aa6611ca89be05c, type: 2}
+  mMat: {fileID: 2100000, guid: 6e0b50a0d6501f4448968280549d4c7f, type: 2}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
-  mAtlas: {fileID: 11400000, guid: 25dd2209de01ab946a59c208581459eb, type: 2}
+  mAtlas: {fileID: 11400000, guid: b49453e232a477145929fbc2c2c4d148, type: 2}
   mSpriteName: O_BTN_00
   mFillCenter: 1
 --- !u!1 &563513973
@@ -440,11 +440,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d33c6354b54fb847b16b36e1391868d, type: 1}
   m_Name: 
-  mMat: {fileID: 2100000, guid: be9cdb0e4a69ca342aa6611ca89be05c, type: 2}
+  mMat: {fileID: 2100000, guid: 6e0b50a0d6501f4448968280549d4c7f, type: 2}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 3
-  mAtlas: {fileID: 11400000, guid: 25dd2209de01ab946a59c208581459eb, type: 2}
+  mAtlas: {fileID: 11400000, guid: b49453e232a477145929fbc2c2c4d148, type: 2}
   mSpriteName: X_BTN_00
   mFillCenter: 1
 --- !u!1 &1280971245
@@ -470,7 +470,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1280971245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .5, y: 0, z: 0}
   m_LocalScale: {x: 577, y: 378, z: 1}
   m_Children: []
   m_Father: {fileID: 197982519}
@@ -484,11 +484,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 1}
   m_Name: 
-  mMat: {fileID: 2100000, guid: be9cdb0e4a69ca342aa6611ca89be05c, type: 2}
+  mMat: {fileID: 2100000, guid: 6e0b50a0d6501f4448968280549d4c7f, type: 2}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 0
-  mAtlas: {fileID: 11400000, guid: 25dd2209de01ab946a59c208581459eb, type: 2}
+  mAtlas: {fileID: 11400000, guid: b49453e232a477145929fbc2c2c4d148, type: 2}
   mSpriteName: Popup_00
 --- !u!1 &1611744755
 GameObject:

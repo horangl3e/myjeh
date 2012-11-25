@@ -1,0 +1,192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 3
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: PauseScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 1}
+  m_Name: 
+  material: {fileID: 2100000, guid: 116016b1682e70346ba284f39e4ffe46, type: 2}
+  sprites:
+  - name: BGM_BTN_00
+    outer:
+      serializedVersion: 2
+      x: 882
+      y: 1897
+      width: 57
+      height: 76
+    inner:
+      serializedVersion: 2
+      x: 882
+      y: 1897
+      width: 57
+      height: 76
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Continue_BTN_00
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 606
+      width: 493
+      height: 161
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 606
+      width: 493
+      height: 161
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1
+    outer:
+      serializedVersion: 2
+      x: 965
+      y: 1989
+      width: 43
+      height: 59
+    inner:
+      serializedVersion: 2
+      x: 965
+      y: 1989
+      width: 43
+      height: 59
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 3
+    outer:
+      serializedVersion: 2
+      x: 940
+      y: 1914
+      width: 42
+      height: 59
+    inner:
+      serializedVersion: 2
+      x: 940
+      y: 1914
+      width: 42
+      height: 59
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: SOUND_BTN_00
+    outer:
+      serializedVersion: 2
+      x: 882
+      y: 1974
+      width: 82
+      height: 74
+    inner:
+      serializedVersion: 2
+      x: 882
+      y: 1974
+      width: 82
+      height: 74
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 2
+    outer:
+      serializedVersion: 2
+      x: 721
+      y: 1822
+      width: 42
+      height: 59
+    inner:
+      serializedVersion: 2
+      x: 721
+      y: 1822
+      width: 42
+      height: 59
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Restart_00
+    outer:
+      serializedVersion: 2
+      x: 721
+      y: 1882
+      width: 160
+      height: 166
+    inner:
+      serializedVersion: 2
+      x: 721
+      y: 1882
+      width: 160
+      height: 166
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Pause_BG_00
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 768
+      width: 720
+      height: 1280
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 768
+      width: 720
+      height: 1280
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  mCoordinates: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
