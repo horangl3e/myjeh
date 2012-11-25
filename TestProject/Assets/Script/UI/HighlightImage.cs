@@ -19,8 +19,8 @@ public class HighlightImage : MonoBehaviour {
     {
         if (HighlightImageObject)
         {
-            HighlightImageObject.transform.localPosition = transform.localPosition;
-            HighlightImageObject.transform.localScale = transform.localScale;
+            HighlightImageObject.transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, -100.0f);
+            HighlightImageObject.transform.localScale = transform.FindChild("Background").localScale;
             HighlightImageObject.SetActiveRecursively(true);
         }
     }
