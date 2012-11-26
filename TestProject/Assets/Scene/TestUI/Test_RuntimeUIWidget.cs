@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 using NUnit.Framework;
 
-using UnityEditor;
 using System.Collections.Generic;
 
 namespace Test
@@ -89,7 +88,6 @@ namespace Test
             uiLabelgameObject.AddComponent<UIButtonOffset>();
             uiLabelgameObject.AddComponent<UIButtonSound>();
 
-            Selection.activeGameObject = uiLabelgameObject;
         }
 
         [Test]

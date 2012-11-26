@@ -1,6 +1,6 @@
 //----------------------------------------------
 //            NGUI: Next-Gen UI kit
-// Copyright © 2011-2012 Tasharen Entertainment
+// Copyright ?2011-2012 Tasharen Entertainment
 //----------------------------------------------
 
 using UnityEngine;
@@ -23,7 +23,7 @@ public class UIImageButton : MonoBehaviour
 		if (target == null) target = GetComponentInChildren<UISprite>();
 	}
 
-	void OnHover (bool isOver)
+	protected void OnHover (bool isOver)
 	{
 		if (target != null)
 		{
