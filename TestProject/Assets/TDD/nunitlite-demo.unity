@@ -283,7 +283,7 @@ Transform:
   m_GameObject: {fileID: 176904306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.308738798, y: -1.8314805, z: .802581429}
-  m_LocalScale: {x: .00451467279, y: .00451467279, z: .00451467279}
+  m_LocalScale: {x: .00202634255, y: .00202634255, z: .00202634255}
   m_Children:
   - {fileID: 1156319863}
   m_Father: {fileID: 0}
@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5ecb5660b11414fb042fb826e03b73, type: 1}
   m_Name: 
   automatic: 1
-  manualHeight: 443
+  manualHeight: 987
 --- !u!1 &289263911
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +718,7 @@ Transform:
   m_GameObject: {fileID: 906736313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .00451467279, y: .00451467279, z: .00451467279}
+  m_LocalScale: {x: .00202634255, y: .00202634255, z: .00202634255}
   m_Children:
   - {fileID: 289263912}
   m_Father: {fileID: 0}
@@ -733,7 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5ecb5660b11414fb042fb826e03b73, type: 1}
   m_Name: 
   automatic: 1
-  manualHeight: 443
+  manualHeight: 987
 --- !u!1 &937531716
 GameObject:
   m_ObjectHideFlags: 0
