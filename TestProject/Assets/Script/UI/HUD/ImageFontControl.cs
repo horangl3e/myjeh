@@ -29,6 +29,12 @@ public class ImageFontControl : MonoBehaviour {
 		get { return ScoreValue; }
     }
 
+    public int _DefaultValue
+    {
+        set { DefaultValue = value; }
+        get { return DefaultValue;  }
+    }
+
     void Awake()
     {
         gameObjectList.Add(gameObject);

@@ -1,36 +1,53 @@
 using UnityEngine;
 using System.Collections;
 
-namespace UITimer
+
+public class TimerUpdate : MonoBehaviour
 {
-    public class TimerUpdate : MonoBehaviour
+    public GameObject targetObject;
+    public int DefaulTime;
+
+    UITimer.Timer timer;
+    ImageFontControl imageFontControl;
+
+    void Awake()
     {
-        public GameObject targetObject;
-        public int DefaulTime;
 
-        Timer timer;
-
-        void Awake()
-        {
-           timer = new Timer
-           (
-               () =>
-               {
-                   if (targetObject)
-                   {
-                        //targetObject.GetComponent<>()    
-                   }
-               }
-           );
-
-           timer.SetDestroyTime(DefaulTime);
-        }
-	
-	    // Update is called once per frame
-	    void Update () {
-            if (timer != null )
-                timer.Update();
-	    }
     }
+
+    void Start()
+    {
+        timer = new UITimer.Timer
+        (
+        () =>
+        {
+            if (targetObject)
+            {
+                ImageFontControl targetControl = targetObject.GetComponent<ImageFontControl>();
+                if (targetControl)
+                {
+                    Debug.Log("111111111111111111111111111111");
+                    targetControl._ScoreValue -= 1;
+                    targetControl._DefaultValue -= 1;
+                }
+            }
+        }
+        ,
+        DefaulTime
+);
+
+        imageFontControl = gameObject.GetComponent<ImageFontControl>();
+    }
+	
+	// Update is called once per frame
+	void Update () {
+
+        if (imageFontControl)
+            imageFontControl._ScoreValue = (int)timer._destroyTime;
+
+        if (timer != null )
+            timer.Update();
+	}
 }
+
 

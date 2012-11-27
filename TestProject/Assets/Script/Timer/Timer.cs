@@ -5,34 +5,45 @@ namespace UITimer
 {
     public class Timer
     {
-
         private float destroyTime = 3.0f;
-        private bool TimeOutCheck = false;
+        private bool  TimeOutCheck = false;
+        public  bool  Infinity = true;
+        private int   InitTimeValue;
 
         public delegate void TimeOutFunc();
         private TimeOutFunc TimeOutfunc;
 
-        public Timer(TimeOutFunc timeOutfunc)
+        public Timer(TimeOutFunc timeOutfunc, int DefaultTime )
         {
             TimeOutfunc = timeOutfunc;
+            SetDestroyTime(DefaultTime);
         }
 
-        // Update is called once per frame
+        public float _destroyTime
+        {
+            get { return destroyTime; }
+        }
+
         public void Update()
         {
-            destroyTime = destroyTime - Time.deltaTime;
-
-            if (destroyTime <= 0)
+            if (!IsTimerOut())
             {
-                Debug.Log("Time End");
-                TimeOutCheck = true;
-                TimeOutfunc();
+                destroyTime = destroyTime - Time.deltaTime;
+                if (destroyTime <= 0)
+                {
+                    if (!Infinity)
+                        TimeOutCheck = true;
+                    else
+                        destroyTime = InitTimeValue;
+                    TimeOutfunc();
+                }
             }
         }
 
-        public void SetDestroyTime( int time )
+        private void SetDestroyTime( int time )
         {
             destroyTime = time;
+            InitTimeValue = time;
         }
 
         public bool IsTimerOut()

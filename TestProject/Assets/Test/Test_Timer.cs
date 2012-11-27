@@ -11,7 +11,7 @@ namespace Test
         public void Initialize()
         {
             var result = false;
-            UITimer.Timer timer = new UITimer.Timer(() => { result = true; });
+            UITimer.Timer timer = new UITimer.Timer(() => { result = true; }, 10);
             Assert.NotNull(timer);
 
             while (!timer.IsTimerOut())
