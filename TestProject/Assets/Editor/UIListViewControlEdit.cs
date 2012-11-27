@@ -26,6 +26,6 @@ public class UIListViewControlEdit : Editor
 
     public void OnSceneGUI()
     {
-        Debug.Log("OnInspectorGUI");
+        //Debug.Log("OnInspectorGUI");
     }
 }

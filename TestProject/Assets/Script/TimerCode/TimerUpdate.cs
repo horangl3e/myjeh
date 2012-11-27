@@ -1,16 +1,36 @@
 using UnityEngine;
 using System.Collections;
 
-public class TimerUpdate : MonoBehaviour {
+namespace UITimer
+{
+    public class TimerUpdate : MonoBehaviour
+    {
+        public GameObject targetObject;
+        public int DefaulTime;
 
+        Timer timer;
 
-    private Timer myTimer = new Timer(1000,1);
-	void Start () {
+        void Awake()
+        {
+           timer = new Timer
+           (
+               () =>
+               {
+                   if (targetObject)
+                   {
+                        //targetObject.GetComponent<>()    
+                   }
+               }
+           );
+
+           timer.SetDestroyTime(DefaulTime);
+        }
 	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	    // Update is called once per frame
+	    void Update () {
+            if (timer != null )
+                timer.Update();
+	    }
+    }
 }
+
