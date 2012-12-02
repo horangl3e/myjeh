@@ -5,7 +5,7 @@ using System.Collections;
 public class TimerUpdate : MonoBehaviour
 {
     public GameObject targetObject;
-    public int DefaulTime;
+    public int DefaulTime = 10;
 
     UITimer.Timer timer;
     ImageFontControl imageFontControl;
@@ -28,7 +28,7 @@ public class TimerUpdate : MonoBehaviour
                 {
                     Debug.Log("111111111111111111111111111111");
                     targetControl._ScoreValue -= 1;
-                    targetControl._DefaultValue -= 1;
+                    //targetControl._DefaultValue -= 1;
                 }
             }
         }

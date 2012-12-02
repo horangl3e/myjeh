@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class ImageFontControl : MonoBehaviour {
 
-    public GameObject gameObject;
+    public GameObject ImageObject;
     public ArrayList gameObjectList = new ArrayList();
     private int ScoreValue = 0;
 	public  bool Reverse = false;
@@ -16,6 +16,8 @@ public class ImageFontControl : MonoBehaviour {
 
     private float InitPosX = 0.0f;
     public bool CenterSort = false;
+	
+	public int Interval = 0;
 
 	public enum Pivot
 	{
@@ -29,17 +31,11 @@ public class ImageFontControl : MonoBehaviour {
 		get { return ScoreValue; }
     }
 
-    public int _DefaultValue
-    {
-        set { DefaultValue = value; }
-        get { return DefaultValue;  }
-    }
-
     void Awake()
     {
-        gameObjectList.Add(gameObject);
+        gameObjectList.Add(ImageObject);
         for (int i = 0; i < GameObjectSize; i++)
-            gameObjectList.Add(NGUITools.AddChild(gameObject.transform.parent.gameObject, gameObject));
+            gameObjectList.Add(NGUITools.AddChild(ImageObject.transform.parent.gameObject, ImageObject));
 
 
         InitPosX = transform.localPosition.x;
@@ -99,9 +95,9 @@ public class ImageFontControl : MonoBehaviour {
                             GameObject pregameObject = (GameObject)gameObjectList[gameObjectCount - 1];
 
                             if (pivot == Pivot.Left)
-                                vec.x = pregameObject.transform.localPosition.x + pregameObject.transform.localScale.x;
+                                vec.x = pregameObject.transform.localPosition.x + pregameObject.transform.localScale.x + Interval;
                             else
-                                vec.x = pregameObject.transform.localPosition.x - pregameObject.transform.localScale.x;
+                                vec.x = pregameObject.transform.localPosition.x - pregameObject.transform.localScale.x - Interval;
 
                             uiSprite.transform.localPosition = vec;
                         }

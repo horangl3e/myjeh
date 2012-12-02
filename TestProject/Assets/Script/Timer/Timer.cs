@@ -7,7 +7,7 @@ namespace UITimer
     {
         private float destroyTime = 3.0f;
         private bool  TimeOutCheck = false;
-        public  bool  Infinity = true;
+        public  bool  Infinity = false;
         private int   InitTimeValue;
 
         public delegate void TimeOutFunc();

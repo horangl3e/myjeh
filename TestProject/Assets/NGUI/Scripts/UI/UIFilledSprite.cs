@@ -1,6 +1,6 @@
-//----------------------------------------------
+﻿//----------------------------------------------
 //            NGUI: Next-Gen UI kit
-// Copyright � 2011-2012 Tasharen Entertainment
+// Copyright ?2011-2012 Tasharen Entertainment
 //----------------------------------------------
 
 using UnityEngine;
@@ -14,441 +14,480 @@ using System.Collections.Generic;
 [AddComponentMenu("NGUI/UI/Sprite (Filled)")]
 public class UIFilledSprite : UISprite
 {
-	public enum FillDirection
-	{
-		Horizontal,
-		Vertical,
-		Radial90,
-		Radial180,
-		Radial360,
-	}
+    public enum FillDirection
+    {
+        Horizontal,
+        Vertical,
+        Radial90,
+        Radial180,
+        Radial360,
+        Center90,
+    }
 
-	[HideInInspector][SerializeField] FillDirection mFillDirection = FillDirection.Radial360;
-	[HideInInspector][SerializeField] float mFillAmount = 1.0f;
-	[HideInInspector][SerializeField] bool mInvert = false;
+    [HideInInspector]
+    [SerializeField]
+    FillDirection mFillDirection = FillDirection.Radial360;
+    [HideInInspector]
+    [SerializeField]
+    float mFillAmount = 1.0f;
+    [HideInInspector]
+    [SerializeField]
+    bool mInvert = false;
 
-	/// <summary>
-	/// Direction of the cut procedure.
-	/// </summary>
+    /// <summary>
+    /// Direction of the cut procedure.
+    /// </summary>
 
-	public FillDirection fillDirection
-	{
-		get
-		{
-			return mFillDirection;
-		}
-		set
-		{
-			if (mFillDirection != value)
-			{
-				mFillDirection = value;
-				mChanged = true;
-			}
-		}
-	}
+    public FillDirection fillDirection
+    {
+        get
+        {
+            return mFillDirection;
+        }
+        set
+        {
+            if (mFillDirection != value)
+            {
+                mFillDirection = value;
+                mChanged = true;
+            }
+        }
+    }
 
-	/// <summary>
-	/// Amount of the sprite shown. 0-1 range with 0 being nothing shown, and 1 being the full sprite.
-	/// </summary>
+    /// <summary>
+    /// Amount of the sprite shown. 0-1 range with 0 being nothing shown, and 1 being the full sprite.
+    /// </summary>
 
-	public float fillAmount
-	{
-		get
-		{
-			return mFillAmount;
-		}
-		set
-		{
-			float val = Mathf.Clamp01(value);
+    public float fillAmount
+    {
+        get
+        {
+            return mFillAmount;
+        }
+        set
+        {
+            float val = Mathf.Clamp01(value);
 
-			if (mFillAmount != val)
-			{
-				mFillAmount = val;
-				mChanged = true;
-			}
-		}
-	}
+            if (mFillAmount != val)
+            {
+                mFillAmount = val;
+                mChanged = true;
+            }
+        }
+    }
 
-	/// <summary>
-	/// Whether the sprite should be filled in the opposite direction.
-	/// </summary>
+    /// <summary>
+    /// Whether the sprite should be filled in the opposite direction.
+    /// </summary>
 
-	public bool invert
-	{
-		get
-		{
-			return mInvert;
-		}
-		set
-		{
-			if (mInvert != value)
-			{
-				mInvert = value;
-				mChanged = true;
-			}
-		}
-	}
+    public bool invert
+    {
+        get
+        {
+            return mInvert;
+        }
+        set
+        {
+            if (mInvert != value)
+            {
+                mInvert = value;
+                mChanged = true;
+            }
+        }
+    }
 
-	/// <summary>
-	/// Adjust the specified quad, making it be radially filled instead.
-	/// </summary>
+    /// <summary>
+    /// Adjust the specified quad, making it be radially filled instead.
+    /// </summary>
 
-	bool AdjustRadial (Vector2[] xy, Vector2[] uv, float fill, bool invert)
-	{
-		// Nothing to fill
-		if (fill < 0.001f) return false;
+    public bool AdjustRadial(Vector2[] xy, Vector2[] uv, float fill, bool invert)
+    {
+        // Nothing to fill
+        if (fill < 0.001f) return false;
 
-		// Nothing to adjust
-		if (!invert && fill > 0.999f) return true;
+        // Nothing to adjust
+        if (!invert && fill > 0.999f) return true;
 
-		// Convert 0-1 value into 0 to 90 degrees angle in radians
-		float angle = Mathf.Clamp01(fill);
-		if (!invert) angle = 1f - angle;
-		angle *= 90f * Mathf.Deg2Rad;
+        // 0~1사이값 fill 인데 혹시나 음수이거나 1보다 클경우를 0또는 1로 바꾸고 그렇ㅈ ㅣ않으면 가지고있는 값 리턴
+        // Convert 0-1 value into 0 to 90 degrees angle in radians
+        float angle = Mathf.Clamp01(fill);
+        if (!invert) angle = 1f - angle;
 
-		// Calculate the effective X and Y factors
-		float fx = Mathf.Sin(angle);
-		float fy = Mathf.Cos(angle);
+        //angle은 0~1사이값이다.
 
-		// Normalize the result, so it's projected onto the side of the rectangle
-		if (fx > fy)
-		{
-			fy *= 1f / fx;
-			fx = 1f;
+        //1도는 0.017라디안 이다.
+        //90 * 1도
+        //90도를 곱한다.
 
-			if (!invert)
-			{
-				xy[0].y = Mathf.Lerp(xy[2].y, xy[0].y, fy);
-				xy[3].y = xy[0].y;
+        //angle이 1이라면 90도 이고 그렇지 아니면 0 
+        //즉 angle의 범위는 0~90도 사이다
+        angle *= 90f * Mathf.Deg2Rad;
 
-				uv[0].y = Mathf.Lerp(uv[2].y, uv[0].y, fy);
-				uv[3].y = uv[0].y;
-			}
-		}
-		else if (fy > fx)
-		{
-			fx *= 1f / fy;
-			fy = 1f;
+        // Calculate the effective X and Y factors
 
-			if (invert)
-			{
-				xy[0].x = Mathf.Lerp(xy[2].x, xy[0].x, fx);
-				xy[1].x = xy[0].x;
+        //cos90은 0 cos0은 1
+        //sin90은 1 sin0은 0
+        float fx = Mathf.Sin(angle);
+        float fy = Mathf.Cos(angle); 
+        //그래프 상에서 x값 y값이다. 1사분선에서
 
-				uv[0].x = Mathf.Lerp(uv[2].x, uv[0].x, fx);
-				uv[1].x = uv[0].x;
-			}
-		}
-		else
-		{
-			fx = 1f;
-			fy = 1f;
-		}
+        //fx와 fy의 범위는 0에서 1사이값이다.
 
-		if (invert)
-		{
-			xy[1].y = Mathf.Lerp(xy[2].y, xy[0].y, fy);
-			uv[1].y = Mathf.Lerp(uv[2].y, uv[0].y, fy);
-		}
-		else
-		{
-			xy[3].x = Mathf.Lerp(xy[2].x, xy[0].x, fx);
-			uv[3].x = Mathf.Lerp(uv[2].x, uv[0].x, fx);
-		}
-		return true;
-	}
+        // Normalize the result, so it's projected onto the side of the rectangle
+        if (fx > fy)
+        {
+            fy *= 1f / fx;
+            fx = 1f;
 
-	/// <summary>
-	/// Helper function that copies the contents of the array, rotated by the specified offset.
-	/// </summary>
+            if (!invert)
+            {
+                //첫번째 매개변수와 두번째 매개변수의 중간값등을 구할때 쓴다 fy가 1이면 두번째 매개변수 0이면 첫번째 매개변수 값을 쓴다
+                xy[0].y = Mathf.Lerp(xy[2].y, xy[0].y, fy);
+                xy[3].y = xy[0].y;
 
-	void Rotate (Vector2[] v, int offset)
-	{
-		for (int i = 0; i < offset; ++i)
-		{
-			Vector2 v0 = new Vector2(v[3].x, v[3].y);
+                uv[0].y = Mathf.Lerp(uv[2].y, uv[0].y, fy);
+                uv[3].y = uv[0].y;
+            }
+        }
+        else if (fy > fx)
+        {
+            fx *= 1f / fy;
+            fy = 1f;
 
-			v[3].x = v[2].y;
-			v[3].y = v[2].x;
+            if (invert)
+            {
+                xy[0].x = Mathf.Lerp(xy[2].x, xy[0].x, fx);
+                xy[1].x = xy[0].x;
 
-			v[2].x = v[1].y;
-			v[2].y = v[1].x;
+                uv[0].x = Mathf.Lerp(uv[2].x, uv[0].x, fx);
+                uv[1].x = uv[0].x;
+            }
+        }
+        else
+        {
+            fx = 1f;
+            fy = 1f;
+        }
 
-			v[1].x = v[0].y;
-			v[1].y = v[0].x;
+        if (invert)
+        {
+            xy[1].y = Mathf.Lerp(xy[2].y, xy[0].y, fy);
+            uv[1].y = Mathf.Lerp(uv[2].y, uv[0].y, fy);
+        }
+        else
+        {
+            xy[3].x = Mathf.Lerp(xy[2].x, xy[0].x, fx);
+            uv[3].x = Mathf.Lerp(uv[2].x, uv[0].x, fx);
+        }
+        return true;
+    }
 
-			v[0].x = v0.y;
-			v[0].y = v0.x;
-		}
-	}
+    /// <summary>
+    /// Helper function that copies the contents of the array, rotated by the specified offset.
+    /// </summary>
 
-	/// <summary>
-	/// Virtual function called by the UIScreen that fills the buffers.
-	/// </summary>
+    public void Rotate(Vector2[] v, int offset)
+    {
+        for (int i = 0; i < offset; ++i)
+        {
+            Vector2 v0 = new Vector2(v[3].x, v[3].y);
 
-	override public void OnFill (BetterList<Vector3> verts, BetterList<Vector2> uvs, BetterList<Color> cols)
-	{
-		float x0 =  0f;
-		float y0 =  0f;
-		float x1 =  1f;
-		float y1 = -1f;
+            v[3].x = v[2].y;
+            v[3].y = v[2].x;
 
-		float u0 = mOuterUV.xMin;
-		float v0 = mOuterUV.yMin;
-		float u1 = mOuterUV.xMax;
-		float v1 = mOuterUV.yMax;
+            v[2].x = v[1].y;
+            v[2].y = v[1].x;
 
-		// Horizontal and vertical filled sprites are simple -- just end the sprite prematurely
-		if (mFillDirection == FillDirection.Horizontal || mFillDirection == FillDirection.Vertical)
-		{
-			float du = (u1 - u0) * mFillAmount;
-			float dv = (v1 - v0) * mFillAmount;
+            v[1].x = v[0].y;
+            v[1].y = v[0].x;
 
-			if (fillDirection == FillDirection.Horizontal)
-			{
-				if (mInvert)
-				{
-					x0 = (1f - mFillAmount);
-					u0 = u1 - du;
-				}
-				else
-				{
-					x1 *= mFillAmount;
-					u1 = u0 + du;
-				}
-			}
-			else if (fillDirection == FillDirection.Vertical)
-			{
-				if (mInvert)
-				{
-					y1 *= mFillAmount;
-					v0 = v1 - dv;
-				}
-				else
-				{
-					y0 = -(1f - mFillAmount);
-					v1 = v0 + dv;
-				}
-			}
-		}
+            v[0].x = v0.y;
+            v[0].y = v0.x;
+        }
+    }
 
-		// Starting quad for the sprite
-		Vector2[] xy = new Vector2[4];
-		Vector2[] uv = new Vector2[4];
+    /// <summary>
+    /// Virtual function called by the UIScreen that fills the buffers.
+    /// </summary>
 
-		xy[0] = new Vector2(x1, y0);
-		xy[1] = new Vector2(x1, y1);
-		xy[2] = new Vector2(x0, y1);
-		xy[3] = new Vector2(x0, y0);
+    override public void OnFill(BetterList<Vector3> verts, BetterList<Vector2> uvs, BetterList<Color> cols)
+    {
+        float x0 = 0f;
+        float y0 = 0f;
+        float x1 = 1f;
+        float y1 = -1f;
 
-		uv[0] = new Vector2(u1, v1);
-		uv[1] = new Vector2(u1, v0);
-		uv[2] = new Vector2(u0, v0);
-		uv[3] = new Vector2(u0, v1);
+        float u0 = mOuterUV.xMin;
+        float v0 = mOuterUV.yMin;
+        float u1 = mOuterUV.xMax;
+        float v1 = mOuterUV.yMax;
 
-		if (fillDirection == FillDirection.Radial90)
-		{
-			// Adjust the quad radially, and if 'false' is returned (it's not visible), just exit
-			if (!AdjustRadial(xy, uv, mFillAmount, mInvert)) return;
-		}
-		else if (fillDirection == FillDirection.Radial180)
-		{
-			// Working in 0-1 coordinates is easier
-			Vector2[] oxy = new Vector2[4];
-			Vector2[] ouv = new Vector2[4];
+        //uv xy 값을 세팅 한다. 
+        // Horizontal and vertical filled sprites are simple -- just end the sprite prematurely
+        if (mFillDirection == FillDirection.Horizontal || mFillDirection == FillDirection.Vertical)
+        {
+            float du = (u1 - u0) * mFillAmount;
+            float dv = (v1 - v0) * mFillAmount;
 
-			for (int i = 0; i < 2; ++i)
-			{
-				oxy[0] = new Vector2(0f, 0f);
-				oxy[1] = new Vector2(0f, 1f);
-				oxy[2] = new Vector2(1f, 1f);
-				oxy[3] = new Vector2(1f, 0f);
+            //Horizontal 좌에서 우로
+            //오른족 부분이 왓다갓다 한다
+            if (fillDirection == FillDirection.Horizontal)
+            {
+                if (mInvert)
+                {
+                    x0 = (1f - mFillAmount);
+                    u0 = u1 - du;
+                }
+                else
+                {
+                    x1 *= mFillAmount;
+                    u1 = u0 + du;
+                }
+            }
+            //Vertical 아래에서 위로
 
-				ouv[0] = new Vector2(0f, 0f);
-				ouv[1] = new Vector2(0f, 1f);
-				ouv[2] = new Vector2(1f, 1f);
-				ouv[3] = new Vector2(1f, 0f);
+            //좌표가 u v는 u1 이 + 위로
+            //x y 는 y1이 -1이다 서로 반대 임
+            // 버티컬은 위에 부분이 왓다갓다 한다.
+            else if (fillDirection == FillDirection.Vertical)
+            {
+                if (mInvert)
+                {
+                    y1 *= mFillAmount;
+                    v0 = v1 - dv;
+                }
+                else
+                {
+                    y0 = -(1f - mFillAmount);
+                    v1 = v0 + dv;
+                }
+            }
+        }
 
-				// Each half must be rotated 90 degrees clockwise in order for it to fill properly
-				if (mInvert)
-				{
-					if (i > 0)
-					{
-						Rotate(oxy, i);
-						Rotate(ouv, i);
-					}
-				}
-				else if (i < 1)
-				{
-					Rotate(oxy, 1 - i);
-					Rotate(ouv, 1 - i);
-				}
+        // Starting quad for the sprite
+        Vector2[] xy = new Vector2[4];
+        Vector2[] uv = new Vector2[4];
 
-				// Each half must fill in only a part of the space
-				float x, y;
+        //사각형하나 순서는 
+        //        3           0
+        //        2           1
+        xy[0] = new Vector2(x1, y0);
+        xy[1] = new Vector2(x1, y1);
+        xy[2] = new Vector2(x0, y1);
+        xy[3] = new Vector2(x0, y0);
 
-				if (i == 1)
-				{
-					x = mInvert ? 0.5f : 1f;
-					y = mInvert ? 1f : 0.5f;
-				}
-				else
-				{
-					x = mInvert ? 1f : 0.5f;
-					y = mInvert ? 0.5f : 1f;
-				}
+        //이것도 동일하다
+        //       3            0
+        //       2            1
+        uv[0] = new Vector2(u1, v1);
+        uv[1] = new Vector2(u1, v0);
+        uv[2] = new Vector2(u0, v0);
+        uv[3] = new Vector2(u0, v1);
 
-				oxy[1].y = Mathf.Lerp(x, y, oxy[1].y);
-				oxy[2].y = Mathf.Lerp(x, y, oxy[2].y);
-				ouv[1].y = Mathf.Lerp(x, y, ouv[1].y);
-				ouv[2].y = Mathf.Lerp(x, y, ouv[2].y);
+        //실제 표현은 x0 y1 에서 오른쪽으로 90도 회전하는듯한 느낌
+        if (fillDirection == FillDirection.Radial90)
+        {
+            // Adjust the quad radially, and if 'false' is returned (it's not visible), just exit
+            if (!AdjustRadial(xy, uv, mFillAmount, mInvert)) return;
+        }
+        else if (fillDirection == FillDirection.Radial180)
+        {
+            // Working in 0-1 coordinates is easier
+            Vector2[] oxy = new Vector2[4];
+            Vector2[] ouv = new Vector2[4];
 
-				float amount = (mFillAmount) * 2 - i;
-				bool odd = (i % 2) == 1;
+            for (int i = 0; i < 2; ++i)
+            {
+                oxy[0] = new Vector2(0f, 0f);
+                oxy[1] = new Vector2(0f, 1f);
+                oxy[2] = new Vector2(1f, 1f);
+                oxy[3] = new Vector2(1f, 0f);
 
-				if (AdjustRadial(oxy, ouv, amount, !odd))
-				{
-					if (mInvert) odd = !odd;
+                ouv[0] = new Vector2(0f, 0f);
+                ouv[1] = new Vector2(0f, 1f);
+                ouv[2] = new Vector2(1f, 1f);
+                ouv[3] = new Vector2(1f, 0f);
 
-					// Add every other side in reverse order so they don't come out backface-culled due to rotation
-					if (odd)
-					{
-						for (int b = 0; b < 4; ++b)
-						{
-							x = Mathf.Lerp(xy[0].x, xy[2].x, oxy[b].x);
-							y = Mathf.Lerp(xy[0].y, xy[2].y, oxy[b].y);
+                // Each half must be rotated 90 degrees clockwise in order for it to fill properly
+                if (mInvert)
+                {
+                    if (i > 0)
+                    {
+                        Rotate(oxy, i);
+                        Rotate(ouv, i);
+                    }
+                }
+                else if (i < 1)
+                {
+                    Rotate(oxy, 1 - i);
+                    Rotate(ouv, 1 - i);
+                }
 
-							float u = Mathf.Lerp(uv[0].x, uv[2].x, ouv[b].x);
-							float v = Mathf.Lerp(uv[0].y, uv[2].y, ouv[b].y);
+                // Each half must fill in only a part of the space
+                float x, y;
 
-							verts.Add(new Vector3(x, y, 0f));
-							uvs.Add(new Vector2(u, v));
-							cols.Add(color);
-						}
-					}
-					else
-					{
-						for (int b = 3; b > -1; --b)
-						{
-							x = Mathf.Lerp(xy[0].x, xy[2].x, oxy[b].x);
-							y = Mathf.Lerp(xy[0].y, xy[2].y, oxy[b].y);
+                if (i == 1)
+                {
+                    x = mInvert ? 0.5f : 1f;
+                    y = mInvert ? 1f : 0.5f;
+                }
+                else
+                {
+                    x = mInvert ? 1f : 0.5f;
+                    y = mInvert ? 0.5f : 1f;
+                }
 
-							float u = Mathf.Lerp(uv[0].x, uv[2].x, ouv[b].x);
-							float v = Mathf.Lerp(uv[0].y, uv[2].y, ouv[b].y);
+                oxy[1].y = Mathf.Lerp(x, y, oxy[1].y);
+                oxy[2].y = Mathf.Lerp(x, y, oxy[2].y);
+                ouv[1].y = Mathf.Lerp(x, y, ouv[1].y);
+                ouv[2].y = Mathf.Lerp(x, y, ouv[2].y);
 
-							verts.Add(new Vector3(x, y, 0f));
-							uvs.Add(new Vector2(u, v));
-							cols.Add(color);
-						}
-					}
-				}
-			}
-			return;
-		}
-		else if (fillDirection == FillDirection.Radial360)
-		{
-			float[] matrix = new float[]
-			{
-				// x0 y0  x1   y1
-				0.5f, 1f, 0f, 0.5f, // quadrant 0
-				0.5f, 1f, 0.5f, 1f, // quadrant 1
-				0f, 0.5f, 0.5f, 1f, // quadrant 2
-				0f, 0.5f, 0f, 0.5f, // quadrant 3
-			};
+                float amount = (mFillAmount) * 2 - i;
+                bool odd = (i % 2) == 1;
 
-			Vector2[] oxy = new Vector2[4];
-			Vector2[] ouv = new Vector2[4];
+                if (AdjustRadial(oxy, ouv, amount, !odd))
+                {
+                    if (mInvert) odd = !odd;
 
-			for (int i = 0; i < 4; ++i)
-			{
-				oxy[0] = new Vector2(0f, 0f);
-				oxy[1] = new Vector2(0f, 1f);
-				oxy[2] = new Vector2(1f, 1f);
-				oxy[3] = new Vector2(1f, 0f);
+                    // Add every other side in reverse order so they don't come out backface-culled due to rotation
+                    if (odd)
+                    {
+                        for (int b = 0; b < 4; ++b)
+                        {
+                            x = Mathf.Lerp(xy[0].x, xy[2].x, oxy[b].x);
+                            y = Mathf.Lerp(xy[0].y, xy[2].y, oxy[b].y);
 
-				ouv[0] = new Vector2(0f, 0f);
-				ouv[1] = new Vector2(0f, 1f);
-				ouv[2] = new Vector2(1f, 1f);
-				ouv[3] = new Vector2(1f, 0f);
+                            float u = Mathf.Lerp(uv[0].x, uv[2].x, ouv[b].x);
+                            float v = Mathf.Lerp(uv[0].y, uv[2].y, ouv[b].y);
 
-				// Each quadrant must be rotated 90 degrees clockwise in order for it to fill properly
-				if (mInvert)
-				{
-					if (i > 0)
-					{
-						Rotate(oxy, i);
-						Rotate(ouv, i);
-					}
-				}
-				else if (i < 3)
-				{
-					Rotate(oxy, 3 - i);
-					Rotate(ouv, 3 - i);
-				}
+                            verts.Add(new Vector3(x, y, 0f));
+                            uvs.Add(new Vector2(u, v));
+                            cols.Add(color);
+                        }
+                    }
+                    else
+                    {
+                        for (int b = 3; b > -1; --b)
+                        {
+                            x = Mathf.Lerp(xy[0].x, xy[2].x, oxy[b].x);
+                            y = Mathf.Lerp(xy[0].y, xy[2].y, oxy[b].y);
 
-				// Each quadrant must fill in only a quarter of the space
-				for (int b = 0; b < 4; ++b)
-				{
-					int index = (mInvert) ? (3 - i) * 4 : i * 4;
+                            float u = Mathf.Lerp(uv[0].x, uv[2].x, ouv[b].x);
+                            float v = Mathf.Lerp(uv[0].y, uv[2].y, ouv[b].y);
 
-					float fx0 = matrix[index];
-					float fy0 = matrix[index + 1];
-					float fx1 = matrix[index + 2];
-					float fy1 = matrix[index + 3];
+                            verts.Add(new Vector3(x, y, 0f));
+                            uvs.Add(new Vector2(u, v));
+                            cols.Add(color);
+                        }
+                    }
+                }
+            }
+            return;
+        }
+        else if (fillDirection == FillDirection.Radial360)
+        {
+            float[] matrix = new float[]
+         			{
+         				// x0 y0  x1   y1
+         				0.5f, 1f, 0f, 0.5f, // quadrant 0
+         				0.5f, 1f, 0.5f, 1f, // quadrant 1
+         				0f, 0.5f, 0.5f, 1f, // quadrant 2
+         				0f, 0.5f, 0f, 0.5f, // quadrant 3
+         			};
 
-					oxy[b].x = Mathf.Lerp(fx0, fy0, oxy[b].x);
-					oxy[b].y = Mathf.Lerp(fx1, fy1, oxy[b].y);
-					ouv[b].x = Mathf.Lerp(fx0, fy0, ouv[b].x);
-					ouv[b].y = Mathf.Lerp(fx1, fy1, ouv[b].y);
-				}
+            Vector2[] oxy = new Vector2[4];
+            Vector2[] ouv = new Vector2[4];
 
-				float amount = (mFillAmount) * 4 - i;
-				bool odd = (i % 2) == 1;
+            for (int i = 0; i < 4; ++i)
+            {
+                oxy[0] = new Vector2(0f, 0f);
+                oxy[1] = new Vector2(0f, 1f);
+                oxy[2] = new Vector2(1f, 1f);
+                oxy[3] = new Vector2(1f, 0f);
 
-				if (AdjustRadial(oxy, ouv, amount, !odd))
-				{
-					if (mInvert) odd = !odd;
+                ouv[0] = new Vector2(0f, 0f);
+                ouv[1] = new Vector2(0f, 1f);
+                ouv[2] = new Vector2(1f, 1f);
+                ouv[3] = new Vector2(1f, 0f);
 
-					// Add every other side in reverse order so they don't come out backface-culled due to rotation
-					if (odd)
-					{
-						for (int b = 0; b < 4; ++b)
-						{
-							float x = Mathf.Lerp(xy[0].x, xy[2].x, oxy[b].x);
-							float y = Mathf.Lerp(xy[0].y, xy[2].y, oxy[b].y);
-							float u = Mathf.Lerp(uv[0].x, uv[2].x, ouv[b].x);
-							float v = Mathf.Lerp(uv[0].y, uv[2].y, ouv[b].y);
+                // Each quadrant must be rotated 90 degrees clockwise in order for it to fill properly
+                if (mInvert)
+                {
+                    if (i > 0)
+                    {
+                        Rotate(oxy, i);
+                        Rotate(ouv, i);
+                    }
+                }
+                else if (i < 3)
+                {
+                    Rotate(oxy, 3 - i);
+                    Rotate(ouv, 3 - i);
+                }
 
-							verts.Add(new Vector3(x, y, 0f));
-							uvs.Add(new Vector2(u, v));
-							cols.Add(color);
-						}
-					}
-					else
-					{
-						for (int b = 3; b > -1; --b)
-						{
-							float x = Mathf.Lerp(xy[0].x, xy[2].x, oxy[b].x);
-							float y = Mathf.Lerp(xy[0].y, xy[2].y, oxy[b].y);
-							float u = Mathf.Lerp(uv[0].x, uv[2].x, ouv[b].x);
-							float v = Mathf.Lerp(uv[0].y, uv[2].y, ouv[b].y);
+                // Each quadrant must fill in only a quarter of the space
+                for (int b = 0; b < 4; ++b)
+                {
+                    int index = (mInvert) ? (3 - i) * 4 : i * 4;
 
-							verts.Add(new Vector3(x, y, 0f));
-							uvs.Add(new Vector2(u, v));
-							cols.Add(color);
-						}
-					}
-				}
-			}
-			return;
-		}
+                    float fx0 = matrix[index];
+                    float fy0 = matrix[index + 1];
+                    float fx1 = matrix[index + 2];
+                    float fy1 = matrix[index + 3];
 
-		// Fill the buffer with the quad for the sprite
-		for (int i = 0; i < 4; ++i)
-		{
-			verts.Add(xy[i]);
-			uvs.Add(uv[i]);
-			cols.Add(color);
-		}
-	}
+                    oxy[b].x = Mathf.Lerp(fx0, fy0, oxy[b].x);
+                    oxy[b].y = Mathf.Lerp(fx1, fy1, oxy[b].y);
+                    ouv[b].x = Mathf.Lerp(fx0, fy0, ouv[b].x);
+                    ouv[b].y = Mathf.Lerp(fx1, fy1, ouv[b].y);
+                }
+
+                float amount = (mFillAmount) * 4 - i;
+                bool odd = (i % 2) == 1;
+
+                if (AdjustRadial(oxy, ouv, amount, !odd))
+                {
+                    if (mInvert) odd = !odd;
+
+                    // Add every other side in reverse order so they don't come out backface-culled due to rotation
+                    if (odd)
+                    {
+                        for (int b = 0; b < 4; ++b)
+                        {
+                            float x = Mathf.Lerp(xy[0].x, xy[2].x, oxy[b].x);
+                            float y = Mathf.Lerp(xy[0].y, xy[2].y, oxy[b].y);
+                            float u = Mathf.Lerp(uv[0].x, uv[2].x, ouv[b].x);
+                            float v = Mathf.Lerp(uv[0].y, uv[2].y, ouv[b].y);
+
+                            verts.Add(new Vector3(x, y, 0f));
+                            uvs.Add(new Vector2(u, v));
+                            cols.Add(color);
+                        }
+                    }
+                    else
+                    {
+                        for (int b = 3; b > -1; --b)
+                        {
+                            float x = Mathf.Lerp(xy[0].x, xy[2].x, oxy[b].x);
+                            float y = Mathf.Lerp(xy[0].y, xy[2].y, oxy[b].y);
+                            float u = Mathf.Lerp(uv[0].x, uv[2].x, ouv[b].x);
+                            float v = Mathf.Lerp(uv[0].y, uv[2].y, ouv[b].y);
+
+                            verts.Add(new Vector3(x, y, 0f));
+                            uvs.Add(new Vector2(u, v));
+                            cols.Add(color);
+                        }
+                    }
+                }
+            }
+            return;
+        }
+
+        // Fill the buffer with the quad for the sprite
+        for (int i = 0; i < 4; ++i)
+        {
+            verts.Add(xy[i]);
+            uvs.Add(uv[i]);
+            cols.Add(color);
+        }
+    }
 }
