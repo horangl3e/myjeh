@@ -16,7 +16,7 @@ public class UIListViewControlEdit : Editor
     public virtual void InitEnable()
     {
         m_target = target as UIListViewControl;
-        m_target.CreateItemforEdit();
+        //m_target.CreateItemforEdit();
     }
 
     public override void OnInspectorGUI()
@@ -28,4 +28,5 @@ public class UIListViewControlEdit : Editor
     {
         //Debug.Log("OnInspectorGUI");
     }
+
 }

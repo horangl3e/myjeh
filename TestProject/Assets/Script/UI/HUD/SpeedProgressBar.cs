@@ -1,28 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-class ProgressCutom
-{
-    private float fmin = 0.22f;
-    private float fmax = 0.77f;
-
-    public float maxValue()
-    {
-        return fmax - fmin;
-    }
-
-    public float GetValue(float fvalue)
-    {
-        return (fvalue * maxValue()) + fmin;
-    }
-}
-
 public class SpeedProgressBar : MonoBehaviour {
 
     private UISlider SpeedSlider;
     private UIFilledSprite SpeedFilledSprite;
 	private UITimer.Timer uiTimer;
-    private ProgressCutom progress = new ProgressCutom();
 
     void Awake()
     {
@@ -47,8 +30,25 @@ public class SpeedProgressBar : MonoBehaviour {
 	void Update () {
         if (null != uiTimer)
         {
-            float TimeValue = uiTimer._destroyTime * 0.1f;
-            SpeedSlider.sliderValue = progress.GetValue(TimeValue);
+            SpeedSlider.sliderValue = uiTimer._destroyTime * 0.1f;
+
+            if (SpeedSlider.sliderValue <= 0.3f)
+            {
+               UIFilledSprite uiFill = gameObject.GetComponentInChildren<UIFilledSprite>();
+
+               if (uiFill)
+               {
+                   //Debug.Log("¿÷¥Ÿ = " + uiFill.transform.gameObject.name );
+
+                   //uiFill.fillDirection = UIFilledSprite.FillDirection.Vertical;
+                   
+                }
+
+//                 SpeedFilledSprite = gameObject.GetComponent<UIFilledSprite>();
+//                 SpeedSlider.fillDirection
+            }
+
+            //Debug.Log("SpeedSlider.sliderValue = " + uiTimer._destroyTime);
             uiTimer.Update();
         }
 	}

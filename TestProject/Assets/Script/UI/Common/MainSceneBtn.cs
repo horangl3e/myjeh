@@ -5,6 +5,6 @@ public class MainSceneBtn : MonoBehaviour {
 
 	void OnClick()
 	{
-		Application.LoadLevel("MainScene");
+		Application.LoadLevel("TestMainScene");
 	}
 }

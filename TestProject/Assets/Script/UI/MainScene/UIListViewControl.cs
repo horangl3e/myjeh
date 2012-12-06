@@ -37,9 +37,4 @@ public class UIListViewControl : MonoBehaviour {
                 Debug.LogError("Error CreateItem UIGrid Null");
         }
     }
-	
-	public void CreateItemforEdit()
-	{
-		CreateItem(0);
-	}
 }

@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: SpeedGage
+  m_Name: SpeedHUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,191 +37,191 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 1}
   m_Name: 
-  material: {fileID: 2100000, guid: 529532b67ba1a424abcc1fd3c67ff355, type: 2}
+  material: {fileID: 2100000, guid: d0ccd82dba3ab8e438552c428f5266fa, type: 2}
   sprites:
-  - name: Test_00
-    outer:
-      serializedVersion: 2
-      x: 345
-      y: 1738
-      width: 344
-      height: 123
-    inner:
-      serializedVersion: 2
-      x: 345
-      y: 1738
-      width: 344
-      height: 123
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Test_01
+  - name: 8
     outer:
       serializedVersion: 2
       x: 0
-      y: 1737
-      width: 344
-      height: 124
+      y: 177
+      width: 61
+      height: 79
     inner:
       serializedVersion: 2
       x: 0
-      y: 1737
-      width: 344
-      height: 124
+      y: 177
+      width: 61
+      height: 79
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: RPM_Gauge_bg_00
-    outer:
-      serializedVersion: 2
-      x: 31
-      y: 1668
-      width: 241
-      height: 68
-    inner:
-      serializedVersion: 2
-      x: 31
-      y: 1668
-      width: 241
-      height: 68
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: RPM_Gauge_00
-    outer:
-      serializedVersion: 2
-      x: 273
-      y: 1676
-      width: 233
-      height: 60
-    inner:
-      serializedVersion: 2
-      x: 273
-      y: 1676
-      width: 233
-      height: 60
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Dura_bg_00 copy
-    outer:
-      serializedVersion: 2
-      x: 801
-      y: 1899
-      width: 74
-      height: 51
-    inner:
-      serializedVersion: 2
-      x: 801
-      y: 1899
-      width: 74
-      height: 51
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Dura_00 copy
-    outer:
-      serializedVersion: 2
-      x: 899
-      y: 1997
-      width: 74
-      height: 51
-    inner:
-      serializedVersion: 2
-      x: 899
-      y: 1997
-      width: 74
-      height: 51
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Rpm_00
-    outer:
-      serializedVersion: 2
-      x: 690
-      y: 1768
-      width: 255
-      height: 93
-    inner:
-      serializedVersion: 2
-      x: 690
-      y: 1768
-      width: 255
-      height: 93
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Item_00
-    outer:
-      serializedVersion: 2
-      x: 801
-      y: 1951
-      width: 97
-      height: 97
-    inner:
-      serializedVersion: 2
-      x: 801
-      y: 1951
-      width: 97
-      height: 97
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Main_Hud_01
+  - name: 4
     outer:
       serializedVersion: 2
       x: 0
-      y: 1862
-      width: 800
-      height: 186
+      y: 97
+      width: 61
+      height: 79
     inner:
       serializedVersion: 2
       x: 0
-      y: 1862
-      width: 800
-      height: 186
+      y: 97
+      width: 61
+      height: 79
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Fuel_Gauge_00
+  - name: 9
     outer:
       serializedVersion: 2
-      x: 31
-      y: 669
-      width: 14
-      height: 998
+      x: 0
+      y: 17
+      width: 61
+      height: 79
     inner:
       serializedVersion: 2
-      x: 31
-      y: 669
-      width: 14
-      height: 998
+      x: 0
+      y: 17
+      width: 61
+      height: 79
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Fuel_Gauge_bg_00
+  - name: 1
     outer:
       serializedVersion: 2
-      x: 0
-      y: 705
-      width: 30
-      height: 1031
+      x: 62
+      y: 177
+      width: 61
+      height: 79
     inner:
       serializedVersion: 2
-      x: 0
-      y: 705
-      width: 30
-      height: 1031
+      x: 62
+      y: 177
+      width: 61
+      height: 79
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 7
+    outer:
+      serializedVersion: 2
+      x: 124
+      y: 177
+      width: 61
+      height: 79
+    inner:
+      serializedVersion: 2
+      x: 124
+      y: 177
+      width: 61
+      height: 79
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 5
+    outer:
+      serializedVersion: 2
+      x: 186
+      y: 177
+      width: 61
+      height: 79
+    inner:
+      serializedVersion: 2
+      x: 186
+      y: 177
+      width: 61
+      height: 79
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 3
+    outer:
+      serializedVersion: 2
+      x: 62
+      y: 97
+      width: 61
+      height: 79
+    inner:
+      serializedVersion: 2
+      x: 62
+      y: 97
+      width: 61
+      height: 79
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 2
+    outer:
+      serializedVersion: 2
+      x: 62
+      y: 17
+      width: 61
+      height: 79
+    inner:
+      serializedVersion: 2
+      x: 62
+      y: 17
+      width: 61
+      height: 79
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 6
+    outer:
+      serializedVersion: 2
+      x: 124
+      y: 97
+      width: 61
+      height: 79
+    inner:
+      serializedVersion: 2
+      x: 124
+      y: 97
+      width: 61
+      height: 79
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 0
+    outer:
+      serializedVersion: 2
+      x: 186
+      y: 97
+      width: 61
+      height: 79
+    inner:
+      serializedVersion: 2
+      x: 186
+      y: 97
+      width: 61
+      height: 79
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Score_Alpha
+    outer:
+      serializedVersion: 2
+      x: 124
+      y: 48
+      width: 35
+      height: 48
+    inner:
+      serializedVersion: 2
+      x: 124
+      y: 48
+      width: 35
+      height: 48
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0

@@ -24,6 +24,6 @@ public class GameStartBtn : MonoBehaviour {
 	
 	void OnClick()
 	{
-		BackgroundLoad("WinterBells");
+		BackgroundLoad("GameScene");
 	}
 }
