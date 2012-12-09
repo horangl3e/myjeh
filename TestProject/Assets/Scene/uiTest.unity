@@ -632,7 +632,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 852879426}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.703296781, y: .703296721, z: 0}
+  m_LocalPosition: {x: -1.44469523, y: 2.88939047, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1224398956}
@@ -696,6 +696,53 @@ MonoBehaviour:
   mDepth: 109
   mAtlas: {fileID: 11400000, guid: 231e9a943972fb1418b94806a0ddda94, type: 2}
   mSpriteName: Fuel_Gauge_bg_00
+--- !u!1 &925135917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 3
+  m_Component:
+  - 4: {fileID: 925135918}
+  - 114: {fileID: 925135919}
+  m_Layer: 8
+  m_Name: Progress Bar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &925135918
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925135917}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -468.392273, y: -.000313997269, z: 0}
+  m_LocalScale: {x: 1.00031996, y: 1.00031996, z: 1.00031996}
+  m_Children:
+  - {fileID: 1276678888}
+  - {fileID: 2105441995}
+  m_Father: {fileID: 1224398956}
+--- !u!114 &925135919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925135917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c20815eb3063c24290a61b7020a1836, type: 1}
+  m_Name: 
+  foreground: {fileID: 2105441995}
+  thumb: {fileID: 0}
+  direction: 0
+  fullSize: {x: 30, y: 1031}
+  eventReceiver: {fileID: 0}
+  functionName: OnSliderChange
+  numberOfSteps: 0
+  rawValue: .643000007
 --- !u!1 &1004849574
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,6 +818,7 @@ Transform:
   - {fileID: 1757917455}
   - {fileID: 93401228}
   - {fileID: 1928631315}
+  - {fileID: 925135918}
   - {fileID: 168959190}
   m_Father: {fileID: 852879427}
 --- !u!114 &1224398957
@@ -791,6 +839,49 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
+--- !u!1 &1276678887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 3
+  m_Component:
+  - 4: {fileID: 1276678888}
+  - 114: {fileID: 1276678889}
+  m_Layer: 8
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1276678888
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1276678887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 30, y: 1031, z: 1}
+  m_Children: []
+  m_Father: {fileID: 925135918}
+--- !u!114 &1276678889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1276678887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 1}
+  m_Name: 
+  mMat: {fileID: 2100000, guid: 529532b67ba1a424abcc1fd3c67ff355, type: 2}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mDepth: 109
+  mAtlas: {fileID: 11400000, guid: 231e9a943972fb1418b94806a0ddda94, type: 2}
+  mSpriteName: Fuel_Gauge_bg_00
 --- !u!1 &1506375077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,3 +1291,61 @@ MonoBehaviour:
   functionName: OnSliderChange
   numberOfSteps: 0
   rawValue: .643000007
+--- !u!1 &2105441994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 3
+  m_Component:
+  - 4: {fileID: 2105441995}
+  - 114: {fileID: 2105441996}
+  - 114: {fileID: 2105441997}
+  m_Layer: 8
+  m_Name: Foreground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2105441995
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2105441994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.51556396, y: 0, z: 0}
+  m_LocalScale: {x: 14, y: 998, z: 1}
+  m_Children: []
+  m_Father: {fileID: 925135918}
+--- !u!114 &2105441996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2105441994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b12228fcbd9f7c4ab404413a6be97f2, type: 1}
+  m_Name: 
+  mMat: {fileID: 2100000, guid: 529532b67ba1a424abcc1fd3c67ff355, type: 2}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 3
+  mDepth: 110
+  mAtlas: {fileID: 11400000, guid: 231e9a943972fb1418b94806a0ddda94, type: 2}
+  mSpriteName: Fuel_Gauge_00
+  mFillDirection: 1
+  mFillAmount: .643000007
+  mInvert: 0
+--- !u!114 &2105441997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2105441994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aea31079284c8c42b0a55f321d07ea7, type: 1}
+  m_Name: 
+  color: []
