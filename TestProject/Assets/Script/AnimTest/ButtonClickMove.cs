@@ -17,6 +17,6 @@ public class ButtonClickMove : MonoBehaviour {
         UISlicedSprite uiSlicedSprite = GageObject.GetComponent<UISlicedSprite>();
 
         if (uiSlicedSprite)
-            tweenPosition.to = new Vector3(-594.0f, (-516.0f) + (uiSlicedSprite.transform.localScale.y -50.0f), 0);
+            tweenPosition.to = new Vector3(-350.0f, (-516.0f) + (uiSlicedSprite.transform.localScale.y -50.0f), 0);
 	}
 }
