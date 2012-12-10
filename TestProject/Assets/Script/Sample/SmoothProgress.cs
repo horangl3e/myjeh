@@ -13,23 +13,18 @@ namespace UI
             set { DurabilitySlider = value; }
         }
 
-        static public SmoothRamdaFunc func = (float value) => { DurabilitySlider.sliderValue += value; };
+        static public SmoothRamdaFunc func = (float value) => { DurabilitySlider.sliderValue -= value; };
     }
     public class SmoothProgress
     {
-        private float a = 1.0f;
-        private float v = 1.0f;
-        private float ProgressValue = 0.0f;
-
-        public SmoothProgress(float ProgressValue)
-        {
-            this.ProgressValue = ProgressValue;
-        }
+        private float a = 0.1f;
+        private float v = 0.1f;
+      
         public void Update(SmoothRamdaFunc func, float S)
         {
-            if (ProgressValue != S)
+            if ( 0.0f <= S)
             {
-                a *= 1.4f;
+                a *= 0.1f;
                 float v1 = v + a * Time.smoothDeltaTime;
                 func(v1 * Time.smoothDeltaTime);
             }

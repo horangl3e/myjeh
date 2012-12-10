@@ -3,9 +3,6 @@ using System.Collections;
 
 public class ClickButton : MonoBehaviour {
 	public GameObject DuraObject;
-
-    private int ValuePoint = 0;
-
     private bool TF = false;
 
     private UI.SmoothProgress smooth;
@@ -17,7 +14,7 @@ public class ClickButton : MonoBehaviour {
 
         DurabilitySlider = DuraObject.GetComponent<UISlider>();
         UI.SmoothRamda._DurabilitySlider = DurabilitySlider;
-        smooth = new UI.SmoothProgress((float)ValuePoint);
+        smooth = new UI.SmoothProgress();
 	}
 	
 	// Update is called once per frame
@@ -33,9 +30,4 @@ public class ClickButton : MonoBehaviour {
 	{
         TF = true;
 	}
-
-    void temp_setter(float value)
-    {
-        DurabilitySlider.sliderValue = value;
-    }
 }
