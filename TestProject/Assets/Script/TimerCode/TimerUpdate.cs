@@ -26,7 +26,7 @@ public class TimerUpdate : MonoBehaviour
                 ImageFontControl targetControl = targetObject.GetComponent<ImageFontControl>();
                 if (targetControl)
                 {
-                    Debug.Log("111111111111111111111111111111");
+                    //Debug.Log("111111111111111111111111111111");
                     targetControl._ScoreValue -= 1;
                     //targetControl._DefaultValue -= 1;
                 }

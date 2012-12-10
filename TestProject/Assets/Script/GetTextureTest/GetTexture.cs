@@ -26,8 +26,8 @@ public class GetTexture : MonoBehaviour {
         UIFilledSprite uiFilledSprite = gameObject.GetComponent<UIFilledSprite>();
         if (uiFilledSprite)
         {
-            Debug.Log("11111111111111 = " + uiFilledSprite.spriteName);
-            Debug.Log("2222222222222" + uiFilledSprite.material.name);
+          //  Debug.Log("11111111111111 = " + uiFilledSprite.spriteName);
+           // Debug.Log("2222222222222" + uiFilledSprite.material.name);
 
 //             Texture spriteNametex = uiFilledSprite.material.GetTexture(uiFilledSprite.spriteName);
 //             if (spriteNametex)
@@ -35,16 +35,16 @@ public class GetTexture : MonoBehaviour {
 //                 Debug.Log("4444444444444" + spriteNametex.name);
 // 
 //             }
-            Debug.Log("44444444444444444444 " + uiFilledSprite.sprite.name);
+            //Debug.Log("44444444444444444444 " + uiFilledSprite.sprite.name);
 
-            Debug.Log("uiFilledSprite.sprite.inner" + uiFilledSprite.sprite.inner);
-            Debug.Log("uiFilledSprite.sprite.outer" + uiFilledSprite.sprite.outer);
+          //  Debug.Log("uiFilledSprite.sprite.inner" + uiFilledSprite.sprite.inner);
+           // Debug.Log("uiFilledSprite.sprite.outer" + uiFilledSprite.sprite.outer);
 
             Texture2D texture = (Texture2D)uiFilledSprite.material.mainTexture;
             if (texture)
             {
                color = texture.GetPixels((int)uiFilledSprite.sprite.inner.left, (int)uiFilledSprite.sprite.inner.top, (int)uiFilledSprite.sprite.inner.width, (int)uiFilledSprite.sprite.inner.height);
-			   Debug.Log("colors.Length = " + color.Length );
+			  // Debug.Log("colors.Length = " + color.Length );
             }
             uiFilledSprite.color = color[100];
         }

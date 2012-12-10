@@ -8,24 +8,15 @@ public class ButtonClickMove : MonoBehaviour {
 	void OnClick()
 	{
 		moveObject.GetComponent<UISprite>().enabled = true;
-		
-		TweenPosition tweenPosition = moveObject.AddComponent<TweenPosition>();
+
+        TweenCirclePosition tweenPosition = moveObject.AddComponent<TweenCirclePosition>();
 		tweenPosition.duration = 0.8f;
 		tweenPosition.steeperCurves = true;
 		tweenPosition.from = new Vector3( gameObject.transform.localPosition.x, gameObject.transform.localPosition.y, gameObject.transform.localPosition.z );
-		tweenPosition.to = new Vector3(-734,0,0);
-		
-		UIFilledSprite uiFilledSprite = GageObject.GetComponent<UIFilledSprite>();
-		if( uiFilledSprite )
-		{
-			
-			Debug.Log("uiFilledSprite.transform.localScale.y = " + uiFilledSprite.transform.localScale.y  * uiFilledSprite.fillAmount);
-			
-			tweenPosition.to = new Vector3(0,0,0);
-			
-			Debug.Log(" GageObject.transform = " + GageObject.transform );
-			
-		}
-		
+
+        UISlicedSprite uiSlicedSprite = GageObject.GetComponent<UISlicedSprite>();
+
+        if (uiSlicedSprite)
+            tweenPosition.to = new Vector3(-594.0f, (-516.0f) + (uiSlicedSprite.transform.localScale.y -50.0f), 0);
 	}
 }
