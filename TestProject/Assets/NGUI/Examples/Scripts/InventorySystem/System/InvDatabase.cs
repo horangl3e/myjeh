@@ -13,6 +13,8 @@ public class InvDatabase : MonoBehaviour
 	/// Retrieves the list of item databases, finding all instances if necessary.
 	/// </summary>
 
+
+    //InvDatabase가 InvBaseItem리스트를 가지고 있다.
 	static public InvDatabase[] list
 	{
 		get
@@ -92,6 +94,7 @@ public class InvDatabase : MonoBehaviour
 	/// Find the specified item given its full 32-bit ID (not to be confused with individual 16-bit item IDs).
 	/// </summary>
 
+    //데이터 베이스는 여러게 일지라도 아이템은 하나밖에 안되나?
 	static public InvBaseItem FindByID (int id32)
 	{
 		InvDatabase db = GetDatabase(id32 >> 16);
@@ -102,6 +105,7 @@ public class InvDatabase : MonoBehaviour
 	/// Find the item with the specified name.
 	/// </summary>
 
+    //모든 데이터베이스 및 아이템 리스트에서 검색한다
 	static public InvBaseItem FindByName (string exact)
 	{
 		for (int i = 0, imax = list.Length; i < imax; ++i)

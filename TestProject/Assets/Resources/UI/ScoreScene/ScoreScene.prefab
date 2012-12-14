@@ -39,19 +39,53 @@ MonoBehaviour:
   m_Name: 
   material: {fileID: 2100000, guid: 476e8a258b4707c478e67109b172b5c9, type: 2}
   sprites:
-  - name: Best_00
+  - name: Score_Alpha
     outer:
       serializedVersion: 2
-      x: 0
-      y: 440
-      width: 451
-      height: 165
+      x: 494
+      y: 736
+      width: 23
+      height: 31
     inner:
       serializedVersion: 2
-      x: 0
-      y: 440
-      width: 451
-      height: 165
+      x: 494
+      y: 736
+      width: 23
+      height: 31
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 0
+    outer:
+      serializedVersion: 2
+      x: 518
+      y: 707
+      width: 21
+      height: 30
+    inner:
+      serializedVersion: 2
+      x: 518
+      y: 707
+      width: 21
+      height: 30
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 2
+    outer:
+      serializedVersion: 2
+      x: 494
+      y: 642
+      width: 22
+      height: 30
+    inner:
+      serializedVersion: 2
+      x: 494
+      y: 642
+      width: 22
+      height: 30
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
@@ -73,36 +107,19 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Result_BG_00
+  - name: 5
     outer:
       serializedVersion: 2
-      x: 0
-      y: 768
-      width: 720
-      height: 1280
+      x: 494
+      y: 611
+      width: 22
+      height: 30
     inner:
       serializedVersion: 2
-      x: 0
-      y: 768
-      width: 720
-      height: 1280
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: ','
-    outer:
-      serializedVersion: 2
-      x: 541
-      y: 674
-      width: 11
-      height: 31
-    inner:
-      serializedVersion: 2
-      x: 541
-      y: 674
-      width: 11
-      height: 31
+      x: 494
+      y: 611
+      width: 22
+      height: 30
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
@@ -111,99 +128,14 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 494
-      y: 673
+      y: 705
       width: 23
       height: 30
     inner:
       serializedVersion: 2
       x: 494
-      y: 673
+      y: 705
       width: 23
-      height: 30
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 0
-    outer:
-      serializedVersion: 2
-      x: 518
-      y: 676
-      width: 21
-      height: 30
-    inner:
-      serializedVersion: 2
-      x: 518
-      y: 676
-      width: 21
-      height: 30
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 3
-    outer:
-      serializedVersion: 2
-      x: 518
-      y: 645
-      width: 21
-      height: 30
-    inner:
-      serializedVersion: 2
-      x: 518
-      y: 645
-      width: 21
-      height: 30
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 2
-    outer:
-      serializedVersion: 2
-      x: 494
-      y: 610
-      width: 22
-      height: 30
-    inner:
-      serializedVersion: 2
-      x: 494
-      y: 610
-      width: 22
-      height: 30
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 4
-    outer:
-      serializedVersion: 2
-      x: 518
-      y: 614
-      width: 21
-      height: 30
-    inner:
-      serializedVersion: 2
-      x: 518
-      y: 614
-      width: 21
-      height: 30
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 5
-    outer:
-      serializedVersion: 2
-      x: 518
-      y: 737
-      width: 22
-      height: 30
-    inner:
-      serializedVersion: 2
-      x: 518
-      y: 737
-      width: 22
       height: 30
     paddingLeft: 0
     paddingRight: 0
@@ -212,14 +144,82 @@ MonoBehaviour:
   - name: 6
     outer:
       serializedVersion: 2
-      x: 541
-      y: 737
+      x: 518
+      y: 676
       width: 21
       height: 30
     inner:
       serializedVersion: 2
+      x: 518
+      y: 676
+      width: 21
+      height: 30
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ','
+    outer:
+      serializedVersion: 2
       x: 541
-      y: 737
+      y: 705
+      width: 11
+      height: 31
+    inner:
+      serializedVersion: 2
+      x: 541
+      y: 705
+      width: 11
+      height: 31
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Best_00
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 440
+      width: 451
+      height: 165
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 440
+      width: 451
+      height: 165
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 8
+    outer:
+      serializedVersion: 2
+      x: 494
+      y: 673
+      width: 22
+      height: 31
+    inner:
+      serializedVersion: 2
+      x: 494
+      y: 673
+      width: 22
+      height: 31
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 4
+    outer:
+      serializedVersion: 2
+      x: 518
+      y: 645
+      width: 21
+      height: 30
+    inner:
+      serializedVersion: 2
+      x: 518
+      y: 645
       width: 21
       height: 30
     paddingLeft: 0
@@ -230,32 +230,15 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 518
-      y: 707
+      y: 738
       width: 22
       height: 29
     inner:
       serializedVersion: 2
       x: 518
-      y: 707
+      y: 738
       width: 22
       height: 29
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 8
-    outer:
-      serializedVersion: 2
-      x: 494
-      y: 641
-      width: 22
-      height: 31
-    inner:
-      serializedVersion: 2
-      x: 494
-      y: 641
-      width: 22
-      height: 31
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
@@ -263,33 +246,50 @@ MonoBehaviour:
   - name: 9
     outer:
       serializedVersion: 2
-      x: 541
-      y: 706
+      x: 518
+      y: 614
       width: 21
       height: 30
     inner:
       serializedVersion: 2
-      x: 541
-      y: 706
+      x: 518
+      y: 614
       width: 21
       height: 30
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Score_Alpha
+  - name: 3
     outer:
       serializedVersion: 2
-      x: 494
-      y: 736
-      width: 23
-      height: 31
+      x: 541
+      y: 737
+      width: 21
+      height: 30
     inner:
       serializedVersion: 2
-      x: 494
-      y: 736
-      width: 23
-      height: 31
+      x: 541
+      y: 737
+      width: 21
+      height: 30
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Result_BG_001
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 768
+      width: 720
+      height: 1280
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 768
+      width: 720
+      height: 1280
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0

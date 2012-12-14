@@ -1,6 +1,6 @@
 //----------------------------------------------
 //            NGUI: Next-Gen UI kit
-// Copyright ?2011-2012 Tasharen Entertainment
+// Copyright © 2011-2012 Tasharen Entertainment
 //----------------------------------------------
 
 using UnityEngine;
@@ -27,14 +27,8 @@ public class UISliderColors : MonoBehaviour
 		if (sprite == null || colors.Length == 0) return;
 
 		float val = mSlider.sliderValue;
-		
-		//Debug.Log("colors.Length = " + colors.Length );
 		val *= (colors.Length - 1);
-		
-		//1
-		//2
 		int startIndex = Mathf.FloorToInt(val);
-		//Debug.Log("startIndex = " + startIndex );
 
 		Color c = colors[0];
 
@@ -49,10 +43,7 @@ public class UISliderColors : MonoBehaviour
 			{
 				c = colors[startIndex];
 			}
-			else
-			{
-				c = colors[colors.Length - 1];	
-			}
+			else c = colors[colors.Length - 1];
 		}
 
 		c.a = sprite.color.a;

@@ -18,7 +18,7 @@ GameObject:
   m_IsActive: 0
 --- !u!4 &400000
 Transform:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
@@ -29,7 +29,7 @@ Transform:
   m_Father: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
@@ -37,21 +37,106 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 1}
   m_Name: 
-  material: {fileID: 2100000, guid: f7e3df572f18e804eae9eca4db629442, type: 2}
+  material: {fileID: 2100000, guid: 434fc2920e04dde4ca18b7a4a8be2aa0, type: 2}
   sprites:
-  - name: XP_BG_00
+  - name: Scroll_BG_00
     outer:
       serializedVersion: 2
-      x: 1404
-      y: 1654
-      width: 316
-      height: 113
+      x: .341308594
+      y: .625488281
+      width: .00439453125
+      height: .270507812
     inner:
       serializedVersion: 2
-      x: 1404
-      y: 1654
-      width: 316
-      height: 113
+      x: .341308594
+      y: .625488281
+      width: .00439453125
+      height: .270507812
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Level_Ball_00
+    outer:
+      serializedVersion: 2
+      x: .803710938
+      y: .268000007
+      width: .0537109375
+      height: .0560000017
+    inner:
+      serializedVersion: 2
+      x: .803710938
+      y: .268000007
+      width: .0537109375
+      height: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Gift_Icon_00
+    outer:
+      serializedVersion: 2
+      x: .959472656
+      y: .172851562
+      width: .037109375
+      height: .037109375
+    inner:
+      serializedVersion: 2
+      x: .959472656
+      y: .172851562
+      width: .037109375
+      height: .037109375
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: SelectedCha_00
+    outer:
+      serializedVersion: 2
+      x: .352050781
+      y: .354980469
+      width: .154296875
+      height: .0576171875
+    inner:
+      serializedVersion: 2
+      x: .352050781
+      y: .354980469
+      width: .154296875
+      height: .0576171875
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: PalIcon_00
+    outer:
+      serializedVersion: 2
+      x: .908203125
+      y: 0
+      width: .05859375
+      height: .060546875
+    inner:
+      serializedVersion: 2
+      x: .908203125
+      y: 0
+      width: .05859375
+      height: .060546875
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: MessegeIcon_alert_00
+    outer:
+      serializedVersion: 2
+      x: .967285156
+      y: 0
+      width: .0288085938
+      height: .0288085938
+    inner:
+      serializedVersion: 2
+      x: .967285156
+      y: 0
+      width: .0288085938
+      height: .0288085938
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
@@ -60,83 +145,83 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 0
-      y: 36
-      width: 682
-      height: 110
+      y: .928710938
+      width: .333007812
+      height: .0537109375
     inner:
       serializedVersion: 2
       x: 0
-      y: 36
-      width: 682
-      height: 110
+      y: .928710938
+      width: .333007812
+      height: .0537109375
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Start_00
+  - name: InfoIcon_00
     outer:
       serializedVersion: 2
-      x: 1404
-      y: 1887
-      width: 439
-      height: 161
+      x: .908203125
+      y: .0864257812
+      width: .05859375
+      height: .060546875
     inner:
       serializedVersion: 2
-      x: 1404
-      y: 1887
-      width: 439
-      height: 161
+      x: .908203125
+      y: .0864257812
+      width: .05859375
+      height: .060546875
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: ShopIcon_00
+  - name: Candy_00
     outer:
       serializedVersion: 2
-      x: 1844
-      y: 1924
-      width: 120
-      height: 124
+      x: .333496094
+      y: .928710938
+      width: .017578125
+      height: .017578125
     inner:
       serializedVersion: 2
-      x: 1844
-      y: 1924
-      width: 120
-      height: 124
+      x: .333496094
+      y: .928710938
+      width: .017578125
+      height: .017578125
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: MessegeIcon_alert_00
+  - name: Option_00
     outer:
       serializedVersion: 2
-      x: 1646
-      y: 1518
-      width: 59
-      height: 59
+      x: .900390625
+      y: .172851562
+      width: .05859375
+      height: .060546875
     inner:
       serializedVersion: 2
-      x: 1646
-      y: 1518
-      width: 59
-      height: 59
+      x: .900390625
+      y: .172851562
+      width: .05859375
+      height: .060546875
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Frame_BG_00
+  - name: List_Bar_2nd_00
     outer:
       serializedVersion: 2
-      x: 721
-      y: 1494
-      width: 682
-      height: 554
+      x: .352050781
+      y: .270996094
+      width: .333007812
+      height: .0537109375
     inner:
       serializedVersion: 2
-      x: 721
-      y: 1494
-      width: 682
-      height: 554
+      x: .352050781
+      y: .270996094
+      width: .333007812
+      height: .0537109375
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
@@ -145,100 +230,15 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 0
-      y: 147
-      width: 698
-      height: 620
+      y: .625488281
+      width: .340820312
+      height: .302734375
     inner:
       serializedVersion: 2
       x: 0
-      y: 147
-      width: 698
-      height: 620
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: PalIcon_00
-    outer:
-      serializedVersion: 2
-      x: 1404
-      y: 1529
-      width: 120
-      height: 124
-    inner:
-      serializedVersion: 2
-      x: 1404
-      y: 1529
-      width: 120
-      height: 124
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: +BTN_00
-    outer:
-      serializedVersion: 2
-      x: 1965
-      y: 1895
-      width: 70
-      height: 76
-    inner:
-      serializedVersion: 2
-      x: 1965
-      y: 1895
-      width: 70
-      height: 76
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: InfoIcon_00
-    outer:
-      serializedVersion: 2
-      x: 1525
-      y: 1529
-      width: 120
-      height: 124
-    inner:
-      serializedVersion: 2
-      x: 1525
-      y: 1529
-      width: 120
-      height: 124
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: List_Bar_2nd_00
-    outer:
-      serializedVersion: 2
-      x: 721
-      y: 1383
-      width: 682
-      height: 110
-    inner:
-      serializedVersion: 2
-      x: 721
-      y: 1383
-      width: 682
-      height: 110
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Gift_Icon_00
-    outer:
-      serializedVersion: 2
-      x: 1965
-      y: 1972
-      width: 76
-      height: 76
-    inner:
-      serializedVersion: 2
-      x: 1965
-      y: 1972
-      width: 76
-      height: 76
+      y: .625488281
+      width: .340820312
+      height: .302734375
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
@@ -246,67 +246,33 @@ MonoBehaviour:
   - name: MessegeIcon_00
     outer:
       serializedVersion: 2
-      x: 1721
-      y: 1762
-      width: 120
-      height: 124
+      x: .352050781
+      y: .413085938
+      width: .05859375
+      height: .060546875
     inner:
       serializedVersion: 2
-      x: 1721
-      y: 1762
-      width: 120
-      height: 124
+      x: .352050781
+      y: .413085938
+      width: .05859375
+      height: .060546875
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Candy_00
+  - name: ShopIcon_00
     outer:
       serializedVersion: 2
-      x: 683
-      y: 110
-      width: 36
-      height: 36
+      x: .352050781
+      y: .474121094
+      width: .05859375
+      height: .060546875
     inner:
       serializedVersion: 2
-      x: 683
-      y: 110
-      width: 36
-      height: 36
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: CandyBar_00
-    outer:
-      serializedVersion: 2
-      x: 721
-      y: 1322
-      width: 698
-      height: 60
-    inner:
-      serializedVersion: 2
-      x: 721
-      y: 1322
-      width: 698
-      height: 60
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Level_Ball_00
-    outer:
-      serializedVersion: 2
-      x: 1721
-      y: 1598
-      width: 110
-      height: 110
-    inner:
-      serializedVersion: 2
-      x: 1721
-      y: 1598
-      width: 110
-      height: 110
+      x: .352050781
+      y: .474121094
+      width: .05859375
+      height: .060546875
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
@@ -314,50 +280,67 @@ MonoBehaviour:
   - name: NumPlate_00
     outer:
       serializedVersion: 2
-      x: 1646
-      y: 1578
-      width: 69
-      height: 75
+      x: .900390625
+      y: .233886719
+      width: .0336914062
+      height: .0366210938
     inner:
       serializedVersion: 2
-      x: 1646
-      y: 1578
-      width: 69
-      height: 75
+      x: .900390625
+      y: .233886719
+      width: .0336914062
+      height: .0366210938
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Option_00
+  - name: Frame_BG_00
     outer:
       serializedVersion: 2
-      x: 1842
-      y: 1762
-      width: 120
-      height: 124
+      x: .352050781
+      y: 0
+      width: .333007812
+      height: .270507812
     inner:
       serializedVersion: 2
-      x: 1842
-      y: 1762
-      width: 120
-      height: 124
+      x: .352050781
+      y: 0
+      width: .333007812
+      height: .270507812
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: SelectedCha_00
+  - name: Scroll_Bar_00
     outer:
       serializedVersion: 2
-      x: 1404
-      y: 1768
-      width: 316
-      height: 118
+      x: .346191406
+      y: .625488281
+      width: .00341796875
+      height: .0166015625
     inner:
       serializedVersion: 2
-      x: 1404
-      y: 1768
-      width: 316
-      height: 118
+      x: .346191406
+      y: .625488281
+      width: .00341796875
+      height: .0166015625
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: CandyBar_00
+    outer:
+      serializedVersion: 2
+      x: .352050781
+      y: .325195312
+      width: .340820312
+      height: .029296875
+    inner:
+      serializedVersion: 2
+      x: .352050781
+      y: .325195312
+      width: .340820312
+      height: .029296875
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
@@ -365,16 +348,84 @@ MonoBehaviour:
   - name: Level_Gauge_00
     outer:
       serializedVersion: 2
-      x: 1721
-      y: 1709
-      width: 241
-      height: 52
+      x: .685546875
+      y: .270996094
+      width: .117675781
+      height: .025390625
     inner:
       serializedVersion: 2
-      x: 1721
-      y: 1709
-      width: 241
-      height: 52
+      x: .685546875
+      y: .270996094
+      width: .117675781
+      height: .025390625
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: +BTN_00
+    outer:
+      serializedVersion: 2
+      x: .959472656
+      y: .210049197
+      width: .0341796875
+      height: .037109375
+    inner:
+      serializedVersion: 2
+      x: .959472656
+      y: .210049197
+      width: .0341796875
+      height: .037109375
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Start_01
+    outer:
+      serializedVersion: 2
+      x: .685546875
+      y: 0
+      width: .222167969
+      height: .0859375
+    inner:
+      serializedVersion: 2
+      x: .685546875
+      y: 0
+      width: .222167969
+      height: .0859375
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Start_02
+    outer:
+      serializedVersion: 2
+      x: .685546875
+      y: .0864257812
+      width: .222167969
+      height: .0859375
+    inner:
+      serializedVersion: 2
+      x: .685546875
+      y: .0864257812
+      width: .222167969
+      height: .0859375
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Start_00
+    outer:
+      serializedVersion: 2
+      x: .685546875
+      y: .172851562
+      width: .214355469
+      height: .0786132812
+    inner:
+      serializedVersion: 2
+      x: .685546875
+      y: .172851562
+      width: .214355469
+      height: .0786132812
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
@@ -383,54 +434,37 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 0
-      y: 768
-      width: 720
-      height: 1280
+      y: 0
+      width: .3515625
+      height: .625
     inner:
       serializedVersion: 2
       x: 0
-      y: 768
-      width: 720
-      height: 1280
+      y: 0
+      width: .3515625
+      height: .625
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Scroll_Bar_00
+  - name: XP_BG_00
     outer:
       serializedVersion: 2
-      x: 709
-      y: 733
-      width: 7
-      height: 34
+      x: .506835938
+      y: .354980469
+      width: .154296875
+      height: .0551757812
     inner:
       serializedVersion: 2
-      x: 709
-      y: 733
-      width: 7
-      height: 34
+      x: .506835938
+      y: .354980469
+      width: .154296875
+      height: .0551757812
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Scroll_BG_00
-    outer:
-      serializedVersion: 2
-      x: 699
-      y: 213
-      width: 9
-      height: 554
-    inner:
-      serializedVersion: 2
-      x: 699
-      y: 213
-      width: 9
-      height: 554
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  mCoordinates: 0
+  mCoordinates: 1
   mPixelSize: 1
   mReplacement: {fileID: 0}
 --- !u!1001 &100100000

@@ -25,5 +25,6 @@ public class GameStartBtn : MonoBehaviour {
 	void OnClick()
 	{
 		BackgroundLoad("GameScene");
+		ResultData.Reset();
 	}
 }

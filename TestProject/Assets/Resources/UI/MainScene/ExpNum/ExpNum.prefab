@@ -18,7 +18,7 @@ GameObject:
   m_IsActive: 0
 --- !u!4 &400000
 Transform:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
@@ -29,7 +29,7 @@ Transform:
   m_Father: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
@@ -39,18 +39,18 @@ MonoBehaviour:
   m_Name: 
   material: {fileID: 2100000, guid: 791e3377713b49446a96764970b9b617, type: 2}
   sprites:
-  - name: 5
+  - name: 8
     outer:
       serializedVersion: 2
-      x: 0
-      y: 53
-      width: 28
+      x: 64
+      y: 55
+      width: 26
       height: 36
     inner:
       serializedVersion: 2
-      x: 0
-      y: 53
-      width: 28
+      x: 64
+      y: 55
+      width: 26
       height: 36
     paddingLeft: 0
     paddingRight: 0
@@ -59,151 +59,15 @@ MonoBehaviour:
   - name: 4
     outer:
       serializedVersion: 2
-      x: 0
-      y: 16
-      width: 28
-      height: 36
-    inner:
-      serializedVersion: 2
-      x: 0
-      y: 16
-      width: 28
-      height: 36
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 3
-    outer:
-      serializedVersion: 2
-      x: 29
+      x: 36
       y: 92
-      width: 28
+      width: 27
       height: 36
     inner:
       serializedVersion: 2
-      x: 29
+      x: 36
       y: 92
-      width: 28
-      height: 36
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 1
-    outer:
-      serializedVersion: 2
-      x: 58
-      y: 92
-      width: 28
-      height: 36
-    inner:
-      serializedVersion: 2
-      x: 58
-      y: 92
-      width: 28
-      height: 36
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: XP_NUM_%
-    outer:
-      serializedVersion: 2
-      x: 87
-      y: 92
-      width: 28
-      height: 36
-    inner:
-      serializedVersion: 2
-      x: 87
-      y: 92
-      width: 28
-      height: 36
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 6
-    outer:
-      serializedVersion: 2
-      x: 29
-      y: 55
-      width: 28
-      height: 36
-    inner:
-      serializedVersion: 2
-      x: 29
-      y: 55
-      width: 28
-      height: 36
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 9
-    outer:
-      serializedVersion: 2
-      x: 29
-      y: 18
-      width: 28
-      height: 36
-    inner:
-      serializedVersion: 2
-      x: 29
-      y: 18
-      width: 28
-      height: 36
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 8
-    outer:
-      serializedVersion: 2
-      x: 58
-      y: 55
-      width: 28
-      height: 36
-    inner:
-      serializedVersion: 2
-      x: 58
-      y: 55
-      width: 28
-      height: 36
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 7
-    outer:
-      serializedVersion: 2
-      x: 87
-      y: 55
-      width: 28
-      height: 36
-    inner:
-      serializedVersion: 2
-      x: 87
-      y: 55
-      width: 28
-      height: 36
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: 0
-    outer:
-      serializedVersion: 2
-      x: 58
-      y: 18
-      width: 28
-      height: 36
-    inner:
-      serializedVersion: 2
-      x: 58
-      y: 18
-      width: 28
+      width: 27
       height: 36
     paddingLeft: 0
     paddingRight: 0
@@ -212,15 +76,15 @@ MonoBehaviour:
   - name: 2
     outer:
       serializedVersion: 2
-      x: 87
-      y: 18
-      width: 28
+      x: 91
+      y: 55
+      width: 26
       height: 36
     inner:
       serializedVersion: 2
-      x: 87
-      y: 18
-      width: 28
+      x: 91
+      y: 55
+      width: 26
       height: 36
     paddingLeft: 0
     paddingRight: 0
@@ -230,15 +94,151 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 0
-      y: 90
-      width: 28
-      height: 38
+      y: 80
+      width: 35
+      height: 48
     inner:
       serializedVersion: 2
       x: 0
-      y: 90
+      y: 80
+      width: 35
+      height: 48
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 5
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 43
       width: 28
-      height: 38
+      height: 36
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 43
+      width: 28
+      height: 36
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 3
+    outer:
+      serializedVersion: 2
+      x: 64
+      y: 18
+      width: 26
+      height: 36
+    inner:
+      serializedVersion: 2
+      x: 64
+      y: 18
+      width: 26
+      height: 36
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1
+    outer:
+      serializedVersion: 2
+      x: 64
+      y: 92
+      width: 27
+      height: 36
+    inner:
+      serializedVersion: 2
+      x: 64
+      y: 92
+      width: 27
+      height: 36
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 0
+    outer:
+      serializedVersion: 2
+      x: 91
+      y: 18
+      width: 26
+      height: 36
+    inner:
+      serializedVersion: 2
+      x: 91
+      y: 18
+      width: 26
+      height: 36
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 9
+    outer:
+      serializedVersion: 2
+      x: 92
+      y: 92
+      width: 27
+      height: 36
+    inner:
+      serializedVersion: 2
+      x: 92
+      y: 92
+      width: 27
+      height: 36
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 7
+    outer:
+      serializedVersion: 2
+      x: 36
+      y: 55
+      width: 27
+      height: 36
+    inner:
+      serializedVersion: 2
+      x: 36
+      y: 55
+      width: 27
+      height: 36
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: '%'
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 6
+      width: 28
+      height: 36
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 6
+      width: 28
+      height: 36
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 6
+    outer:
+      serializedVersion: 2
+      x: 36
+      y: 18
+      width: 27
+      height: 36
+    inner:
+      serializedVersion: 2
+      x: 36
+      y: 18
+      width: 27
+      height: 36
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
