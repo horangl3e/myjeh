@@ -448,7 +448,7 @@ public class UIDraggablePanel : IgnoreTimeScale
         Transform gridTransform = gameObject.GetComponentInChildren<UIGridCustom>().transform;
         for (int i = 0; i < gridTransform.transform.childCount; ++i)
         {
-            if (gridTransform.transform.GetChild(i).localScale.x > 1.0f)
+            if (gridTransform.transform.GetChild(i).localScale.x == 1.5f)
             {
                 CurrentIndex = i;
                 break;
@@ -458,7 +458,6 @@ public class UIDraggablePanel : IgnoreTimeScale
 
 	void MoveRelative (Vector3 relative)
 	{
-        //relative 왼쪽 - 오른쪽 +
         CurrentIndexCheck();
 
         //드레그한 양 
@@ -472,92 +471,31 @@ public class UIDraggablePanel : IgnoreTimeScale
         float x1 = 1.5f;
         float x2 = 1.0f;
 
-        //가운데에 있다가..
-        //가운데에서 벗어 나면 작아 진다.. 가운데에서 진입 한다면 커진다...
-        //벗어 나고 있는 놈이 누군지? 현재 셀렉트 된 아이템 이겠지.
-        //진입하고 있는 놈은 누군지? 어느쪽으로 방향을 틀었는지?
-        //현재 셀릭트 된 아이템을 구분 해야 함 .
-        //사이즈가 제일 큰놈이 현재 셀렉트 된 놈임.. 그래서 인덱스를 얻어 온다음에 - + 값에 의해 진입하고 있는 놈을 찾자.
+        float ox = Mathf.Lerp(x1, x2, (-gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 2);
+        float ox2 = Mathf.Lerp(x2, x1, (-gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 2);
 
+        float ox3 = Mathf.Lerp(x2, x1, (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 2);
+        float ox4 = Mathf.Lerp(x1, x2, (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 2);
 
+        Transform t = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex);
 
-//        Debug.Log(").position = " + ox);
-// 
-//         for (int i = 0; i < gameObject.GetComponentInChildren<UIGridCustom>().transform.childCount; ++i )
-//         {
-//             if (i == 2)
-//             {
-//                 //줄어 드는거 
-//                 Transform t = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(i);
-//                 t.localScale = new Vector3(ox, ox, 1.0f);
-//             }
-//             else if( i == 3 )
-//             {
-//                 Transform t = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(i);
-//                 t.localScale = new Vector3(ox2, ox2, 1.0f);
-//             }
-//         }
+        if (ox == 1.5f)
+            t.localScale = new Vector3(ox4, ox4, 1.0f);
+        else if (ox4 == 1.5f)
+            t.localScale = new Vector3(ox, ox, 1.0f);
 
+        Transform t2 = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex + 1);
+        t2.localScale = new Vector3(ox2, ox2, 1.0f);
 
-
-
-        if (horizontalScrollBar.scrollValue >= 1.00f || horizontalScrollBar.scrollValue <= 0.0f) return;
-
-         if (relative.x < 0)
-         {
-//              //중앙에서 왼쪽으로 가면서 1.0이 된다.
-//               float ox = Mathf.Lerp(x1, x2, (-gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 2);
-// 
-//              //중앙 에서 왼쪽으로 가면서 1.5가 된다 
-//               float ox2 = Mathf.Lerp(x2, x1, (-gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 2);
-// 
-//               for (int i = 0; i < gameObject.GetComponentInChildren<UIGridCustom>().transform.childCount; ++i)
-//               {
-//                   if (i == CurrentIndex)
-//                   {
-//                       //줄어 드는거 
-//                       Transform t = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(i);
-//                       t.localScale = new Vector3(ox, ox, 1.0f);
-//                   }
-//                   else if (i == CurrentIndex + 1)
-//                   {
-//                       Transform t = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(i);
-//                       t.localScale = new Vector3(ox2, ox2, 1.0f);
-//                   }
-//               }
-//  
- 
-        }
-        if (relative.x > 0)
-        {
-            
-            //중앙에서 오른쪽으로 가게 하자 
-            //중앙에서 오른쪽으로 가면 1.0이 된다.
-            float ox = Mathf.Lerp(x1, x2, (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 2);
-            //오른쪽을 갈수록 1.5가 된다
-            float ox2 = Mathf.Lerp(x2, x1, (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 2);
-
-
-            Debug.Log("4444444444444444444 = " + ox2);
- 
-             for (int i = 0; i < gameObject.GetComponentInChildren<UIGridCustom>().transform.childCount; ++i)
-             {
-                 if (i == CurrentIndex - 1)
-                 {
+        Transform t3 = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex - 1);
+        t3.localScale = new Vector3(ox3, ox3, 1.0f);
         
-                     Transform t = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(i);
-                     t.localScale = new Vector3(ox2, ox2, 1.0f);
-                 } 
-                 else if (i == CurrentIndex)
-                  {
-                      //줄어 드는거 
-                     Transform t = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(i);
-                      t.localScale = new Vector3(ox, ox, 1.0f);
-                  }
 
-             }
-        }
-        
+        //보간을 구현을 해야 한다.
+        //보간은 일단 드레그 상태가 아니면 ?
+        // 보간을 할지 안할지를 결정 해야 하는데 결정의 조건은 딱 나누어 떨어 지지 않는것들을 체크한다.scale값이 소수점이 아니어야 한다. 소수점이라면.
+        // Lerp를 써서 목표 지점 까지 스무스하게 보간해서 스케일을 시켜라 
+
 	}
 
 	/// <summary>
@@ -648,6 +586,8 @@ public class UIDraggablePanel : IgnoreTimeScale
 					RestrictWithinBounds(false);
 				}
 			}
+
+            //드레그 중이 아니라면 세팅을 하자.
 		}
 	}
 
