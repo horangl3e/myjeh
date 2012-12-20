@@ -460,6 +460,11 @@ public class UIDraggablePanel : IgnoreTimeScale
 	{
         CurrentIndexCheck();
 
+
+
+
+        Debug.Log(" Pivot =" + gameObject.GetComponent<UIPanel>().transform.position );
+
         //드레그한 양 
 		mTrans.localPosition += relative;
 		Vector4 cr = mPanel.clipRange;
@@ -467,15 +472,16 @@ public class UIDraggablePanel : IgnoreTimeScale
 		cr.y -= relative.y;
 		mPanel.clipRange = cr;
 		UpdateScrollbars(false);
+        
 
         float x1 = 1.5f;
         float x2 = 1.0f;
 
-        float ox = Mathf.Lerp(x1, x2, (-gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 2);
-        float ox2 = Mathf.Lerp(x2, x1, (-gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 2);
+        float ox = Mathf.Lerp(x1, x2, (-gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 3.6f);
+        float ox2 = Mathf.Lerp(x2, x1, (-gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 3.6f);
 
-        float ox3 = Mathf.Lerp(x2, x1, (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 2);
-        float ox4 = Mathf.Lerp(x1, x2, (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 2);
+        float ox3 = Mathf.Lerp(x2, x1, (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 3.6f);
+        float ox4 = Mathf.Lerp(x1, x2, (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 3.6f);
 
         Transform t = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex);
 
@@ -489,13 +495,6 @@ public class UIDraggablePanel : IgnoreTimeScale
 
         Transform t3 = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex - 1);
         t3.localScale = new Vector3(ox3, ox3, 1.0f);
-        
-
-        //보간을 구현을 해야 한다.
-        //보간은 일단 드레그 상태가 아니면 ?
-        // 보간을 할지 안할지를 결정 해야 하는데 결정의 조건은 딱 나누어 떨어 지지 않는것들을 체크한다.scale값이 소수점이 아니어야 한다. 소수점이라면.
-        // Lerp를 써서 목표 지점 까지 스무스하게 보간해서 스케일을 시켜라 
-
 	}
 
 	/// <summary>
@@ -558,7 +557,6 @@ public class UIDraggablePanel : IgnoreTimeScale
 			Ray ray = UICamera.currentCamera.ScreenPointToRay(UICamera.currentTouch.pos);
 			float dist = 0f;
 
-            //드레그 중이라면?
 			if (mPlane.Raycast(ray, out dist))
 			{
 				Vector3 currentPos = ray.GetPoint(dist);
@@ -586,8 +584,6 @@ public class UIDraggablePanel : IgnoreTimeScale
 					RestrictWithinBounds(false);
 				}
 			}
-
-            //드레그 중이 아니라면 세팅을 하자.
 		}
 	}
 
