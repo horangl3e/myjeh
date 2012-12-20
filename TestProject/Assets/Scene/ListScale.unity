@@ -2222,7 +2222,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.02600479, y: 3.02600479, z: 0}
+  m_LocalPosition: {x: -1.51300251, y: 3.02600479, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 218}
@@ -3926,7 +3926,7 @@ MonoBehaviour:
   cellHeight: 0
   repositionNow: 0
   sorted: 0
-  hideInactive: 1
+  hideInactive: 0
 --- !u!114 &338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4102,7 +4102,7 @@ MonoBehaviour:
   widgetsAreStatic: 0
   mDebugInfo: 1
   mClipping: 2
-  mClipRange: {x: 287, y: 0, z: 705, w: 240}
+  mClipRange: {x: 287, y: 10, z: 705, w: 240}
   mClipSoftness: {x: 1, y: 1}
 --- !u!114 &353
 MonoBehaviour:
