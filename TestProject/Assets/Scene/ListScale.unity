@@ -1296,7 +1296,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 210}
   - 114: {fileID: 352}
-  - 114: {fileID: 243}
+  - 114: {fileID: 104}
   m_Layer: 8
   m_Name: UIPanel (Clipped View)
   m_TagString: Untagged
@@ -1304,6 +1304,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b028bb1cc946b584c9d70b39dd911ecd, type: 1}
+  m_Name: 
+  restrictWithinPanel: 1
+  disableDragIfFits: 0
+  dragEffect: 0
+  scale: {x: 1, y: 0, z: 0}
+  scrollWheelFactor: -2
+  momentumAmount: 35
+  relativePositionOnReset: {x: 0, y: 0}
+  repositionClipping: 0
+  horizontalScrollBar: {fileID: 0}
+  verticalScrollBar: {fileID: 0}
+  showScrollBars: 1
 --- !u!1 &110
 GameObject:
   m_ObjectHideFlags: 0
@@ -2476,28 +2497,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 110}
   m_Enabled: 1
---- !u!114 &243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400004, guid: 1a2278a3fbb187a459f3c48a60561a88,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d81807633ea807d4c8e3fff7e10c6000, type: 1}
-  m_Name: 
-  restrictWithinPanel: 1
-  disableDragIfFits: 0
-  dragEffect: 0
-  scale: {x: 1, y: 0, z: 0}
-  scrollWheelFactor: -2
-  momentumAmount: 35
-  relativePositionOnReset: {x: 0, y: 0}
-  repositionClipping: 0
-  horizontalScrollBar: {fileID: 0}
-  verticalScrollBar: {fileID: 0}
-  showScrollBars: 1
 --- !u!114 &256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2622,7 +2621,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 1}
   m_Name: 
-  draggablePanel: {fileID: 243}
+  draggablePanel: {fileID: 104}
   panel: {fileID: 0}
 --- !u!114 &262
 MonoBehaviour:
@@ -2748,7 +2747,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 1}
   m_Name: 
-  draggablePanel: {fileID: 243}
+  draggablePanel: {fileID: 104}
   panel: {fileID: 0}
 --- !u!114 &268
 MonoBehaviour:
@@ -2874,7 +2873,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 1}
   m_Name: 
-  draggablePanel: {fileID: 243}
+  draggablePanel: {fileID: 104}
   panel: {fileID: 0}
 --- !u!114 &274
 MonoBehaviour:
@@ -3000,7 +2999,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 1}
   m_Name: 
-  draggablePanel: {fileID: 243}
+  draggablePanel: {fileID: 104}
   panel: {fileID: 0}
 --- !u!114 &280
 MonoBehaviour:
@@ -3126,7 +3125,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 1}
   m_Name: 
-  draggablePanel: {fileID: 243}
+  draggablePanel: {fileID: 104}
   panel: {fileID: 0}
 --- !u!114 &286
 MonoBehaviour:
@@ -3252,7 +3251,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 1}
   m_Name: 
-  draggablePanel: {fileID: 243}
+  draggablePanel: {fileID: 104}
   panel: {fileID: 0}
 --- !u!114 &292
 MonoBehaviour:
@@ -3378,7 +3377,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 1}
   m_Name: 
-  draggablePanel: {fileID: 243}
+  draggablePanel: {fileID: 104}
   panel: {fileID: 0}
 --- !u!114 &298
 MonoBehaviour:
@@ -3504,7 +3503,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 1}
   m_Name: 
-  draggablePanel: {fileID: 243}
+  draggablePanel: {fileID: 104}
   panel: {fileID: 0}
 --- !u!114 &304
 MonoBehaviour:
@@ -3630,7 +3629,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 1}
   m_Name: 
-  draggablePanel: {fileID: 243}
+  draggablePanel: {fileID: 104}
   panel: {fileID: 0}
 --- !u!114 &310
 MonoBehaviour:
@@ -3756,7 +3755,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 1}
   m_Name: 
-  draggablePanel: {fileID: 243}
+  draggablePanel: {fileID: 104}
   panel: {fileID: 0}
 --- !u!114 &316
 MonoBehaviour:
@@ -3882,7 +3881,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 1}
   m_Name: 
-  draggablePanel: {fileID: 243}
+  draggablePanel: {fileID: 104}
   panel: {fileID: 0}
 --- !u!114 &322
 MonoBehaviour:
@@ -3895,7 +3894,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 1}
   m_Name: 
-  draggablePanel: {fileID: 243}
+  draggablePanel: {fileID: 104}
   panel: {fileID: 0}
 --- !u!114 &323
 MonoBehaviour:

@@ -441,30 +441,9 @@ public class UIDraggablePanel : IgnoreTimeScale
 	/// Move the panel by the specified amount.
 	/// </summary>
 
-    static int CurrentIndex = 0;
-
-    void CurrentIndexCheck()
-    {
-        Transform gridTransform = gameObject.GetComponentInChildren<UIGridCustom>().transform;
-        for (int i = 0; i < gridTransform.transform.childCount; ++i)
-        {
-            if (gridTransform.transform.GetChild(i).localScale.x == 1.5f)
-            {
-                CurrentIndex = i;
-                break;
-            }
-        }
-    }
 
 	void MoveRelative (Vector3 relative)
 	{
-        CurrentIndexCheck();
-
-
-
-
-        Debug.Log(" Pivot =" + gameObject.GetComponent<UIPanel>().transform.position );
-
         //드레그한 양 
 		mTrans.localPosition += relative;
 		Vector4 cr = mPanel.clipRange;
@@ -472,31 +451,8 @@ public class UIDraggablePanel : IgnoreTimeScale
 		cr.y -= relative.y;
 		mPanel.clipRange = cr;
 		UpdateScrollbars(false);
-        
-
-        float x1 = 1.5f;
-        float x2 = 1.0f;
-
-        float ox = Mathf.Lerp(x1, x2, (-gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 3.6f);
-        float ox2 = Mathf.Lerp(x2, x1, (-gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 3.6f);
-
-        float ox3 = Mathf.Lerp(x2, x1, (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 3.6f);
-        float ox4 = Mathf.Lerp(x1, x2, (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 3.6f);
-
-        Transform t = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex);
-
-        if (ox == 1.5f)
-            t.localScale = new Vector3(ox4, ox4, 1.0f);
-        else if (ox4 == 1.5f)
-            t.localScale = new Vector3(ox, ox, 1.0f);
-
-        Transform t2 = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex + 1);
-        t2.localScale = new Vector3(ox2, ox2, 1.0f);
-
-        Transform t3 = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex - 1);
-        t3.localScale = new Vector3(ox3, ox3, 1.0f);
 	}
-
+	
 	/// <summary>
 	/// Move the panel by the specified amount.
 	/// </summary>
@@ -548,7 +504,7 @@ public class UIDraggablePanel : IgnoreTimeScale
 	/// Drag the object along the plane.
 	/// </summary>
 
-	public void Drag (Vector2 delta)
+	public virtual void Drag (Vector2 delta)
 	{
 		if (enabled && gameObject.active && mShouldMove)
 		{
