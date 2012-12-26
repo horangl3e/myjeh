@@ -34,7 +34,7 @@ public class UIDraggablePanelCustom : UIDraggablePanel
         }
         for (int i = 0; i < gridTransform.transform.childCount; ++i)
         {
-            if (gridTransform.transform.GetChild(i).localScale.x == 1.5f)
+            if (gridTransform.transform.GetChild(i).localScale.x == 1.7f)
             {
                 CurrentIndex = i;
                 break;
@@ -44,22 +44,22 @@ public class UIDraggablePanelCustom : UIDraggablePanel
 
     private void SetItemScale()
     {
-        float x1 = 1.5f;
+        float x1 = 1.7f;
         float x2 = 1.0f;
 
-        float ox = Mathf.Lerp(x1, x2, (-gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 4.0f);
-        float ox2 = Mathf.Lerp(x2, x1, (-gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 4.0f);
+        float ox = Mathf.Lerp(x1, x2, (-gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 1.4f);
+        float ox2 = Mathf.Lerp(x2, x1, (-gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 1.4f);
 
-        float ox3 = Mathf.Lerp(x2, x1, (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 4.0f);
-        float ox4 = Mathf.Lerp(x1, x2, (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 4.0f);
+        float ox3 = Mathf.Lerp(x2, x1, (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 1.4f);
+        float ox4 = Mathf.Lerp(x1, x2, (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x) * 1.4f);
 
         if( CurrentIndex != 0 )
         {
             Transform t = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex);
 
-            if (ox == 1.5f)
+            if (ox == 1.7f)
                 t.localScale = new Vector3(ox4, ox4, 1.0f);
-            else if (ox4 == 1.5f)
+            else if (ox4 == 1.7f)
                 t.localScale = new Vector3(ox, ox, 1.0f);
 
             Transform t2 = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex + 1);

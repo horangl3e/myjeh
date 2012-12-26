@@ -15,21 +15,8 @@ public class ListVisibleFalse : MonoBehaviour {
 
         NGUITools.SetActive(gameObject.transform.GetChild(1).gameObject, true);
         NGUITools.SetActive(gameObject.transform.GetChild(2).gameObject, true);
+		NGUITools.SetActive(gameObject.transform.GetChild(3).gameObject, true);
 
         NGUITools.SetActive(gameObject.transform.GetChild(imax - 1).gameObject, true);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-        UIDraggablePanelCustom DraggablePanel = NGUITools.FindInParents<UIDraggablePanelCustom>(gameObject);
-        if (DraggablePanel)
-        {
-           Transform transformObject = gameObject.transform.GetChild(DraggablePanel.ItemCurrentIndex);
-
-
-            Debug.Log("DraggablePanel.CurrentIndex = " + DraggablePanel.ItemCurrentIndex);
-        }
-	
 	}
 }

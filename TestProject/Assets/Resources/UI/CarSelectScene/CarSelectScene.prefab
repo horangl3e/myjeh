@@ -42,16 +42,237 @@ MonoBehaviour:
   - name: Fake00
     outer:
       serializedVersion: 2
-      x: 0
-      y: 128
+      x: 449
+      y: 114
       width: 128
       height: 128
     inner:
       serializedVersion: 2
-      x: 0
-      y: 128
+      x: 449
+      y: 114
       width: 128
       height: 128
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Beetle_img_s
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 420
+      width: 329
+      height: 347
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 420
+      width: 329
+      height: 347
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: SelectCar_bg_00
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 768
+      width: 720
+      height: 1280
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 768
+      width: 720
+      height: 1280
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Start_00
+    outer:
+      serializedVersion: 2
+      x: 721
+      y: 1845
+      width: 547
+      height: 203
+    inner:
+      serializedVersion: 2
+      x: 721
+      y: 1845
+      width: 547
+      height: 203
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Start_01
+    outer:
+      serializedVersion: 2
+      x: 1269
+      y: 1845
+      width: 547
+      height: 203
+    inner:
+      serializedVersion: 2
+      x: 1269
+      y: 1845
+      width: 547
+      height: 203
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Carrot_img_s
+    outer:
+      serializedVersion: 2
+      x: 330
+      y: 420
+      width: 329
+      height: 347
+    inner:
+      serializedVersion: 2
+      x: 330
+      y: 420
+      width: 329
+      height: 347
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Scooter_img_s
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 73
+      width: 329
+      height: 346
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 73
+      width: 329
+      height: 346
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Left_btn_00
+    outer:
+      serializedVersion: 2
+      x: 330
+      y: 243
+      width: 118
+      height: 176
+    inner:
+      serializedVersion: 2
+      x: 330
+      y: 243
+      width: 118
+      height: 176
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Right_btn_01
+    outer:
+      serializedVersion: 2
+      x: 330
+      y: 66
+      width: 118
+      height: 176
+    inner:
+      serializedVersion: 2
+      x: 330
+      y: 66
+      width: 118
+      height: 176
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Right_btn_00
+    outer:
+      serializedVersion: 2
+      x: 449
+      y: 243
+      width: 118
+      height: 176
+    inner:
+      serializedVersion: 2
+      x: 449
+      y: 243
+      width: 118
+      height: 176
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Left_btn_01
+    outer:
+      serializedVersion: 2
+      x: 568
+      y: 243
+      width: 118
+      height: 176
+    inner:
+      serializedVersion: 2
+      x: 568
+      y: 243
+      width: 118
+      height: 176
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Gauge_bg_00
+    outer:
+      serializedVersion: 2
+      x: 1817
+      y: 2025
+      width: 226
+      height: 23
+    inner:
+      serializedVersion: 2
+      x: 1817
+      y: 2025
+      width: 226
+      height: 23
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Gauge_Top_00
+    outer:
+      serializedVersion: 2
+      x: 1817
+      y: 2007
+      width: 220
+      height: 17
+    inner:
+      serializedVersion: 2
+      x: 1817
+      y: 2007
+      width: 220
+      height: 17
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Carrot_Desc_00
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 3
+      width: 142
+      height: 69
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 3
+      width: 142
+      height: 69
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
