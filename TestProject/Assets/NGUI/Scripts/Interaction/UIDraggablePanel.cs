@@ -94,8 +94,8 @@ public class UIDraggablePanel : IgnoreTimeScale
 
 	public ShowCondition showScrollBars = ShowCondition.OnlyIfNeeded;
 
-	Transform mTrans;
-	UIPanel mPanel;
+	protected Transform mTrans;
+	protected UIPanel mPanel;
 	Plane mPlane;
 	Vector3 mLastPos;
 	bool mPressed = false;
@@ -231,13 +231,21 @@ public class UIDraggablePanel : IgnoreTimeScale
 
 		if (constraint.magnitude > 0.001f)
 		{
+            //스프링이 일어 나는 조건이 되면 들어 온다.
 			if (!instant && dragEffect == DragEffect.MomentumAndSpring)
 			{
+                //Debug.Log("여기는 몇번이나 들어오나 = " + constraint );
+
+                //실제로 스프링이 동작하는 로직..
 				// Spring back into place
+                //패널
+                //스프링을 할 객체
+                //스프링 목표 위치 
 				SpringPanel.Begin(mPanel.gameObject, mTrans.localPosition + constraint, 13f);
 			}
 			else
 			{
+              //  Debug.Log("여기들어올상황은 뭐지");
 				// Jump back into place
 				MoveRelative(constraint);
 				mMomentum = Vector3.zero;
@@ -246,6 +254,7 @@ public class UIDraggablePanel : IgnoreTimeScale
 		}
 		else
 		{
+           // Debug.Log("스프링ㅇ ㅣ일어나는 조건이 아니므로 없앤다");
 			// Remove the spring as it's no longer needed
 			DisableSpring();
 		}
@@ -442,7 +451,7 @@ public class UIDraggablePanel : IgnoreTimeScale
 	/// </summary>
 
 
-	void MoveRelative (Vector3 relative)
+	public void MoveRelative (Vector3 relative)
 	{
         //드레그한 양 
 		mTrans.localPosition += relative;
@@ -457,7 +466,7 @@ public class UIDraggablePanel : IgnoreTimeScale
 	/// Move the panel by the specified amount.
 	/// </summary>
 
-	void MoveAbsolute (Vector3 absolute)
+	public void MoveAbsolute (Vector3 absolute)
 	{
 		Vector3 a = mTrans.InverseTransformPoint(absolute);
 		Vector3 b = mTrans.InverseTransformPoint(Vector3.zero);
@@ -468,7 +477,7 @@ public class UIDraggablePanel : IgnoreTimeScale
 	/// Create a plane on which we will be performing the dragging.
 	/// </summary>
 
-	public void Press (bool pressed)
+	public virtual void Press (bool pressed)
 	{
 		if (enabled && gameObject.active)
 		{
@@ -495,6 +504,7 @@ public class UIDraggablePanel : IgnoreTimeScale
 			}
 			else if (restrictWithinPanel && mPanel.clipping != UIDrawCall.Clipping.None && dragEffect == DragEffect.MomentumAndSpring)
 			{
+                Debug.Log("드레그중에 마우스를 놓으면 발생");
 				RestrictWithinBounds(false);
 			}
 		}
@@ -511,7 +521,7 @@ public class UIDraggablePanel : IgnoreTimeScale
 			UICamera.currentTouch.clickNotification = UICamera.ClickNotification.BasedOnDelta;
 
 			Ray ray = UICamera.currentCamera.ScreenPointToRay(UICamera.currentTouch.pos);
-			float dist = 0f;
+            float dist = 0.0f;
 
 			if (mPlane.Raycast(ray, out dist))
 			{
@@ -537,6 +547,7 @@ public class UIDraggablePanel : IgnoreTimeScale
 					mPanel.clipping != UIDrawCall.Clipping.None &&
 					dragEffect != DragEffect.MomentumAndSpring)
 				{
+                    Debug.Log("UIDraggablrePanel MomentAndSprintg");
 					RestrictWithinBounds(false);
 				}
 			}
