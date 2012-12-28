@@ -90,33 +90,13 @@ public class UIDraggablePanelCustom : UIDraggablePanel
        SetItemScale();
 	}
 
-    public void Test()
-    {
-        //c;
-        Drag(new Vector2(0.0f, 0.0f));
-        CurrentIndexCheck();
-        SetItemScale();
-    }
-
     public override void Press(bool pressed)
     {
         base.Press(pressed);
 
         if (!pressed)
         {
-            Debug.Log("드레그중에 마우스를 놓았음 ");
-            Debug.Log("위치  = " + mTrans.localPosition);
-            Debug.Log("Position = " + gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x);
-
-
-            //gameObject.GetComponent<TestFird>().Tf = true;
-            //MoveRelative(new Vector3(100.0f,0.0f,0.0f));
-           // gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position = new Vector3(0.0686f,0.0f,0.0f);
-            //Vector3 vec = new Vector3(-132.0f, 0.0f, 0.0f);
-           // SpringPanel.Begin(mPanel.gameObject, vec, 13f);
-
-            TF = true;
-            
+            TF = true; 
         }
     }
 
@@ -129,41 +109,20 @@ public class UIDraggablePanelCustom : UIDraggablePanel
                 if (ItemCurrentIndex != 0)
                 {
                     float SliderPosition = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(ItemCurrentIndex).position.x;
-                    float SliderPositionRight = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(ItemCurrentIndex + 1).position.x;
-                    float SliderPositionLeft = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(ItemCurrentIndex - 1).position.x;
-
-                    Debug.Log("mTrans.localPosition = " + mTrans.localPosition);
+                    float SliderPositionRight = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(ItemCurrentIndex + 1).localScale.x;
+                    float SliderPositionLeft = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(ItemCurrentIndex - 1).localScale.x;
 
                     if (SliderPositionRight > SliderPositionLeft)
-                    {
-                        Debug.Log("1111111111111111111111111111111111");
-                        MoveAbsolute(new Vector3(0.02f, 0.0f, 0.0f));
-                    }
-
+                        MoveAbsolute(new Vector3(0.04f, 0.0f, 0.0f));
                     else
-                    {
-                        Debug.Log("22222222222222222222222222");
-                        MoveAbsolute(new Vector3(-0.02f, 0.0f, 0.0f));
-                    }
-                        
+                        MoveAbsolute(new Vector3(-0.04f, 0.0f, 0.0f));
 
                     CurrentIndexCheck();
                     SetItemScale();
                 }
             }
             else
-            {
                 TF = false;
-            }
-
-
-            if (mTrans.localPosition.x < 100.0f)
-            {
-              //  MoveAbsolute(new Vector3(0.05f, 0.0f, 0.0f));
-               // CurrentIndexCheck();
-               // SetItemScale();
-            }
-           
         }
     }
 }

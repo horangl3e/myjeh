@@ -547,7 +547,6 @@ public class UIDraggablePanel : IgnoreTimeScale
 					mPanel.clipping != UIDrawCall.Clipping.None &&
 					dragEffect != DragEffect.MomentumAndSpring)
 				{
-                    Debug.Log("UIDraggablrePanel MomentAndSprintg");
 					RestrictWithinBounds(false);
 				}
 			}
