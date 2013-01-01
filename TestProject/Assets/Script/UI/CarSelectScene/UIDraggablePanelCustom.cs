@@ -22,12 +22,7 @@ public class UIDraggablePanelCustom : UIDraggablePanel
 
     public bool TF = false;
 
-    private Vector3 InitLocalPosition;
-
-    public void Start()
-    {
-        InitLocalPosition = gameObject.transform.localPosition;
-    }
+    private Vector2 fdelta;
 
     public void CurrentIndexCheck()
     {
@@ -60,10 +55,10 @@ public class UIDraggablePanelCustom : UIDraggablePanel
     {
         float SliderPosition = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex).position.x;
 
-        float ox = Mathf.Lerp(maxScale, minScale, -SliderPosition * 1.49f);
-        float ox2 = Mathf.Lerp(minScale, maxScale, -SliderPosition * 1.49f);
-        float ox3 = Mathf.Lerp(minScale, maxScale, SliderPosition * 1.49f);
-        float ox4 = Mathf.Lerp(maxScale, minScale, SliderPosition * 1.49f);
+        float ox = Mathf.Lerp(maxScale, minScale, -SliderPosition * 1.3f);
+        float ox2 = Mathf.Lerp(minScale, maxScale, -SliderPosition * 1.3f);
+        float ox3 = Mathf.Lerp(minScale, maxScale, SliderPosition * 1.3f);
+        float ox4 = Mathf.Lerp(maxScale, minScale, SliderPosition * 1.3f);
 
         if( CurrentIndex != 0 )
         {
@@ -84,45 +79,56 @@ public class UIDraggablePanelCustom : UIDraggablePanel
 	
 	public override void Drag (Vector2 delta)
 	{
-       base.Drag(delta);
-
 	   CurrentIndexCheck();
-       SetItemScale();
+       fdelta = delta;
 	}
 
     public override void Press(bool pressed)
     {
         base.Press(pressed);
+        TF = pressed;
+    }
 
-        if (!pressed)
+    public bool Doing()
+    {
+        Transform gridTransform = gameObject.GetComponentInChildren<UIGridCustom>().transform;
+        for (int i = 0; i < gridTransform.transform.childCount; ++i)
         {
-            TF = true; 
+            if (gridTransform.transform.GetChild(i).localScale.x >= 1.7f)
+                return true;
         }
+
+        return false;
     }
 
     public void Update()
     {
-        if (TF)
+        if (!TF)
         {
-            if (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(ItemCurrentIndex).localScale.x <= 1.7f)
+            if (fdelta.x < 0.0f)
             {
-                if (ItemCurrentIndex != 0)
+                if ((CurrentIndex - 1) < 2)
                 {
-                    float SliderPosition = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(ItemCurrentIndex).position.x;
-                    float SliderPositionRight = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(ItemCurrentIndex + 1).localScale.x;
-                    float SliderPositionLeft = gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(ItemCurrentIndex - 1).localScale.x;
-
-                    if (SliderPositionRight > SliderPositionLeft)
-                        MoveAbsolute(new Vector3(0.04f, 0.0f, 0.0f));
-                    else
-                        MoveAbsolute(new Vector3(-0.04f, 0.0f, 0.0f));
-
-                    CurrentIndexCheck();
-                    SetItemScale();
+                    if (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex + 1).localScale.x <= 1.7f)
+                    {
+                        MoveRelative(new Vector3(-30.0f, 0.0f, 0.0f));
+                        CurrentIndexCheck();
+                        SetItemScale();
+                    }
                 }
             }
             else
-                TF = false;
+            {
+                if ((CurrentIndex - 1) > 0)
+                {
+                    if (gameObject.GetComponentInChildren<UIGridCustom>().transform.GetChild(CurrentIndex - 1).localScale.x <= 1.7f)
+                    {
+                        MoveRelative(new Vector3(30.0f, 0.0f, 0.0f));
+                        CurrentIndexCheck();
+                        SetItemScale();
+                    }
+                }
+            }
         }
     }
 }
