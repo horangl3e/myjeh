@@ -21,6 +21,7 @@ public class InvDatabase : MonoBehaviour
 		{
 			if (mIsDirty)
 			{
+                Debug.Log("2222222222222222222222");
 				mIsDirty = false;
 				mList = GameObject.FindSceneObjectsOfType(typeof(InvDatabase)) as InvDatabase[];
 
@@ -82,6 +83,7 @@ public class InvDatabase : MonoBehaviour
 
 	static InvDatabase GetDatabase (int dbID)
 	{
+        Debug.Log("7777777777777777777");
 		for (int i = 0, imax = list.Length; i < imax; ++i)
 		{
 			InvDatabase db = list[i];
@@ -97,6 +99,7 @@ public class InvDatabase : MonoBehaviour
     //데이터 베이스는 여러게 일지라도 아이템은 하나밖에 안되나?
 	static public InvBaseItem FindByID (int id32)
 	{
+        Debug.Log("111111111111111111111");
 		InvDatabase db = GetDatabase(id32 >> 16);
 		return (db != null) ? db.GetItem(id32 & 0xFFFF) : null;
 	}
@@ -108,6 +111,7 @@ public class InvDatabase : MonoBehaviour
     //모든 데이터베이스 및 아이템 리스트에서 검색한다
 	static public InvBaseItem FindByName (string exact)
 	{
+        Debug.Log("34444444444444444444444444444");
 		for (int i = 0, imax = list.Length; i < imax; ++i)
 		{
 			InvDatabase db = list[i];
@@ -132,6 +136,7 @@ public class InvDatabase : MonoBehaviour
 
 	static public int FindItemID (InvBaseItem item)
 	{
+        Debug.Log("555555555555555555555");
 		for (int i = 0, imax = list.Length; i < imax; ++i)
 		{
 			InvDatabase db = list[i];

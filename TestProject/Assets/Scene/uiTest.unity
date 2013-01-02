@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 23278997}
   m_Layer: 8
-  m_Name: GameObject
+  m_Name: GameObject2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -573,6 +573,7 @@ GameObject:
   - 114: {fileID: 579259764}
   - 65: {fileID: 579259762}
   - 114: {fileID: 579259763}
+  - 114: {fileID: 579259768}
   m_Layer: 8
   m_Name: Button
   m_TagString: Untagged
@@ -672,6 +673,16 @@ MonoBehaviour:
   hover: {r: .600000024, g: 1, b: .200000003, a: 1}
   pressed: {r: .5, g: .5, b: .5, a: 1}
   duration: .200000003
+--- !u!114 &579259768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 579259760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9bc564f5d3b844da580eb250cdc311, type: 1}
+  m_Name: 
 --- !u!1 &751642365
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +751,7 @@ Transform:
   m_GameObject: {fileID: 774474871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 30, y: 1031, z: 1}
+  m_LocalScale: {x: 30, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1757943937}
 --- !u!114 &774474873
@@ -750,7 +761,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 774474871}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d33c6354b54fb847b16b36e1391868d, type: 1}
   m_Name: 
@@ -874,7 +885,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 852879426}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.03317547, y: 1.51658773, z: 0}
+  m_LocalPosition: {x: 0, y: 1.44144154, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1224398956}
@@ -985,6 +996,513 @@ MonoBehaviour:
   functionName: OnSliderChange
   numberOfSteps: 0
   rawValue: .643000007
+--- !u!1 &966594189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 0a393cf40d0948c45b5db390d7a1b2f5, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 3
+  m_Component:
+  - 4: {fileID: 966594190}
+  - 114: {fileID: 966594191}
+  m_Layer: 0
+  m_Name: ItemDatabase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &966594190
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 0a393cf40d0948c45b5db390d7a1b2f5, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 966594189}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .541952789, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &966594191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 0a393cf40d0948c45b5db390d7a1b2f5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 966594189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be182ce83f3ee04b941134953597507, type: 1}
+  m_Name: 
+  databaseID: 131
+  items:
+  - id16: 0
+    name: Orc Bracers
+    description: '"Crude and bulky. Typical orcish craftsmanship."'
+    slot: 5
+    minItemLevel: 1
+    maxItemLevel: 15
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 160
+    - id: 0
+      modifier: 0
+      amount: 100
+    - id: 1
+      modifier: 0
+      amount: 75
+    - id: 4
+      modifier: 1
+      amount: 5
+    - id: 8
+      modifier: 0
+      amount: -80
+    - id: 6
+      modifier: 0
+      amount: 0
+    - id: 6
+      modifier: 0
+      amount: 0
+    - id: 6
+      modifier: 0
+      amount: 0
+    - id: 6
+      modifier: 0
+      amount: 0
+    - id: 6
+      modifier: 0
+      amount: 0
+    attachment: {fileID: 100000, guid: 8d847f26b6745fb4d9076f59a3cf0151, type: 2}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Bracers
+  - id16: 1
+    name: Spiked Pads
+    description: '"Spiked, for extra pleasure!"'
+    slot: 4
+    minItemLevel: 5
+    maxItemLevel: 15
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 240
+    - id: 0
+      modifier: 0
+      amount: 60
+    - id: 1
+      modifier: 0
+      amount: 110
+    - id: 4
+      modifier: 1
+      amount: 5
+    - id: 2
+      modifier: 0
+      amount: -45
+    - id: 8
+      modifier: 0
+      amount: -120
+    attachment: {fileID: 100000, guid: d6b1ee5e07651d74fa5f4b8f8adfbc9b, type: 2}
+    color: {r: 1, g: .230769247, b: 0, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Shoulders
+  - id16: 2
+    name: Dark Shoulders
+    description: '"Everyone looks better in black.
+
+      Even orcs."'
+    slot: 4
+    minItemLevel: 20
+    maxItemLevel: 30
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 240
+    - id: 0
+      modifier: 0
+      amount: 60
+    - id: 1
+      modifier: 0
+      amount: 110
+    - id: 4
+      modifier: 1
+      amount: 5
+    - id: 2
+      modifier: 0
+      amount: -45
+    - id: 8
+      modifier: 0
+      amount: -120
+    attachment: {fileID: 100000, guid: d6b1ee5e07651d74fa5f4b8f8adfbc9b, type: 2}
+    color: {r: .201492548, g: .201492548, b: .201492548, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Shoulders
+  - id16: 3
+    name: Blue Pads
+    description: 
+    slot: 4
+    minItemLevel: 15
+    maxItemLevel: 25
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 240
+    - id: 0
+      modifier: 0
+      amount: 60
+    - id: 1
+      modifier: 0
+      amount: 110
+    - id: 4
+      modifier: 1
+      amount: 5
+    - id: 2
+      modifier: 0
+      amount: -45
+    - id: 8
+      modifier: 0
+      amount: -120
+    attachment: {fileID: 100000, guid: d6b1ee5e07651d74fa5f4b8f8adfbc9b, type: 2}
+    color: {r: 0, g: .538461208, b: 1, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Shoulders
+  - id16: 4
+    name: Dark Bracers
+    description: '"Everyone looks better in black.
+
+      Even orcs."'
+    slot: 5
+    minItemLevel: 20
+    maxItemLevel: 30
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 160
+    - id: 0
+      modifier: 0
+      amount: 100
+    - id: 1
+      modifier: 0
+      amount: 75
+    - id: 4
+      modifier: 1
+      amount: 5
+    - id: 8
+      modifier: 0
+      amount: -80
+    attachment: {fileID: 100000, guid: 8d847f26b6745fb4d9076f59a3cf0151, type: 2}
+    color: {r: .231343269, g: .231343269, b: .231343269, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Bracers
+  - id16: 5
+    name: Bracers of Blood
+    description: '"The blood... it can''t be washed off!"'
+    slot: 5
+    minItemLevel: 30
+    maxItemLevel: 40
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 80
+    - id: 3
+      modifier: 0
+      amount: 75
+    - id: 8
+      modifier: 0
+      amount: 180
+    - id: 5
+      modifier: 1
+      amount: 5
+    attachment: {fileID: 100000, guid: 8d847f26b6745fb4d9076f59a3cf0151, type: 2}
+    color: {r: 1, g: 0, b: 0, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Bracers
+  - id16: 6
+    name: Pink Wraps
+    description: '"Pretty."'
+    slot: 5
+    minItemLevel: 1
+    maxItemLevel: 10
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 80
+    - id: 3
+      modifier: 0
+      amount: 75
+    - id: 8
+      modifier: 0
+      amount: 180
+    attachment: {fileID: 100000, guid: 8d847f26b6745fb4d9076f59a3cf0151, type: 2}
+    color: {r: 1, g: 0, b: .986013889, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Bracers
+  - id16: 7
+    name: Steel Pads
+    description: 
+    slot: 4
+    minItemLevel: 25
+    maxItemLevel: 35
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 380
+    - id: 1
+      modifier: 0
+      amount: 60
+    - id: 7
+      modifier: 0
+      amount: 110
+    - id: 5
+      modifier: 1
+      amount: 5
+    attachment: {fileID: 100000, guid: d6b1ee5e07651d74fa5f4b8f8adfbc9b, type: 2}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Shoulders
+  - id16: 8
+    name: Orc Boots
+    description: '"Crude and bulky. Typical orcish craftsmanship."'
+    slot: 6
+    minItemLevel: 1
+    maxItemLevel: 15
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 160
+    - id: 0
+      modifier: 0
+      amount: 100
+    - id: 1
+      modifier: 0
+      amount: 75
+    - id: 4
+      modifier: 1
+      amount: 5
+    - id: 8
+      modifier: 0
+      amount: -80
+    attachment: {fileID: 100000, guid: 8d847f26b6745fb4d9076f59a3cf0151, type: 2}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Boots
+  - id16: 9
+    name: Dark Boots
+    description: '"Everyone looks better in black.
+
+      Even orcs."'
+    slot: 6
+    minItemLevel: 20
+    maxItemLevel: 30
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 160
+    - id: 0
+      modifier: 0
+      amount: 100
+    - id: 1
+      modifier: 0
+      amount: 75
+    - id: 4
+      modifier: 1
+      amount: 5
+    - id: 8
+      modifier: 0
+      amount: -80
+    attachment: {fileID: 100000, guid: 8d847f26b6745fb4d9076f59a3cf0151, type: 2}
+    color: {r: .231343269, g: .231343269, b: .231343269, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Boots
+  - id16: 10
+    name: Pink Boots
+    description: '"Pretty."'
+    slot: 6
+    minItemLevel: 1
+    maxItemLevel: 10
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 80
+    - id: 3
+      modifier: 0
+      amount: 75
+    - id: 8
+      modifier: 0
+      amount: 180
+    attachment: {fileID: 100000, guid: 8d847f26b6745fb4d9076f59a3cf0151, type: 2}
+    color: {r: 1, g: 0, b: .986013889, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Boots
+  - id16: 11
+    name: Bloody Boots
+    description: '"The blood... it can''t be washed off!"'
+    slot: 6
+    minItemLevel: 30
+    maxItemLevel: 40
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 80
+    - id: 3
+      modifier: 0
+      amount: 75
+    - id: 8
+      modifier: 0
+      amount: 180
+    - id: 5
+      modifier: 1
+      amount: 5
+    attachment: {fileID: 100000, guid: 8d847f26b6745fb4d9076f59a3cf0151, type: 2}
+    color: {r: 1, g: 0, b: 0, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Boots
+  - id16: 12
+    name: Blue Boots
+    description: 
+    slot: 6
+    minItemLevel: 15
+    maxItemLevel: 25
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 80
+    - id: 0
+      modifier: 0
+      amount: 75
+    - id: 1
+      modifier: 0
+      amount: 180
+    - id: 2
+      modifier: 0
+      amount: -40
+    - id: 8
+      modifier: 0
+      amount: -80
+    attachment: {fileID: 100000, guid: 8d847f26b6745fb4d9076f59a3cf0151, type: 2}
+    color: {r: 0, g: .58041954, b: 1, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Boots
+  - id16: 13
+    name: 1s
+    description: s
+    slot: 3
+    minItemLevel: 45
+    maxItemLevel: 50
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 80
+    - id: 0
+      modifier: 0
+      amount: 80
+    - id: 1
+      modifier: 0
+      amount: 80
+    - id: 3
+      modifier: 0
+      amount: 60
+    - id: 8
+      modifier: 0
+      amount: 80
+    - id: 7
+      modifier: 0
+      amount: 90
+    attachment: {fileID: 100000, guid: 8d847f26b6745fb4d9076f59a3cf0151, type: 2}
+    color: {r: .174825191, g: 1, b: 0, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Boots
+  - id16: 14
+    name: Green Bracers
+    description: '"Orcs can be druids?"'
+    slot: 5
+    minItemLevel: 45
+    maxItemLevel: 50
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 80
+    - id: 0
+      modifier: 0
+      amount: 80
+    - id: 1
+      modifier: 0
+      amount: 80
+    - id: 3
+      modifier: 0
+      amount: 60
+    - id: 8
+      modifier: 0
+      amount: 80
+    - id: 7
+      modifier: 0
+      amount: 90
+    attachment: {fileID: 100000, guid: 8d847f26b6745fb4d9076f59a3cf0151, type: 2}
+    color: {r: .174825191, g: 1, b: 0, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Bracers
+  - id16: 15
+    name: Green Shoulders
+    description: '"Orcs can be druids?"'
+    slot: 4
+    minItemLevel: 45
+    maxItemLevel: 50
+    stats:
+    - id: 6
+      modifier: 0
+      amount: 80
+    - id: 0
+      modifier: 0
+      amount: 80
+    - id: 1
+      modifier: 0
+      amount: 80
+    - id: 3
+      modifier: 0
+      amount: 60
+    - id: 8
+      modifier: 0
+      amount: 80
+    - id: 7
+      modifier: 0
+      amount: 90
+    attachment: {fileID: 100000, guid: d6b1ee5e07651d74fa5f4b8f8adfbc9b, type: 2}
+    color: {r: .174825191, g: 1, b: 0, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Shoulders
+  - id16: 16
+    name: Copy of Green Shoulders
+    description: '"Orcs can be druids?"'
+    slot: 4
+    minItemLevel: 45
+    maxItemLevel: 50
+    stats:
+    - id: 3
+      modifier: 0
+      amount: 80
+    - id: 0
+      modifier: 0
+      amount: 80
+    - id: 1
+      modifier: 0
+      amount: 80
+    - id: 3
+      modifier: 0
+      amount: 60
+    - id: 8
+      modifier: 0
+      amount: 80
+    - id: 7
+      modifier: 0
+      amount: 90
+    - id: 6
+      modifier: 0
+      amount: 0
+    attachment: {fileID: 100000, guid: d6b1ee5e07651d74fa5f4b8f8adfbc9b, type: 2}
+    color: {r: .174825191, g: 1, b: 0, a: 1}
+    iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+    iconName: Orc Armor - Shoulders
+  iconAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
 --- !u!1 &1004849574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1601,48 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
+--- !u!1 &1248723485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 3
+  m_Component:
+  - 4: {fileID: 1248723486}
+  - 114: {fileID: 1248723488}
+  m_Layer: 0
+  m_Name: GearObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1248723486
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1248723485}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .541952789, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &1248723488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1248723485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed8998f84456154d8b3dd758f06235f, type: 1}
+  m_Name: 
+  maxGearValue: 3
+  Items:
+  - gearValue: .100000001
+  - gearValue: .0599999987
+  - gearValue: .0199999996
 --- !u!1001 &1252229402
 Prefab:
   m_ObjectHideFlags: 0
@@ -1515,6 +2075,7 @@ GameObject:
   - 65: {fileID: 1757943938}
   - 114: {fileID: 1757943942}
   - 114: {fileID: 1757943941}
+  - 114: {fileID: 1757943943}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -1587,7 +2148,7 @@ MonoBehaviour:
   eventReceiver: {fileID: 0}
   functionName: OnSliderChange
   numberOfSteps: 0
-  rawValue: 1
+  rawValue: 0
 --- !u!114 &1757943941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1617,6 +2178,16 @@ MonoBehaviour:
   callWhenFinished: 
   from: {r: 1, g: 0, b: 0, a: 1}
   to: {r: 1, g: 0, b: 0, a: 0}
+--- !u!114 &1757943943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1757943936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd28df8d5cb7aa4dbcbd0a896ab75ff, type: 1}
+  m_Name: 
 --- !u!1 &1876268975
 GameObject:
   m_ObjectHideFlags: 0

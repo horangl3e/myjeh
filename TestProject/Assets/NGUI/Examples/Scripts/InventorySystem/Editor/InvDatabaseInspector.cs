@@ -19,6 +19,7 @@ public class InvDatabaseInspector : Editor
 
 	public static void SelectIndex (InvDatabase db, InvBaseItem item)
 	{
+        Debug.Log("555555555555555555");
 		mIndex = 0;
 
 		foreach (InvBaseItem i in db.items)
@@ -48,6 +49,8 @@ public class InvDatabaseInspector : Editor
 		{
 			mIndex = Mathf.Clamp(mIndex, 0, db.items.Count - 1);
 			item = db.items[mIndex];
+
+            Debug.Log("db.items.Count = " + db.items.Count);
 		}
 
 		if (mConfirmDelete)
