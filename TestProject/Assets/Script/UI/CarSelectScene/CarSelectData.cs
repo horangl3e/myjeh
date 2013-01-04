@@ -3,26 +3,45 @@ using System.Collections;
 
 public class CarSelectData : MonoBehaviour {
 	
-	private int index = 0;
+	protected const string ON_CHANGE_DRAGGABLE_PANEL_INDEX = "OnChangeDraggablePanelIndex";
 	
+	ArrayList carAbility = new ArrayList();
+	
+	int index = 0;
 	public int Index
 	{
-		get{ return index;}
-		set { index = value; }
+		get { return index; }
+		private set {
+			if (index != value) {
+				index = value;
+				NGUITools.Broadcast(ON_CHANGE_DRAGGABLE_PANEL_INDEX);
+			}
+		}
 	}
 	
-	// Use this for initialization
-	void Start () {
-	
+	void Start()
+	{
+		UIDraggablePanelCustom DraggablePanel = NGUITools.FindInParents<UIDraggablePanelCustom>(GameObject.Find("UIGrid"));
+		
+        if (DraggablePanel) {
+			DraggablePanel.OnChangedIndex = () => {
+				Index = DraggablePanel.CurrentIndex - 1;
+			};
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-	
-	void Awake()
+
+	protected virtual void Init ()
 	{
 		DontDestroyOnLoad(this);
+		
+		//for(int i = 0; i < 3; i++ )
+		//	carAbility.Add( new EditableStat());
 	}
+
+	void Awake()
+	{
+		Init ();
+	}
+	
+
 }

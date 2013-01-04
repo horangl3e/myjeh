@@ -15,7 +15,7 @@ public class UIGearGageUpdate : MonoBehaviour {
     void Awake()
     {
         slider = gameObject.GetComponent<UISlider>();
-        gear = GameObject.Find("GearObject").GetComponent<UIGear>();
+        gear = GameObject.Find("ShopDataBase").GetComponent<UIGear>();
     }
 
     public void StartGearGage()
@@ -29,6 +29,8 @@ public class UIGearGageUpdate : MonoBehaviour {
 
         if (gearGageEnable)
             slider.sliderValue += v1;
+        else
+            slider.sliderValue = 0.0f;
 
         if (slider.sliderValue == 1.0f)
         {

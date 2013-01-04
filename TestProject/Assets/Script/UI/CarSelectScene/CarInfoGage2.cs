@@ -20,15 +20,15 @@ public class CarInfoGage2 : MonoBehaviour {
         UIDraggablePanelCustom DraggablePanel = NGUITools.FindInParents<UIDraggablePanelCustom>(GameObject.Find("UIGrid"));
         if (DraggablePanel)
         {
-            if (DraggablePanel.ItemCurrentIndex == 1)
+            if (DraggablePanel.CurrentIndex == 1)
             {
                 gameObject.GetComponent<UISlider>().sliderValue = 0.2f;
             }
-            else if (DraggablePanel.ItemCurrentIndex == 2)
+            else if (DraggablePanel.CurrentIndex == 2)
             {
                 gameObject.GetComponent<UISlider>().sliderValue = 0.5f;
             }
-            else if (DraggablePanel.ItemCurrentIndex == 3)
+            else if (DraggablePanel.CurrentIndex == 3)
             {
                 gameObject.GetComponent<UISlider>().sliderValue = 0.9f;
             }

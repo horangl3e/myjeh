@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: CarSelectScene
+  m_Name: CarShop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,43 +37,77 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 1}
   m_Name: 
-  material: {fileID: 2100000, guid: baae232596f37074099a020b81f7603c, type: 2}
+  material: {fileID: 2100000, guid: 2c02dac7289841c4eab9927cb59312e2, type: 2}
   sprites:
-  - name: Fake00
+  - name: Car_BG
     outer:
       serializedVersion: 2
-      x: 472
-      y: 285
-      width: 128
-      height: 128
+      x: 0
+      y: 273
+      width: 536
+      height: 494
     inner:
       serializedVersion: 2
-      x: 472
-      y: 285
-      width: 128
-      height: 128
+      x: 0
+      y: 273
+      width: 536
+      height: 494
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Beetle_img_s
+  - name: Right_00
     outer:
       serializedVersion: 2
-      x: 1665
-      y: 1701
-      width: 329
-      height: 347
+      x: 537
+      y: 640
+      width: 120
+      height: 127
     inner:
       serializedVersion: 2
-      x: 1665
-      y: 1701
-      width: 329
-      height: 347
+      x: 537
+      y: 640
+      width: 120
+      height: 127
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: SelectCar_bg_00
+  - name: Buy_00
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 130
+      width: 549
+      height: 142
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 130
+      width: 549
+      height: 142
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Ruby_Buy_00
+    outer:
+      serializedVersion: 2
+      x: 537
+      y: 318
+      width: 109
+      height: 70
+    inner:
+      serializedVersion: 2
+      x: 537
+      y: 318
+      width: 109
+      height: 70
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Car_Store_bg_00
     outer:
       serializedVersion: 2
       x: 0
@@ -90,240 +124,138 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Start_00
+  - name: Right_01
     outer:
       serializedVersion: 2
-      x: 0
-      y: 68
-      width: 547
-      height: 203
+      x: 537
+      y: 512
+      width: 120
+      height: 127
     inner:
       serializedVersion: 2
-      x: 0
-      y: 68
-      width: 547
-      height: 203
+      x: 537
+      y: 512
+      width: 120
+      height: 127
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Start_01
+  - name: Left_00
     outer:
       serializedVersion: 2
-      x: 1381
-      y: 1349
-      width: 547
-      height: 203
+      x: 537
+      y: 389
+      width: 120
+      height: 122
     inner:
       serializedVersion: 2
-      x: 1381
-      y: 1349
-      width: 547
-      height: 203
+      x: 537
+      y: 389
+      width: 120
+      height: 122
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Carrot_img_s
+  - name: Ok_00
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 13
+      width: 200
+      height: 116
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 13
+      width: 200
+      height: 116
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Buy_01
     outer:
       serializedVersion: 2
       x: 721
-      y: 1205
-      width: 329
-      height: 347
+      y: 1906
+      width: 549
+      height: 142
     inner:
       serializedVersion: 2
       x: 721
-      y: 1205
-      width: 329
-      height: 347
+      y: 1906
+      width: 549
+      height: 142
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Scooter_img_s
+  - name: Ok_01
     outer:
       serializedVersion: 2
-      x: 1051
-      y: 1206
-      width: 329
-      height: 346
+      x: 201
+      y: 13
+      width: 200
+      height: 116
     inner:
       serializedVersion: 2
-      x: 1051
-      y: 1206
-      width: 329
-      height: 346
+      x: 201
+      y: 13
+      width: 200
+      height: 116
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Left_btn_00
+  - name: Left_01
     outer:
       serializedVersion: 2
-      x: 472
-      y: 591
-      width: 118
-      height: 176
+      x: 402
+      y: 7
+      width: 120
+      height: 122
     inner:
       serializedVersion: 2
-      x: 472
-      y: 591
-      width: 118
-      height: 176
+      x: 402
+      y: 7
+      width: 120
+      height: 122
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Right_btn_01
+  - name: Ruby_Buy_01
     outer:
       serializedVersion: 2
-      x: 591
-      y: 591
-      width: 118
-      height: 176
-    inner:
-      serializedVersion: 2
-      x: 591
-      y: 591
-      width: 118
-      height: 176
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Right_btn_00
-    outer:
-      serializedVersion: 2
-      x: 472
-      y: 414
-      width: 118
-      height: 176
-    inner:
-      serializedVersion: 2
-      x: 472
-      y: 414
-      width: 118
-      height: 176
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Left_btn_01
-    outer:
-      serializedVersion: 2
-      x: 591
-      y: 414
-      width: 118
-      height: 176
-    inner:
-      serializedVersion: 2
-      x: 591
-      y: 414
-      width: 118
-      height: 176
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Gauge_bg_00
-    outer:
-      serializedVersion: 2
-      x: 0
-      y: 44
-      width: 226
-      height: 23
-    inner:
-      serializedVersion: 2
-      x: 0
-      y: 44
-      width: 226
-      height: 23
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Gauge_Top_00
-    outer:
-      serializedVersion: 2
-      x: 0
-      y: 26
-      width: 220
-      height: 17
-    inner:
-      serializedVersion: 2
-      x: 0
-      y: 26
-      width: 220
-      height: 17
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Carrot_Desc_00
-    outer:
-      serializedVersion: 2
-      x: 548
+      x: 550
       y: 202
-      width: 142
-      height: 69
+      width: 109
+      height: 70
     inner:
       serializedVersion: 2
-      x: 548
+      x: 550
       y: 202
-      width: 142
-      height: 69
+      width: 109
+      height: 70
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Scooter_Img_00
+  - name: Ruby_00
     outer:
       serializedVersion: 2
-      x: 1193
-      y: 1554
-      width: 471
-      height: 494
+      x: 1271
+      y: 1960
+      width: 681
+      height: 88
     inner:
       serializedVersion: 2
-      x: 1193
-      y: 1554
-      width: 471
-      height: 494
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Carrot_Img_00
-    outer:
-      serializedVersion: 2
-      x: 0
-      y: 272
-      width: 471
-      height: 495
-    inner:
-      serializedVersion: 2
-      x: 0
-      y: 272
-      width: 471
-      height: 495
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Beetle_img_00
-    outer:
-      serializedVersion: 2
-      x: 721
-      y: 1553
-      width: 471
-      height: 495
-    inner:
-      serializedVersion: 2
-      x: 721
-      y: 1553
-      width: 471
-      height: 495
+      x: 1271
+      y: 1960
+      width: 681
+      height: 88
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
