@@ -28,6 +28,12 @@ public class LeftButtonClick : MonoBehaviour {
 	
 	void OnClick()
 	{
-		Click = true;
+		TweenPosition tweenPos = uiGrid.AddComponent<TweenPosition>();
+		
+		tweenPos.method = TweenPosition.Method.Linear;
+		tweenPos.style = TweenPosition.Style.Once;
+		
+		tweenPos.from = new Vector3( uiGrid.transform.localPosition.x,0.0f,0.0f);
+        tweenPos.to = new Vector3( uiGrid.transform.localPosition.x + (-300.0f), 0.0f, 0.0f);
 	}
 }

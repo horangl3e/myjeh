@@ -164,7 +164,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.703296721, y: .703296721, z: 0}
+  m_LocalPosition: {x: -.703296781, y: .703296721, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 218}
@@ -1644,7 +1644,7 @@ MonoBehaviour:
   mMat: {fileID: 2100000, guid: 2c02dac7289841c4eab9927cb59312e2, type: 2}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mDepth: 0
+  mDepth: 10
   mAtlas: {fileID: 11400000, guid: 6433835c75cd62247b364f355032c0ee, type: 2}
   mSpriteName: Ruby_00
 --- !u!1 &1273388071
@@ -2204,8 +2204,8 @@ GameObject:
   - 4: {fileID: 1657115281}
   - 114: {fileID: 1657115284}
   - 114: {fileID: 1657115285}
-  - 114: {fileID: 1657115283}
   - 65: {fileID: 1657115282}
+  - 114: {fileID: 1657115286}
   m_Layer: 8
   m_Name: Image Button
   m_TagString: Untagged
@@ -2237,16 +2237,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 120, y: 122, z: 0}
   m_Center: {x: 1.90734863e-05, y: -7.62939453e-06, z: -1.25}
---- !u!114 &1657115283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1657115280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d91970263680e2458eb7ccc371374a6, type: 1}
-  m_Name: 
 --- !u!114 &1657115284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2275,6 +2265,17 @@ MonoBehaviour:
   trigger: 0
   volume: 1
   pitch: 1
+--- !u!114 &1657115286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1657115280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2091079ff731243488e21f42b6f5cd11, type: 1}
+  m_Name: 
+  uiGrid: {fileID: 2061343826}
 --- !u!1 &1717724123
 GameObject:
   m_ObjectHideFlags: 0
@@ -2751,7 +2752,6 @@ GameObject:
   - 4: {fileID: 2061343827}
   - 114: {fileID: 2061343828}
   - 114: {fileID: 2061343829}
-  - 114: {fileID: 2061343830}
   m_Layer: 8
   m_Name: UIGrid
   m_TagString: Untagged
@@ -2808,25 +2808,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85a832423a889c9489c71290fc6a3bf0, type: 1}
   m_Name: 
---- !u!114 &2061343830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2061343826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d166255cacf07b4292b8402b3ddefc5, type: 1}
-  m_Name: 
-  method: 0
-  style: 0
-  duration: 1
-  steeperCurves: 0
-  tweenGroup: 0
-  eventReceiver: {fileID: 0}
-  callWhenFinished: 
-  from: {x: -121, y: 0, z: 0}
-  to: {x: -121, y: 0, z: 0}
 --- !u!1 &2062240268
 GameObject:
   m_ObjectHideFlags: 0
