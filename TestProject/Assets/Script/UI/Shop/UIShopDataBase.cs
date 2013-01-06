@@ -7,6 +7,8 @@ public class ShopDataBase
 {
     public int ID;
     public string Dec = "Edit Description";
+    public UIAtlas uiAtlas;
+    public string spriteName;
 }
 
 public class UIShopDataBase : MonoBehaviour {

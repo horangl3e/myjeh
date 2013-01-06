@@ -42,14 +42,14 @@ MonoBehaviour:
   - name: Car_BG
     outer:
       serializedVersion: 2
-      x: 0
-      y: 273
+      x: 721
+      y: 1059
       width: 536
       height: 494
     inner:
       serializedVersion: 2
-      x: 0
-      y: 273
+      x: 721
+      y: 1059
       width: 536
       height: 494
     paddingLeft: 0
@@ -178,14 +178,14 @@ MonoBehaviour:
   - name: Buy_01
     outer:
       serializedVersion: 2
-      x: 721
-      y: 1906
+      x: 1258
+      y: 1411
       width: 549
       height: 142
     inner:
       serializedVersion: 2
-      x: 721
-      y: 1906
+      x: 1258
+      y: 1411
       width: 549
       height: 142
     paddingLeft: 0
@@ -246,16 +246,67 @@ MonoBehaviour:
   - name: Ruby_00
     outer:
       serializedVersion: 2
-      x: 1271
-      y: 1960
+      x: 1258
+      y: 1322
       width: 681
       height: 88
     inner:
       serializedVersion: 2
-      x: 1271
-      y: 1960
+      x: 1258
+      y: 1322
       width: 681
       height: 88
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Car_02
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 273
+      width: 536
+      height: 494
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 273
+      width: 536
+      height: 494
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Car_03
+    outer:
+      serializedVersion: 2
+      x: 721
+      y: 1554
+      width: 536
+      height: 494
+    inner:
+      serializedVersion: 2
+      x: 721
+      y: 1554
+      width: 536
+      height: 494
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Car_01
+    outer:
+      serializedVersion: 2
+      x: 1258
+      y: 1554
+      width: 536
+      height: 494
+    inner:
+      serializedVersion: 2
+      x: 1258
+      y: 1554
+      width: 536
+      height: 494
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0

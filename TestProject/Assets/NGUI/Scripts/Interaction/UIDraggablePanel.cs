@@ -231,33 +231,17 @@ public class UIDraggablePanel : IgnoreTimeScale
 
 		if (constraint.magnitude > 0.001f)
 		{
-            //스프링이 일어 나는 조건이 되면 들어 온다.
 			if (!instant && dragEffect == DragEffect.MomentumAndSpring)
-			{
-                //Debug.Log("여기는 몇번이나 들어오나 = " + constraint );
-
-                //실제로 스프링이 동작하는 로직..
-				// Spring back into place
-                //패널
-                //스프링을 할 객체
-                //스프링 목표 위치 
 				SpringPanel.Begin(mPanel.gameObject, mTrans.localPosition + constraint, 13f);
-			}
 			else
 			{
-              //  Debug.Log("여기들어올상황은 뭐지");
-				// Jump back into place
 				MoveRelative(constraint);
 				mMomentum = Vector3.zero;
 				mScroll = 0f;
 			}
 		}
 		else
-		{
-           // Debug.Log("스프링ㅇ ㅣ일어나는 조건이 아니므로 없앤다");
-			// Remove the spring as it's no longer needed
 			DisableSpring();
-		}
 	}
 
 	/// <summary>

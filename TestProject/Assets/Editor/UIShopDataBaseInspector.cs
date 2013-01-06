@@ -111,6 +111,19 @@ public class UIShopDataBaseInspector : Editor {
 
                 if ( !itemDesc.Equals(item.Dec) )
                     item.Dec = itemDesc;
+
+                NGUIEditorTools.DrawSeparator();
+
+                UIAtlas atlas;
+                atlas = EditorGUILayout.ObjectField("Atlas", item.uiAtlas, typeof(UIAtlas), false) as UIAtlas;
+
+                if (atlas != item.uiAtlas )
+                    item.uiAtlas = atlas;
+
+                string spriteName = EditorGUILayout.TextField("Sprite Name", item.spriteName);
+
+                if (spriteName != item.spriteName)
+                    item.spriteName = spriteName;
             }
             NGUIEditorTools.DrawSeparator();
         }
