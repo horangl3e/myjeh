@@ -94,8 +94,8 @@ public class UIDraggablePanel : IgnoreTimeScale
 
 	public ShowCondition showScrollBars = ShowCondition.OnlyIfNeeded;
 
-	protected Transform mTrans;
-	protected UIPanel mPanel;
+	Transform mTrans;
+	UIPanel mPanel;
 	Plane mPlane;
 	Vector3 mLastPos;
 	bool mPressed = false;
@@ -232,16 +232,23 @@ public class UIDraggablePanel : IgnoreTimeScale
 		if (constraint.magnitude > 0.001f)
 		{
 			if (!instant && dragEffect == DragEffect.MomentumAndSpring)
+			{
+				// Spring back into place
 				SpringPanel.Begin(mPanel.gameObject, mTrans.localPosition + constraint, 13f);
+			}
 			else
 			{
+				// Jump back into place
 				MoveRelative(constraint);
 				mMomentum = Vector3.zero;
 				mScroll = 0f;
 			}
 		}
 		else
+		{
+			// Remove the spring as it's no longer needed
 			DisableSpring();
+		}
 	}
 
 	/// <summary>
@@ -434,10 +441,8 @@ public class UIDraggablePanel : IgnoreTimeScale
 	/// Move the panel by the specified amount.
 	/// </summary>
 
-
-	public void MoveRelative (Vector3 relative)
+	void MoveRelative (Vector3 relative)
 	{
-        //드레그한 양 
 		mTrans.localPosition += relative;
 		Vector4 cr = mPanel.clipRange;
 		cr.x -= relative.x;
@@ -445,7 +450,7 @@ public class UIDraggablePanel : IgnoreTimeScale
 		mPanel.clipRange = cr;
 		UpdateScrollbars(false);
 	}
-	
+
 	/// <summary>
 	/// Move the panel by the specified amount.
 	/// </summary>
@@ -463,7 +468,7 @@ public class UIDraggablePanel : IgnoreTimeScale
 
 	public virtual void Press (bool pressed)
 	{
-		if (enabled && gameObject.active)
+		if (enabled && gameObject.activeSelf)
 		{
 			mTouches += (pressed ? 1 : -1);
 			mCalculatedBounds = false;
@@ -488,7 +493,6 @@ public class UIDraggablePanel : IgnoreTimeScale
 			}
 			else if (restrictWithinPanel && mPanel.clipping != UIDrawCall.Clipping.None && dragEffect == DragEffect.MomentumAndSpring)
 			{
-                Debug.Log("드레그중에 마우스를 놓으면 발생");
 				RestrictWithinBounds(false);
 			}
 		}
@@ -500,12 +504,12 @@ public class UIDraggablePanel : IgnoreTimeScale
 
 	public virtual void Drag (Vector2 delta)
 	{
-		if (enabled && gameObject.active && mShouldMove)
+		if (enabled && gameObject.activeSelf && mShouldMove)
 		{
 			UICamera.currentTouch.clickNotification = UICamera.ClickNotification.BasedOnDelta;
 
 			Ray ray = UICamera.currentCamera.ScreenPointToRay(UICamera.currentTouch.pos);
-            float dist = 0.0f;
+			float dist = 0f;
 
 			if (mPlane.Raycast(ray, out dist))
 			{
@@ -543,7 +547,7 @@ public class UIDraggablePanel : IgnoreTimeScale
 
 	public void Scroll (float delta)
 	{
-		if (enabled && gameObject.active)
+		if (enabled && gameObject.activeSelf)
 		{
 			mShouldMove = shouldMove;
 			if (Mathf.Sign(mScroll) != Mathf.Sign(delta)) mScroll = 0f;

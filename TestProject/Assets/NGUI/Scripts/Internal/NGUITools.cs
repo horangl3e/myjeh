@@ -1,6 +1,6 @@
 //----------------------------------------------
 //            NGUI: Next-Gen UI kit
-// Copyright © 2011-2012 Tasharen Entertainment
+// Copyright ?2011-2012 Tasharen Entertainment
 //----------------------------------------------
 
 using UnityEngine;
@@ -510,7 +510,7 @@ static public class NGUITools
 
 	static void Activate (Transform t)
 	{
-		t.gameObject.active = true;
+		t.gameObject.SetActive(true);
 
 		for (int i = 0, imax = t.GetChildCount(); i < imax; ++i)
 		{
@@ -530,7 +530,7 @@ static public class NGUITools
 			Transform child = t.GetChild(i);
 			Deactivate(child);
 		}
-		t.gameObject.active = false;
+		t.gameObject.SetActive(false);
 	}
 
 	/// <summary>

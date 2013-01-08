@@ -83,7 +83,7 @@ public class HUDText : MonoBehaviour
 			mUnused.RemoveAt(mUnused.Count - 1);
 			ent.time = Time.realtimeSinceStartup;
 			ent.label.depth = NGUITools.CalculateNextDepth(gameObject);
-			ent.label.gameObject.active = true;
+			ent.label.gameObject.SetActive(true);
 			ent.offset = 0f;
 			mList.Add(ent);
 			return ent;
@@ -112,7 +112,7 @@ public class HUDText : MonoBehaviour
 	{
 		mList.Remove(ent);
 		mUnused.Add(ent);
-		ent.label.gameObject.active = false;
+		ent.label.gameObject.SetActive(false);
 	}
 
 	/// <summary>

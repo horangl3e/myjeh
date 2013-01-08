@@ -1,6 +1,6 @@
 //----------------------------------------------
 //            NGUI: Next-Gen UI kit
-// Copyright © 2011-2012 Tasharen Entertainment
+// Copyright ?2011-2012 Tasharen Entertainment
 //----------------------------------------------
 
 using UnityEngine;
@@ -35,7 +35,7 @@ public class NGUISelectionTools
 		if (HasValidTransform())
 		{
 			GameObject[] gos = Selection.gameObjects;
-			bool val = !Selection.activeGameObject.active;
+			bool val = !Selection.activeGameObject.activeSelf;
 			foreach (GameObject go in gos) NGUITools.SetActive(go, val);
 		}
 	}
